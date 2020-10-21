@@ -1,0 +1,1 @@
+const greet: string = 'Hello World'
