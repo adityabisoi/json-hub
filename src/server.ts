@@ -1,12 +1,15 @@
-import express from 'express'
+import express, { Application, Request, Response, NextFunction } from 'express'
 
-const app=express()
-const port:number=3000
+const app: Application = express()
 
-const greet: string = "Hello World";
+const port: number = 3000
 
-app.get('/',(req,res)=>{
-    res.send(greet)
+app.get('/', (req: Request, res: Response, next: NextFunction) => {
+    res.status(200).json({
+        msg:'Hello'
+    })
 })
 
-app.listen(port,()=>console.log(`Server running on ${port}`))
+
+// Run the server
+app.listen(port, () => console.log(`Server running on ${port}`))
