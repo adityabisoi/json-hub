@@ -19,10 +19,12 @@
   },
   "homepage": "https://github.com/adityabisoi/fetch#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "@types/express": "^4.17.8",
+    "@types/morgan": "^1.9.1",
     "@types/node": "^14.14.0",
     "nodemon": "^2.0.6",
     "ts-node": "^9.0.0",
