@@ -1,9 +1,9 @@
 import express, { Application, Request, Response, NextFunction } from 'express'
-const router=express.Router()
+const router = express.Router()
 
-router.get('/',(req:Request,res:Response,next:NextFunction)=>{
+router.get('/', (req: Request, res: Response, next: NextFunction) => {
     res.status(200).json({
-        msg:'Users GET'
+        msg: 'Users GET'
     })
 })
 
@@ -13,4 +13,22 @@ router.post('/', (req: Request, res: Response, next: NextFunction) => {
     })
 })
 
-module.exports=router
+router.get('/:userId', (req: Request, res: Response, next: NextFunction) => {
+    const id: string = req.params.userId
+
+    // Single user valid
+    if (id == 'valid') {
+        res.status(200).json({
+            msg: 'Single user valid'
+        })
+    }
+
+    // Single user invalid
+    else {
+        res.status(200).json({
+            msg: 'Single user invalid'
+        })
+    }
+})
+
+module.exports = router
