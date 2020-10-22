@@ -1,15 +1,8 @@
-import express, { Application, Request, Response, NextFunction } from 'express'
+import http from 'http'
+const app=require('./app')
 
-const app: Application = express()
-
+// Define port
 const port: number = 3000
 
-app.get('/', (req: Request, res: Response, next: NextFunction) => {
-    res.status(200).json({
-        msg:'Hello'
-    })
-})
-
-
-// Run the server
-app.listen(port, () => console.log(`Server running on ${port}`))
+const server = http.createServer(app)
+server.listen(port)
