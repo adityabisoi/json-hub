@@ -4,7 +4,9 @@
   "description": "A NodeJS based REST API service for development and testing",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node dist/server.js",
+    "dev": "nodemon src/server.ts",
+    "build": "tsc -p ."
   },
   "repository": {
     "type": "git",
