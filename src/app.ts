@@ -1,9 +1,16 @@
 import express, { Application, Request, Response, NextFunction } from 'express'
 import morgan from 'morgan'
 import bodyParser from 'body-parser'
+import mongoose from 'mongoose'
+require('dotenv').config()
+
 const app: Application = express()
 
 const usersRoute = require('./api/routes/users')
+
+// Connect to database
+mongoose.connect('mongodb+srv://fetch_user:'+process.env.DB_PASS+'@fetch.cogjx.mongodb.net/'+process.env.DB_NAME+'?retryWrites=true&w=majority',
+    { useUnifiedTopology: true, useNewUrlParser: true })
 
 app.use(morgan('dev'))
 app.use(bodyParser.urlencoded({
