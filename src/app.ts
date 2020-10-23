@@ -1,10 +1,15 @@
 import express, { Application, Request, Response, NextFunction } from 'express'
 import morgan from 'morgan'
+import bodyParser from 'body-parser'
 const app: Application = express()
 
 const usersRoute = require('./api/routes/users')
 
 app.use(morgan('dev'))
+app.use(bodyParser.urlencoded({
+    extended: false
+}))
+app.use(bodyParser.json())
 
 // Routes to handle requests
 app.use('/users', usersRoute)

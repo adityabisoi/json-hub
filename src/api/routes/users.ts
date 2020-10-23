@@ -8,6 +8,12 @@ router.get('/', (req: Request, res: Response, next: NextFunction) => {
 })
 
 router.post('/', (req: Request, res: Response, next: NextFunction) => {
+    type User = {
+        id:number
+        first_name: string
+        last_name:string
+        email:string
+    }
     res.status(200).json({
         msg: 'Users POST'
     })
