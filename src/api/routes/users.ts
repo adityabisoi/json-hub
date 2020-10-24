@@ -68,4 +68,18 @@ router.get('/:userId', (req: Request, res: Response, next: NextFunction) => {
         })
 })
 
+router.delete('/:userId', (req: Request, res: Response, next: NextFunction) => {
+    const id: any = req.params.userId
+    User.remove({ _id: id }).exec()
+        .then((data: any) => {
+            res.status(200).json(data)
+        })
+        .catch((err: any) => {
+            console.log(err)
+            res.status(500).json({
+                error: err
+            })
+        })
+})
+
 module.exports = router
