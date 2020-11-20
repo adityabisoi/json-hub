@@ -7,4 +7,4 @@ A REST API service for development and testing
 * Run `npm run dev` to run the project on development
 
 ### Documentation
-https://docs.google.com/document/d/1tsHF0Fel0TG3bChvBv_2rM8TVyIBVI7yxTqqRZ-pm6w/edit?usp=sharing
+https://bit.ly/36PmwEc
