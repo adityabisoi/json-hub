@@ -2,10 +2,14 @@
 
 # fetch
 
+<p align="center" width="100%">
+    <img width="300" src="https://github.com/adityabisoi/fetch/blob/main/logo.png"> 
+</p>
+
 A community-owned REST API service for testers and developers. Fetch provides REST API endpoints for different types of placeholders, which can be easily used during testing and development without the need for creating sample data manually.
 
 ## Installation
-Follow the instructions to get started with the project on your local machine!
+Follow the instructions to get started with the project on your local machine 🚀
 * Fork and clone the project
 * `cd fetch/` and run `npm install` to install dependencies
 * Run `npm run dev` to run the project on development
