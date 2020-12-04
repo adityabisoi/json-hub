@@ -2,7 +2,7 @@
 
 # fetch
 
-A REST API service for development and testing
+A community-owned REST API service for testers and developers. Fetch provides REST API endpoints for different types of placeholders, which can be easily used during testing and development without the need for creating sample data manually.
 
 ## Installation
 Follow the instructions to get started with the project on your local machine!
