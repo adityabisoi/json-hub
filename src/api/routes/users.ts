@@ -1,14 +1,44 @@
 import express, { Application, Request, Response, NextFunction } from 'express'
 import mongoose from 'mongoose'
+import {fakedata} from "./../../fakedata"
 const router = express.Router()
 
 const User = require('../routes/user')
 
+User.find({})
+.then((data:string)=>{
+    if(data.length===0)
+    {
+        User.insertMany(fakedata)
+        .then((data: string) => {
+            console.log(data)
+        })
+        .catch((err: string) => {
+            console.log(err)
+        });
+    }
+})
+
+
+
 router.get('/', (req: Request, res: Response, next: NextFunction) => {
     User.find().exec()
         .then((data: string) => {
+            if(data.length===0)
+            {
+                User.insertMany(fakedata)
+                .then((data: string) => {
+                    console.log(data)
+                    res.status(200).json(data)
+                })
+                .catch((err: string) => {
+                    console.log(err)
+                });
+            }
+            else{
             console.log(data)
             res.status(200).json(data)
+            }
         })
         .catch((err: string) => {
             console.log(err)
