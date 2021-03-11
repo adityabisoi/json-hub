@@ -4,9 +4,8 @@
   "description": "A NodeJS based REST API service for development and testing",
   "main": "server.js",
   "scripts": {
-    "start": "node src/server.ts",
-    "dev": "nodemon src/server.ts",
-    "build": "tsc -p ."
+    "start": "tsc -p . && node dist/server.js",
+    "dev": "nodemon src/server.ts"
   },
   "repository": {
     "type": "git",
