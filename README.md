@@ -12,8 +12,8 @@ A community-owned REST API service for testers and developers. Fetch provides RE
 Follow the instructions to get started with the project on your local machine 🚀
 * Fork and clone the project
 * `cd fetch/` and run `npm install` to install dependencies
-* Setup [mongodb](https://docs.mongodb.com/manual/installation/)
-* Enter the database name in `.env.example` and rename it to `.env`.
+* Setup [mongodb](https://docs.mongodb.com/manual/installation/) or, [mongodb atlas](https://www.mongodb.com/cloud/atlas)
+* Enter the credentials in `.env.example` and rename it to `.env`.
 * Run `npm run dev` to run the project on development
 
 ## Documentation

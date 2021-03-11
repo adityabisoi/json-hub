@@ -9,7 +9,7 @@ const app: Application = express()
 const usersRoute = require('./api/routes/users')
 
 // Connect to database
-mongoose.connect(`mongodb://localhost:27017/${process.env.DB_NAME}`,
+mongoose.connect(`mongodb+srv://Lamborghini:${process.env.DB_PASS}@cluster0.cogjx.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`,
     { useUnifiedTopology: true, useNewUrlParser: true })
 
 app.use(morgan('dev'))
