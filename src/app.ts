@@ -6,6 +6,7 @@ require('dotenv').config()
 
 const app: Application = express()
 
+const homeRoute = require('./api/routes/home')
 const usersRoute = require('./api/routes/users')
 
 // Connect to database
@@ -31,6 +32,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 })
 
 // Routes to handle requests
+app.use('/', homeRoute)
 app.use('/users', usersRoute)
 
 // Handle error
