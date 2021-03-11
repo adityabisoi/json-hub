@@ -17,6 +17,7 @@ Follow the instructions to get started with the project on your local machine ðŸ
 * Setup [mongodb](https://docs.mongodb.com/manual/installation/) or, [mongodb atlas](https://www.mongodb.com/cloud/atlas)
 * Enter the credentials in `.env.example` and rename it to `.env`.
 * Run `npm run dev` to run the project on development
+* The tool `Postman` can be used to test the endpoints in the application.
 
 ## Documentation
 To understand the aim, scope and technologies used in the project, please see the [documentation](https://bit.ly/36PmwEc)
