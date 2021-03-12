@@ -8,9 +8,10 @@ const app: Application = express()
 
 const homeRoute = require('./api/routes/home')
 const usersRoute = require('./api/routes/users')
+const testRoute = require('./api/routes/usertest')
 
 // Connect to database
-mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.cogjx.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`,
+mongoose.connect(`${process.env.DB_CONNECTION_URL}`,
     { useUnifiedTopology: true, useNewUrlParser: true })
 
 app.use(morgan('dev'))
@@ -34,6 +35,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 // Routes to handle requests
 app.use('/', homeRoute)
 app.use('/users', usersRoute)
+app.use('/usertest', testRoute)
 
 // Handle error
 interface ErrorWithStatus extends Error {

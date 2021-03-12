@@ -14,10 +14,14 @@ The project is live [here](https://rest-fetch.herokuapp.com/)
 Follow the instructions to get started with the project on your local machine 🚀
 * Fork and clone the project
 * `cd fetch/` and run `npm install` to install dependencies
-* Setup [mongodb](https://docs.mongodb.com/manual/installation/) or, [mongodb atlas](https://www.mongodb.com/cloud/atlas)
+* Setup [mongodb atlas](https://www.mongodb.com/cloud/atlas) following [this tutorial](https://dev.to/dalalrohit/how-to-connect-to-mongodb-atlas-using-node-js-k9i)
 * Enter the credentials in `.env.example` and rename it to `.env`.
-* Run `npm run dev` to run the project on development
-* [Postman](https://www.postman.com/) can be used to test the endpoints in the application.
+* Run `npm run dev` to run the project in development
+
+## Testing
+* The endpoint `usertest` which follows the same schema as the `users/` endpoint, must be used for testing
+* All other endpoints except `usertest` should involve methods which **must not** change the data on the server (read-only)
+* To test the endpoints provided by the application, tools such as [postman](https://www.postman.com/) can be used
 
 ## Documentation
 To understand the aim, scope and technologies used in the project, please see the [documentation](https://bit.ly/36PmwEc)
