@@ -1,5 +1,5 @@
 # Related Issue
-- issue goes here
+- closes #issue goes here
 
 # Proposed Changes
 - change 1
