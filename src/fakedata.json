@@ -1,0 +1,18 @@
+
+{
+    "fakedata":[{
+    "first_name": "Becky",
+    "last_name": "Blasbad",
+    "email": "beck1blas4@gmail.com"
+},{
+    "first_name": "Andry",
+    "last_name": "Gentry",
+    "email": "Anrygen002@gmail.com"
+},
+{
+    "first_name": "David",
+    "last_name": "Griffin",
+    "email": "Devdavid9@gmail.com"
+}]
+
+}

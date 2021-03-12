@@ -1,8 +1,8 @@
 import express, { Application, Request, Response, NextFunction } from 'express'
 import mongoose from 'mongoose'
-import {fakedata} from "./../../fakedata"
+var da=require("./../../fakedata")
 const router = express.Router()
-
+const fakedata=da.fakedata;
 const User = require('../routes/user')
 
 User.find({})
