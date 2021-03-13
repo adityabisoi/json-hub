@@ -26,6 +26,9 @@ Follow the instructions to get started with the project on your local machine ðŸ
 ## Documentation
 To understand the aim, scope and technologies used in the project, please see the [documentation](https://bit.ly/36PmwEc)
 
+## Help & support
+If you are stuck somewhere or do not understand what to do, feel free to reach out to mentors/ admin in discord.
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
