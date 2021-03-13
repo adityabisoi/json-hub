@@ -1,6 +1,5 @@
 import express, { Application, Request, Response, NextFunction } from 'express'
 import morgan from 'morgan'
-import bodyParser from 'body-parser'
 import mongoose from 'mongoose'
 require('dotenv').config()
 
@@ -15,10 +14,10 @@ mongoose.connect(`${process.env.DB_CONNECTION_URL}`,
     { useUnifiedTopology: true, useNewUrlParser: true })
 
 app.use(morgan('dev'))
-app.use(bodyParser.urlencoded({
+app.use(express.json())
+app.use(express.urlencoded({
     extended: false
 }))
-app.use(bodyParser.json())
 
 // Add CORS
 app.use((req: Request, res: Response, next: NextFunction) => {
