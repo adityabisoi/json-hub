@@ -9,8 +9,8 @@ const app: Application = express()
 const homeRoute = require('./api/routes/home')
 const usersRoute = require('./api/routes/users')
 
-// Connect to database
-mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.cogjx.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`,
+// Connect to database 
+mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.hrkum.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`,
     { useUnifiedTopology: true, useNewUrlParser: true })
 
 app.use(morgan('dev'))
