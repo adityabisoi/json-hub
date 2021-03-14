@@ -13,10 +13,11 @@ The project is live [here](https://rest-fetch.herokuapp.com/)
 ## Installation
 Follow the instructions to get started with the project on your local machine 🚀
 * Fork and clone the project
-* `cd fetch/` and run `npm install` to install dependencies
-* Setup [mongodb atlas](https://www.mongodb.com/cloud/atlas) following [this tutorial](https://dev.to/dalalrohit/how-to-connect-to-mongodb-atlas-using-node-js-k9i)
-* Enter the credentials in `.env.example` and rename it to `.env`.
-* Run `npm run dev` to run the project in development
+* Install and configure your [Docker](https://www.docker.com/), following [this](https://docs.docker.com/engine/install/).
+* Rename `.env.example` to `.env`, it will provide the connection URL.
+* Once docker is installed run the followig commands.
+  * `docker-compose build`
+  * Once the build is complete, run `docker-compose up`
 
 ## Testing
 * The endpoint `usertest` which follows the same schema as the `users/` endpoint, must be used for testing
