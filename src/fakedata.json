@@ -1,6 +1,7 @@
 
 {
-    "fakedata":[{
+    "page":1,
+    "data":[{
     "first_name": "Becky",
     "last_name": "Blasbad",
     "email": "beck1blas4@gmail.com"
