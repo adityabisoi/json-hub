@@ -45,4 +45,18 @@ router.get('/:userId', (req: Request, res: Response, next: NextFunction) => {
         })
 })
 
+router.post('/', (req: Request, res: Response, next: NextFunction) => {
+    const user = new User({
+        _id: new mongoose.Types.ObjectId(),
+        first_name: req.body.first_name,
+        last_name: req.body.last_name,
+        email: req.body.email
+    })
+
+    res.status(200).json({
+        timestamp:Date.now(),
+        data:user
+    })
+})
+
 module.exports = router
