@@ -9,13 +9,18 @@ services:
     ports:
       - "4000:4000"
     links:
-      - mongo
-  mongo:
-    container_name: mongo
-    image: mongo:latest
+      - mongodb
+  mongodb:
+    container_name: mongodb
+    image: mongo
     environment:
-      MONGO_INITDB_ROOT_USERNAME: $MONGO_INITDB_ROOT_USERNAME
-      MONGO_INITDB_ROOT_PASSWORD: $MONGO_INITDB_ROOT_PASSWORD
-      MONGO_INITDB_DATABASE: $MONGO_INITDB_DATABASE
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME:-admin}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD:-adminPassword}
+      MONGO_INITDB_DATABASE: ${MONGO_INITDB_DATABASE:-RESTfetchdb}
+      MONGO_NON_ROOT_USERNAME: ${MONGO_NON_ROOT_USERNAME:-admin}
+      MONGO_NON_ROOT_PASSWORD: ${MONGO_NON_ROOT_PASSWORD:-adminPassword}
     ports:
       - "27017:27017"
+    volumes:
+      - ./mongo-user.sh:/docker-entrypoint-initdb.d/mongo-user.sh:ro
+    command: mongod

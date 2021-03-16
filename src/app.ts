@@ -9,13 +9,18 @@ const homeRoute = require('./api/routes/home')
 const usersRoute = require('./api/routes/users')
 const testRoute = require('./api/routes/usertest')
 
+const options = {
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  useFindAndModify: false,
+};
 // Connect to database
-const url = `mongodb://` + `${process.env.MONGO_INITDB_ROOT_USERNAME}` + `:` + `${process.env.MONGO_INITDB_ROOT_PASSWORD}` + `@` + `${process.env.MONGO_INITDB_DATABASE}` + `:27017`
+const url = `mongodb://${process.env.MONGO_NON_ROOT_USERNAME}:` + `${process.env.MONGO_NON_ROOT_PASSWORD}` + `@` + `mongodb:27017` + `/${process.env.MONGO_INITDB_DATABASE}`
 
-mongoose.connect(url,
-    { useUnifiedTopology: true, useNewUrlParser: true })
-
+mongoose.connect(url, options)
+console.log(url)
 console.log("Connected")
+
 
 app.use(morgan('dev'))
 app.use(express.json())
