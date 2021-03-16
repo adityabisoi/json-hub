@@ -10,8 +10,12 @@ const usersRoute = require('./api/routes/users')
 const testRoute = require('./api/routes/usertest')
 
 // Connect to database
-mongoose.connect(`${process.env.DB_CONNECTION_URL}`,
+const url = `mongodb://` + `${process.env.MONGO_INITDB_ROOT_USERNAME}` + `:` + `${process.env.MONGO_INITDB_ROOT_PASSWORD}` + `@` + `${process.env.MONGO_INITDB_DATABASE}` + `:27017`
+
+mongoose.connect(url,
     { useUnifiedTopology: true, useNewUrlParser: true })
+
+console.log("Connected")
 
 app.use(morgan('dev'))
 app.use(express.json())
