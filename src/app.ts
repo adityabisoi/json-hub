@@ -15,12 +15,12 @@ const options = {
   useFindAndModify: false,
 };
 // Connect to database
-const url = `mongodb://${process.env.MONGO_NON_ROOT_USERNAME}:` + `${process.env.MONGO_NON_ROOT_PASSWORD}` + `@` + `mongodb:27017` + `/${process.env.MONGO_INITDB_DATABASE}`
+const url = `mongodb://${process.env.MONGO_NON_ROOT_USERNAME}:${process.env.MONGO_NON_ROOT_PASSWORD}@mongodb:27017/${process.env.MONGO_INITDB_DATABASE}`
 
-mongoose.connect(url, options)
+mongoose.connect(url, options).then(() => {
+    console.log("Connected")
+})
 console.log(url)
-console.log("Connected")
-
 
 app.use(morgan('dev'))
 app.use(express.json())
