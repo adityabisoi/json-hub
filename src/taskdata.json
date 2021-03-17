@@ -1,62 +1,62 @@
 {
-  "taskdata": [
+  "data": [
     {
       "task_name": "reading",
-
+      "completed": true,
       "details": "keep up with the world and broaden your horizons"
     },
 
     {
       "task_name": "drinking",
-
+      "completed": true,
       "details": "drink delicious chai or coffee"
     },
 
     {
       "task_name": "eating",
-
+      "completed": false,
       "details": "having nice and healthy food"
     },
 
     {
       "task_name": "sleeping",
-
+      "completed": true,
       "details": "have a good sleep"
     },
 
     {
       "task_name": "writing",
-
+      "completed": true,
       "details": "write a diary entry or blog posts to have thoughts organized"
     },
 
     {
       "task_name": "smile",
-
+      "completed": true,
       "details": "smile and spreading happiness"
     },
 
     {
       "task_name": "walking",
-
+      "completed": false,
       "details": "take a walk and feel refreshed"
     },
 
     {
       "task_name": "working",
-
+      "completed": false,
       "details": "work on projects"
     },
 
     {
       "task_name": "learning",
-
+      "completed": true,
       "details": "learn something new"
     },
 
     {
       "task_name": "procrastinating",
-
+      "completed": false,
       "details": "procrastinate once in a while"
     }
   ]
