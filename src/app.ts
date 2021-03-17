@@ -20,7 +20,6 @@ const url = `mongodb://${process.env.MONGO_NON_ROOT_USERNAME}:${process.env.MONG
 mongoose.connect(url, options).then(() => {
     console.log("Connected")
 })
-console.log(url)
 
 app.use(morgan('dev'))
 app.use(express.json())
