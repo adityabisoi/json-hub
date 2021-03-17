@@ -3,6 +3,7 @@ const data = require("./../../taskdata.json");
 
 const router = express.Router();
 
+// GET request /tasks route
 router.get("/", (req: Request, res: Response, next: NextFunction) => {
   res.send(data);
 });

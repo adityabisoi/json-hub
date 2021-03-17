@@ -8,7 +8,7 @@ const app: Application = express();
 const homeRoute = require("./api/routes/home");
 const usersRoute = require("./api/routes/users");
 const testRoute = require("./api/routes/usertest");
-const taskRoute = require("./api/routes/tasks");
+const taskRoute = require("./api/routes/tasks"); //include tasks route
 
 // Connect to database
 mongoose.connect(`${process.env.DB_CONNECTION_URL}`, {
@@ -42,7 +42,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 app.use("/", homeRoute);
 app.use("/users", usersRoute);
 app.use("/usertest", testRoute);
-app.use("/tasks", taskRoute);
+app.use("/tasks", taskRoute); // Added task route
 
 // Handle error
 interface ErrorWithStatus extends Error {
