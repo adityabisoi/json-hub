@@ -24,21 +24,9 @@ User.find({})
 router.get('/', (req: Request, res: Response, next: NextFunction) => {
     User.find().exec()
         .then((data: string) => {
-            if(data.length===0)
-            {
-                User.insertMany(fakedata)
-                .then((data: string) => {
-                    console.log(data)
-                    res.status(200).json(data)
-                })
-                .catch((err: string) => {
-                    console.log(err)
-                });
-            }
-            else{
             console.log(data)
             res.status(200).json(data)
-            }
+            
         })
         .catch((err: string) => {
             console.log(err)
