@@ -10,8 +10,7 @@ A community-owned REST API service for testers and developers. Fetch provides RE
 
 The project is live [here](https://rest-fetch.herokuapp.com/)
 
-## Tech-Stack:
-<img alt="TypeScript" src="https://img.shields.io/badge/typescript%20-%23007ACC.svg?&style=for-the-badge&logo=typescript&logoColor=white"/> <img alt="Shell" src="https://img.shields.io/badge/shell%20-%23121011.svg?&style=for-the-badge&logo=gnu-bash&logoColor=white"/>
+
 
 ## Installation
 Follow the instructions to get started with the project on your local machine 🚀
