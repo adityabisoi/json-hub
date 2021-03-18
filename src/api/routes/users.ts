@@ -56,7 +56,7 @@ router.post('/', (req: Request, res: Response, next: NextFunction) => {
         first_name:user.first_name,
         last_name:user.last_name,
         email:user.email,
-        timestamp:dateFormat(new Date(), "yyyy-mm-dd h-MM")
+        timestamp:dateFormat(new Date(), "yyyy-mm-dd HH-MM")
     })
 })
 
