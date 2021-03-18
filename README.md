@@ -10,6 +10,8 @@ A community-owned REST API service for testers and developers. Fetch provides RE
 
 The project is live [here](https://rest-fetch.herokuapp.com/)
 
+
+
 ## Installation
 Follow the instructions to get started with the project on your local machine 🚀
 * Fork and clone the project
@@ -31,6 +33,17 @@ If you are stuck somewhere or do not understand what to do, feel free to reach o
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## Contributors 
+<table>
+	<tr>
+		<td>
+			<a href="https://github.com/adityabisoi/REST-fetch/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=adityabisoi/REST-fetch" />
+</a>
+		</td>
+	</tr>
+</table>
 
 ## License
 
