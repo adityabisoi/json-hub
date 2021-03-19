@@ -15,7 +15,14 @@ const options = {
   useFindAndModify: false,
 };
 // Connect to database
-const url = `mongodb://${process.env.MONGO_NON_ROOT_USERNAME}:${process.env.MONGO_NON_ROOT_PASSWORD}@mongodb:27017/${process.env.MONGO_INITDB_DATABASE}`
+var url;
+if(process.env.USE_DOCKER == `true`){
+    url = `mongodb://${process.env.MONGO_NON_ROOT_USERNAME}:${process.env.MONGO_NON_ROOT_PASSWORD}@mongodb:27017/${process.env.MONGO_INITDB_DATABASE}`
+}else{
+    url = `${process.env.DB_CONNECTION_URL}`
+}
+
+console.log(url);
 
 mongoose.connect(url, options).then(() => {
     console.log("Connected")
