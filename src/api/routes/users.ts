@@ -1,23 +1,8 @@
 import express, { Application, Request, Response, NextFunction } from 'express'
 import mongoose from 'mongoose'
-var da=require("./../../fakedata")
 const router = express.Router()
-const fakedata=da.data;
 const User = require('../routes/user')
 
-User.find({})
-.then((data:string)=>{
-    if(data.length===0)
-    {
-        User.insertMany(fakedata)
-        .then((data: string) => {
-            console.log(data)
-        })
-        .catch((err: string) => {
-            console.log(err)
-        });
-    }
-})
 
 
 
