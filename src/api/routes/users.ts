@@ -2,13 +2,14 @@ import express, { Application, Request, Response, NextFunction } from 'express'
 import mongoose from 'mongoose'
 const router = express.Router()
 
-const User = require('../routes/user')
+const User = require('../models/user')
 
 router.get('/', (req: Request, res: Response, next: NextFunction) => {
     User.find().exec()
         .then((data: string) => {
             console.log(data)
             res.status(200).json(data)
+            
         })
         .catch((err: string) => {
             console.log(err)
