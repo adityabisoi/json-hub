@@ -1,16 +1,39 @@
-[![Join the chat at https://gitter.im/fetch-lobby/community](https://badges.gitter.im/fetch-lobby/community.svg)](https://gitter.im/fetch-lobby/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+<p align="center">
+	
+<img src="https://github.com/Samridhi-98/Images/blob/master/Images/restfetchpng.PNG"  width="100%" >
 
-# fetch
-
-<p align="center" width="100%">
-    <img width="300" src="https://github.com/adityabisoi/fetch/blob/main/logo.png"> 
 </p>
 
-A community-owned REST API service for testers and developers. Fetch provides REST API endpoints for different types of placeholders, which can be easily used during testing and development without the need for creating sample data manually.
+<h2>About Us <a><img src="https://github.com/Samridhi-98/Images/blob/master/Images/reading.svg" width="4%"></a></h2>
+<p>
+	
+[![GitHub contributors](https://img.shields.io/github/contributors/adityabisoi/REST-fetch)](https://github.com/adityabisoi/REST-fetch/graphs/contributors/)
+[![Issues](https://img.shields.io/github/issues/adityabisoi/REST-fetch)](https://github.com/adityabisoi/REST-fetch/issues)
+[![PRs](https://img.shields.io/github/issues-pr/adityabisoi/REST-fetch)](https://github.com/adityabisoi/REST-fetch/pulls)
+[![Forks](https://img.shields.io/github/forks/adityabisoi/REST-fetch)](https://github.com/adityabisoi/REST-fetch) 
+[![Stars](https://img.shields.io/github/stars/adityabisoi/REST-fetch)](https://github.com/adityabisoi/REST-fetch) 
+[![Join the chat at https://gitter.im/fetch-lobby/community](https://badges.gitter.im/fetch-lobby/community.svg)](https://gitter.im/fetch-lobby/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-The project is live [here](https://rest-fetch.herokuapp.com/)
+</p>
 
+<p>
+A community-owned REST API service for testers and developers. Fetch provides REST API endpoints for different types of placeholders, which can be easily used during testing 	and development without the need for creating sample data manually.
+</p>
 
+## Technology Stack <img src="https://github.com/Samridhi-98/Images/blob/master/Images/atom.svg" width="3%">
+<ul>
+<li>MongoDB</li>
+<li>Express</li>
+<li>NodeJS</li>
+<li>Typescript</li>
+<li>CI/CD</li>
+</ul>	
+
+<h3>
+<em>
+Try it out <a href="https://rest-fetch.herokuapp.com/)"><img src="https://github.com/Samridhi-98/Images/blob/master/Images/play.svg" width="2%"></a> 
+</em>
+</h3>
 
 ## Installation
 There are two ways of installing the project on your local Machine 🚀
@@ -31,21 +54,23 @@ There are two ways of installing the project on your local Machine 🚀
   * Run `npm run dev` to run the project in development
 
 
-## Testing
+## Testing <img src="https://github.com/Samridhi-98/Images/blob/master/Images/test.svg" width="3%">
 * The endpoint `usertest` which follows the same schema as the `users/` endpoint, must be used for testing
 * All other endpoints except `usertest` should involve methods which **must not** change the data on the server (read-only)
 * To test the endpoints provided by the application, tools such as [postman](https://www.postman.com/) can be used
 
-## Documentation
+## Documentation <img src="https://github.com/Samridhi-98/Images/blob/master/Images/doc.svg" width="3%">
 To understand the aim, scope and technologies used in the project, please see the [documentation](https://bit.ly/36PmwEc)
 
-## Help & support
+## Help & support <img src="https://github.com/Samridhi-98/Images/blob/master/Images/help.svg" width="3%">
 If you are stuck somewhere or do not understand what to do, feel free to reach out to mentors/ admin in discord.
 
-## Contributing
+## Contribution <img src="https://github.com/Samridhi-98/Images/blob/master/Images/contribution.svg" width="3%">
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+<br/>
+<strong> Please refer the <a href="https://github.com/adityabisoi/REST-fetch/blob/main/CONTRIBUTING.md">contribution guideline</a> before making any contribution. </strong>
 
-## Contributors 
+## Contributors <img src="https://github.com/Samridhi-98/Images/blob/master/Images/contributors.svg" width="3%">
 <table>
 	<tr>
 		<td>
@@ -56,6 +81,6 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 	</tr>
 </table>
 
-## License
+## License <img src="https://github.com/Samridhi-98/Images/blob/master/Images/license.svg" width="3%">
 
 This project is licensed under the GPL V3 License - see the [LICENSE.md](LICENSE.md) file for details
