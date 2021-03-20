@@ -10,11 +10,24 @@ const usersRoute = require("./api/routes/users");
 const testRoute = require("./api/routes/usertest");
 const taskRoute = require("./api/routes/tasks"); //include tasks route
 
-// Connect to database
-mongoose.connect(`${process.env.DB_CONNECTION_URL}`, {
-  useUnifiedTopology: true,
+const options = {
   useNewUrlParser: true,
-});
+  useCreateIndex: true,
+  useFindAndModify: false,
+};
+// Connect to database
+var url;
+if(process.env.USE_DOCKER == `true`){
+    url = `mongodb://${process.env.MONGO_NON_ROOT_USERNAME}:${process.env.MONGO_NON_ROOT_PASSWORD}@mongodb:27017/${process.env.MONGO_INITDB_DATABASE}`
+}else{
+    url = `${process.env.DB_CONNECTION_URL}`
+}
+
+console.log(url);
+
+mongoose.connect(url, options).then(() => {
+    console.log("Connected")
+})
 
 app.use(morgan("dev"));
 app.use(express.json());
