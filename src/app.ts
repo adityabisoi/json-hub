@@ -8,6 +8,8 @@ const app: Application = express()
 const homeRoute = require('./api/routes/home')
 const usersRoute = require('./api/routes/users')
 const testRoute = require('./api/routes/usertest')
+//importing the comments endpoint file
+const commentRoute = require('./api/routes/comments')
 
 // Connect to database
 mongoose.connect(`${process.env.DB_CONNECTION_URL}`,
@@ -35,6 +37,8 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 app.use('/', homeRoute)
 app.use('/users', usersRoute)
 app.use('/usertest', testRoute)
+//Routing the app to use the comments endpoint
+app.use('/comments',commentRoute)
 
 // Handle error
 interface ErrorWithStatus extends Error {
