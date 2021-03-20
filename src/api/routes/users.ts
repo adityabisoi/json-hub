@@ -9,6 +9,7 @@ router.get('/', (req: Request, res: Response, next: NextFunction) => {
         .then((data: string) => {
             console.log(data)
             res.status(200).json(data)
+            
         })
         .catch((err: string) => {
             console.log(err)
