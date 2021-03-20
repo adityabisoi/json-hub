@@ -1,40 +1,14 @@
 import express, { Application, Request, Response, NextFunction } from 'express'
 import mongoose from 'mongoose'
 const router = express.Router()
+
 const User = require('../routes/user')
-
-
-
 
 router.get('/', (req: Request, res: Response, next: NextFunction) => {
     User.find().exec()
         .then((data: string) => {
             console.log(data)
             res.status(200).json(data)
-            
-        })
-        .catch((err: string) => {
-            console.log(err)
-            res.status(500).json({
-                error: err
-            })
-        })
-})
-
-router.post('/', (req: Request, res: Response, next: NextFunction) => {
-    const user = new User({
-        _id: new mongoose.Types.ObjectId(),
-        first_name: req.body.first_name,
-        last_name: req.body.last_name,
-        email: req.body.email
-    })
-
-    user.save()
-        .then((data: string) => {
-            console.log(data)
-            res.status(201).json({
-                data: data
-            })
         })
         .catch((err: string) => {
             console.log(err)
@@ -64,20 +38,6 @@ router.get('/:userId', (req: Request, res: Response, next: NextFunction) => {
         })
         // Single user invalid
         .catch((err: string) => {
-            console.log(err)
-            res.status(500).json({
-                error: err
-            })
-        })
-})
-
-router.delete('/:userId', (req: Request, res: Response, next: NextFunction) => {
-    const id: any = req.params.userId
-    User.remove({ _id: id }).exec()
-        .then((data: any) => {
-            res.status(200).json(data)
-        })
-        .catch((err: any) => {
             console.log(err)
             res.status(500).json({
                 error: err
