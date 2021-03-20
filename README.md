@@ -35,14 +35,24 @@ Try it out <a href="https://rest-fetch.herokuapp.com/)"><img src="https://github
 </em>
 </h3>
 
+## Installation
+There are two ways of installing the project on your local Machine 🚀
+* Using Docker
+  * Fork and clone the project
+  * Install and configure your [Docker](https://www.docker.com/), following [this](https://docs.docker.com/engine/install/).
+  * Rename `.env.example` to `.env`.
+  * Once docker is installed run the followig commands.
+    * `docker-compose build`
+    * Once the build is complete, run `docker-compose up`
 
-## Installation <img src="https://github.com/Samridhi-98/Images/blob/master/Images/install.svg" width="3%">
-Follow the instructions to get started with the project on your local machine.
-* Fork and clone the project
-* `cd fetch/` and run `npm install` to install dependencies
-* Setup [mongodb atlas](https://www.mongodb.com/cloud/atlas) following [this tutorial](https://dev.to/dalalrohit/how-to-connect-to-mongodb-atlas-using-node-js-k9i)
-* Enter the credentials in `.env.example` and rename it to `.env`.
-* Run `npm run dev` to run the project in development
+* Conventional Setup
+  * Fork and clone the project
+  * `cd fetch/` and run `npm install` to install dependencies
+  * Setup [mongodb atlas](https://www.mongodb.com/cloud/atlas) following [this tutorial](https://dev.to/dalalrohit/how-to-connect-to-mongodb-atlas-using-node-js-k9i)
+  * Enter the credentials in `.env.example` and rename it to `.env`.
+  * Make sure to set `USE_DOCKER= false` in `.env` file.
+  * Run `npm run dev` to run the project in development
+
 
 ## Testing <img src="https://github.com/Samridhi-98/Images/blob/master/Images/test.svg" width="3%">
 * The endpoint `usertest` which follows the same schema as the `users/` endpoint, must be used for testing
