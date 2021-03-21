@@ -1,6 +1,7 @@
 import express, { Application, Request, Response, NextFunction } from 'express'
-var dateFormat = require('dateformat');
+import mongoose from 'mongoose'
 const router = express.Router()
+import dateFormat from 'dateformat'
 
 const User = require('../routes/user')
 
@@ -46,18 +47,9 @@ router.get('/:userId', (req: Request, res: Response, next: NextFunction) => {
 })
 
 router.post('/', (req: Request, res: Response, next: NextFunction) => {
-    const user = new User({
-        first_name: req.body.first_name,
-        last_name: req.body.last_name,
-        email: req.body.email
-    })
-
-    res.status(200).json({
-        first_name:user.first_name,
-        last_name:user.last_name,
-        email:user.email,
-        timestamp:dateFormat(new Date(), "yyyy-mm-dd HH-MM")
-    })
+    var userData=req.body
+    userData['timestamp']=dateFormat(new Date(), "yyyy-mm-dd HH-MM")
+    res.status(200).json(userData)
 })
 
 module.exports = router
