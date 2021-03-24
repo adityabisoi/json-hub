@@ -54,4 +54,8 @@ router.patch('/', (req: Request, res: Response, next: NextFunction) => {
     res.status(200).json(jsonData)
 })
 
+router.delete('/:userId', (req: Request, res: Response, next: NextFunction) => {
+    res.status(204).json()
+})
+
 module.exports = router
