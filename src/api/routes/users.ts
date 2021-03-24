@@ -3,13 +3,14 @@ import mongoose from 'mongoose'
 const router = express.Router()
 import dateFormat from 'dateformat'
 
-const User = require('../routes/user')
+const User = require('../models/user')
 
 router.get('/', (req: Request, res: Response, next: NextFunction) => {
     User.find().exec()
         .then((data: string) => {
             console.log(data)
             res.status(200).json(data)
+            
         })
         .catch((err: string) => {
             console.log(err)
@@ -46,10 +47,18 @@ router.get('/:userId', (req: Request, res: Response, next: NextFunction) => {
         })
 })
 
+
 router.post('/', (req: Request, res: Response, next: NextFunction) => {
     var userData=req.body
     userData['timestamp']=dateFormat(new Date(), "yyyy-mm-dd HH-MM")
     res.status(200).json(userData)
+)}
+            
+router.patch('/', (req: Request, res: Response, next: NextFunction) => {
+    var jsonData=req.body
+    jsonData['timestamp']=dateFormat(new Date(), "yyyy-mm-dd HH-MM")
+    
+    res.status(200).json(jsonData)
 })
 
 module.exports = router
