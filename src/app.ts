@@ -9,6 +9,7 @@ const homeRoute = require("./api/routes/home");
 const usersRoute = require("./api/routes/users");
 const testRoute = require("./api/routes/usertest");
 const taskRoute = require("./api/routes/tasks"); //include tasks route
+const photoRoute = require("./api/routes/photos");
 
 const options = {
   useNewUrlParser: true,
@@ -56,6 +57,7 @@ app.use("/", homeRoute);
 app.use("/users", usersRoute);
 app.use("/usertest", testRoute);
 app.use("/tasks", taskRoute); // Added task route
+app.use("/photos",photoRoute)
 
 // Handle error
 interface ErrorWithStatus extends Error {
