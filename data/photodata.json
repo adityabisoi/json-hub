@@ -1,0 +1,45 @@
+{
+    "data": [
+      {
+        "name": "red robot",
+        "picture": "https://robohash.org/1"
+      },
+      {
+        "name": "yellow robot",
+        "picture": "https://robohash.org/2"
+      },
+      {
+        "name": "purple male robot",
+        "picture": "https://robohash.org/3"
+      },
+      {
+        "name": "purple female robot",
+        "picture": "https://robohash.org/4"
+      },
+      {
+        "name": "green antena robot",
+        "picture": "https://robohash.org/5"
+      },
+      {
+        "name": "yellow son robot",
+        "picture": "https://robohash.org/6"
+      },
+      {
+        "name": "green uncle robot",
+        "picture": "https://robohash.org/7"
+      },
+      {
+        "name": "gray robot",
+        "picture": "https://robohash.org/8"
+      },
+      {
+        "name": "pink grand father robot",
+        "picture": "https://robohash.org/9"
+      },
+      {
+        "name": "green small robot",
+        "picture": "https://robohash.org/10"
+      }
+    ]
+  }
+  
