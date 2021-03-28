@@ -48,9 +48,58 @@ There are two ways of installing the project on your local Machine 🚀
 * Conventional Setup
   * Fork and clone the project
   * `cd fetch/` and run `npm install` to install dependencies
-  * Setup [mongodb atlas](https://www.mongodb.com/cloud/atlas) following [this tutorial](https://dev.to/dalalrohit/how-to-connect-to-mongodb-atlas-using-node-js-k9i)
-  * Enter the credentials in `.env.example` and rename it to `.env`.
-  * Make sure to set `USE_DOCKER= false` in `.env` file.
+  
+  * There are two ways of setting the mongodb connection 🍃
+    * Using MongoDB Atlas URI :
+      * Setup [mongodb atlas](https://www.mongodb.com/cloud/atlas) following [this tutorial](https://dev.to/dalalrohit/how-to-connect-to-mongodb-atlas-using-node-js-k9i)
+      * Enter the credentials in `.env.example` and rename it to `.env`.
+      * Make sure to set `USE_DOCKER= false` in `.env` file.
+    * Using local MongoDB server :
+      * Download the [MongoDB MSI Installer Package](https://www.mongodb.com/try/download/community). Make sure you select MSI as the package you want to download.
+      * Install MongoDB with the Installation Wizard
+        * Navigate to your downloads folder and double click on the .msi package you just downloaded
+        * Click <strong>Next</strong> to start installation.
+        * Accept the licence agreement then click <strong>Next</strong>.
+        * Select the <strong>Complete</strong> setup.
+        * Select <strong>Run service as Network Service user</strong> and make a note of the data directory, we’ll need this later.
+        * We won’t need Mongo Compass, so deselect it and click <strong>Next</strong>.
+        * Click <strong>Install</strong> to begin installation.
+        * Hit <strong>Finish</strong> to complete installation.
+      * Create the Data Folders to Store our Databases
+        * Navigate to the C Drive on your PC and create a new folder called <strong>data</strong> here.
+        * Inside the data folder you just created, create another folder called <strong>db</strong>.
+      * Setup Alias Shortcuts for Mongo and Mongod
+        * Open your terminal running Git Bash.
+        * Change directory to your home directory with the following command: 
+          
+          `cd ~`
+        * Here, we’re going to create a file called .bash_profile using the following command: 
+        
+          `touch .bash_profile`
+        * Open the newly created .bash_profile with vim using the following command: Open the newly created .bash_profile with vim using the following command:
+
+          `vim .bash_profile`
+        * In vim, hit the <strong>I</strong> key on the keyboard to enter insert mode.
+        * In your explorer go to C → Program Files → MongoDB → Server . Now you should see the version of your MongoDB.
+        * Paste in the following code into vim, make sure your replace the 4.0 with your version that you see in explorer
+
+          `alias mongod="/c/Program\ files/MongoDB/Server/4.0/bin/mongod.exe"`
+
+
+          `alias mongo="/c/Program\ Files/MongoDB/Server/4.0/bin/mongo.exe"`
+        * Hit the Escape key on your keyboard to exit the insert mode. Then type to save and exit Vim.
+
+          `:wq!`
+      * Verify That Setup was Successful 
+        * Close down the current terminal and quit the application.
+        * Re-launch the terminal.
+        * Type the following commands into the terminal:
+            
+            `mongo --version`
+        * If you see something that looks like <strong>bash mongo command not found</strong>, make sure to check all the previous steps.
+      * Enter the credentials in `.env.example` and rename it to `.env`.
+      * Make sure to set `USE_DOCKER= false` in `.env` file.
+  
   * Run `npm run dev` to run the project in development
 
 
