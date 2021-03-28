@@ -1,0 +1,25 @@
+
+.header{
+    background-image:linear-gradient(#1D2D50,rgba(0,0,0,1));
+    /* background-color: #1D2D50 !important; */
+    background-size: cover !important;
+    background-position: center !important;
+    height: 70vh !important;
+}
+.title{
+    padding-top: 20vh;
+    
+    margin-bottom: 5vh;
+    font-size: 5em;
+    font-weight: 0.1em;
+    text-align: center;
+    color: white;
+
+}
+.description{
+    text-align: center;
+    font-size: 1.5em;
+    color: white;
+    margin: 0vh 20vw;
+    
+}

@@ -1,9 +1,15 @@
 import express, { Application, Request, Response, NextFunction } from "express";
 import morgan from "morgan";
 import mongoose from "mongoose";
+import path from "path";
 require("dotenv").config();
 
 const app: Application = express();
+app.use(express.static(__dirname + '/public'));
+app.set("views",path.join(__dirname,"views"));
+app.set("view engine","ejs");
+
+
 
 const homeRoute = require("./api/routes/home");
 const usersRoute = require("./api/routes/users");
