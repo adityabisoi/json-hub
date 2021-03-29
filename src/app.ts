@@ -2,6 +2,8 @@ import express, { Application, Request, Response, NextFunction } from "express";
 import morgan from "morgan";
 import mongoose from "mongoose";
 import path from "path";
+
+
 require("dotenv").config();
 
 const app: Application = express();
