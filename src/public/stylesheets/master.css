@@ -15,6 +15,34 @@ body {
   background-position: center !important;
   height: 70vh !important;
 }
+/* Navbar */
+.main-nav{
+    float: right;
+    margin-top: 2vh;
+    padding-right:2vh;
+}
+.main-nav li{
+    display: inline;
+    margin-left: 5vh;
+    font-size: 1.2em; 
+}
+.main-nav li a:link,
+.main-nav li a:visited{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 10px;
+    transition: border-bottom 0.5s;
+}
+.main-nav li a:hover,
+.main-nav li a:active{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    border-bottom: 2px solid white;
+}
+/* ---Navbar end--- */
 .title {
   padding-top: 20vh;
   /* font-family: "terminal"; */
