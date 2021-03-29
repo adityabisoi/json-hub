@@ -33,15 +33,18 @@
                 </ul>
             </div>
         </nav>
-        <p class="title" id="app"></p>
-        <p class="description">
-            A community-owned REST API service for developers. Fetch provides REST API 
-            endpoints which can be easily used during testing 
-            and development without the need for creating sample data manually.
-        </p>
-        <p class="icons">
-            <i class="fab fa-github"></i>
-        </p>     
+        <div class="header-content">
+            <p class="title" id="app"></p>
+            <div class="description">
+                A community-owned REST API service for developers. Fetch provides REST API 
+                endpoints which can be easily used during testing 
+                and development without the need for creating sample data manually.
+            </div>
+            <p class="icons">
+                <i class="fab fa-github"></i>
+            </p>  
+        </div>
+           
     </div>
     <div class="container">
         <% for(let idx=0; idx<data.length ;idx++) {%>
@@ -100,7 +103,9 @@
         <% } %>
         
     </div>
-    
+    <footer>
+        <p>Made with 💖 by me</p>
+    </footer>
     <script src="/scripts/script.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous"></script> -->
 </body>
