@@ -21,12 +21,13 @@ router.get("/", (req: Request, res: Response, next: NextFunction) => {
 router.get("/:index", (req: Request, res: Response, next: NextFunction) => {
   try {
     const idx = req.params.index;
+    const count = req.query.count;
     console.log("index: ", idx)
-    console.log("data: ", data.data.length)
+    console.log("count: ", count);
     if (data.data.length > idx) {
-      res.status(200).json(data.data[idx]);
+      res.status(200).json({ data: data.data[idx] });
     } else {
-      res.json({ message: "No data found at the given index" })
+      res.status(400).json({ message: "No data found at the given index" })
     }
   }
   catch (err) {
