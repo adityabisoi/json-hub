@@ -54,4 +54,25 @@ router.patch('/', (req: Request, res: Response, next: NextFunction) => {
     res.status(200).json(jsonData)
 })
 
+router.delete('/:userId', (req: Request, res: Response, next: NextFunction) => {
+    const id: any = req.params.userId;
+    User.findById(id).exec()
+        .then((data: string) => {
+            if (data) {
+                res.status(204).json()
+            }
+            else {
+                res.status(404).json({
+                    message: 'User ID does not exist'
+                })
+            }
+        })
+        .catch((err: string) => {
+            console.log(err)
+            res.status(500).json({
+                error: err
+            })
+        })
+})
+
 module.exports = router
