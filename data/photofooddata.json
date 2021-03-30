@@ -1,0 +1,79 @@
+{
+    "data": [
+        {
+            "name": "pizza",
+            "taste": "spicy",
+            "picture": "https://source.unsplash.com/Oxb84ENcFfU/1600x900"
+        },
+        {
+            "name": "burger",
+            "taste": "spicy",
+            "picture": "https://b.zmtcdn.com/data/homepage_dish_data/4/6e69685d22c94ffd42ccd7e70e246bd9.png"
+        },
+        {
+            "name": "pasta",
+            "taste": "spicy",
+            "picture": "https://b.zmtcdn.com/data/dish_images/bbdabeeb71f0962aff2d87cfc57860061612437785.png"
+        },
+        {
+            "name": "chicken",
+            "taste": "spicy",
+            "picture": "https://b.zmtcdn.com/data/homepage_dish_data/4/742929dcb631403d7c1c1efad2ca2700.png"
+        },
+        {
+            "name": "chaat",
+            "taste": "spicy",
+            "picture": "https://b.zmtcdn.com/data/dish_images/aebeb88b78a4a83ea9e727f234899bed1602781186.png"
+        },
+        {
+            "name": "fried rice",
+            "taste": "nutty",
+            "picture": "https://b.zmtcdn.com/data/dish_images/924fb7dc50bb19b9cd01a1126bca234b1615960357.png"
+        },
+        {
+            "name": "falooda",
+            "taste": "sweet",
+            "picture": "https://b.zmtcdn.com/data/dish_photos/7ca/a98976a1fc56131e0dd0a0404867b7ca.jpg"
+        },
+        {
+            "name": "ice cream",
+            "taste": "sweet",
+            "picture": "https://source.unsplash.com/3w2AuRZeeSU/"
+        },
+        {
+            "name": "sandwich",
+            "taste": "spicy",
+            "picture": "https://b.zmtcdn.com/data/homepage_dish_data/4/4a04890400b5d7bac101baace5d7e994.png"
+        },
+        {
+            "name": "cake",
+            "taste": "sweet",
+            "picture": "https://source.unsplash.com/kPxsqUGneXQ/"
+        },
+        {
+            "name": "cold drink",
+            "taste": "sweet",
+            "picture": "https://source.unsplash.com/gjaQ7RnVIkM/"
+        },
+        {
+            "name": "juice",
+            "taste": "sweet",
+            "picture": "https://source.unsplash.com/C3aM2Nc7sbI/"
+        },
+        {
+            "name": "chapati",
+            "taste": "nutty",
+            "picture": "https://b.zmtcdn.com/data/dish_photos/db5/8490784a2b2e19ae5dfd2a22efb06db5.jpg"
+        },
+        {
+            "name": "dal fry",
+            "taste": "spicy",
+            "picture": "https://b.zmtcdn.com/data/dish_photos/45e/14b704acd26f122ebe4ac2f9eded045e.jpg"
+        },
+        {
+            "name": "Aloo Parantha",
+            "taste": "spicy",
+            "picture": "https://b.zmtcdn.com/data/dish_photos/001/44befd6cc12b983282bf943b0dcf4001.jpg"
+        }
+    ]
+}
