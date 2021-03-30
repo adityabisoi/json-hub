@@ -47,6 +47,26 @@ router.get('/:userId', (req: Request, res: Response, next: NextFunction) => {
         })
 })
 
+router.post('/', (req: Request, res: Response, next: NextFunction) => {
+    var userData=req.body
+    //validating parameters
+    var error="required ";
+    if (!userData.first_name) {
+        error +=" first_name "
+    }if(!userData.last_name){
+        error +=" last_name "
+    }if(!userData.email){
+        error +=" email "
+    }
+    
+    if(!error){
+        userData['timestamp']=dateFormat(new Date(), "yyyy-mm-dd HH-MM")
+        res.status(200).json(userData)
+    }else{
+        res.status(400).json({error: error})
+    }
+})
+
 router.patch('/', (req: Request, res: Response, next: NextFunction) => {
     var jsonData=req.body
     jsonData['timestamp']=dateFormat(new Date(), "yyyy-mm-dd HH-MM")
