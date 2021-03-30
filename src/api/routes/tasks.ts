@@ -20,14 +20,24 @@ router.get("/", (req: Request, res: Response, next: NextFunction) => {
 //GET request /tasks/index
 router.get("/:index", (req: Request, res: Response, next: NextFunction) => {
   try {
-    const idx = req.params.index;
-    const count = req.query.count;
+    const idx: number = parseInt(req.params.index);
+    let count: any = req.query.count;
     console.log("index: ", idx)
     console.log("count: ", count);
     if (data.data.length > idx) {
-      res.status(200).json({ data: data.data[idx] });
+      if (count) {
+        let result = [];
+        const size: number = idx + parseInt(count);
+        for (let i: any = idx; i < size; i++) {
+          // console.log("insdie loop:  ", data.data[i]);
+          result.push(data.data[i]);
+        }
+        res.status(200).json({ data: result });
+      } else {
+        res.status(200).json({ data: data.data[idx] })
+      }
     } else {
-      res.status(400).json({ message: "No data found at the given index" })
+      res.status(404).json({ message: "No data found at the given index" })
     }
   }
   catch (err) {
