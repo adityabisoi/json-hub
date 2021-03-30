@@ -75,5 +75,10 @@
             "taste": "spicy",
             "picture": "https://b.zmtcdn.com/data/dish_photos/001/44befd6cc12b983282bf943b0dcf4001.jpg"
         }
+    ],
+    "taste": [
+        "spicy",
+        "nutty",
+        "sweet"
     ]
 }

@@ -3,12 +3,37 @@ const data = require("../../../data/photofooddata.json");
 
 const router = express.Router();
 
+/*
+
+/photos/food/taste -> send all the taste category
+
+
+/photos/food -> send all the food items
+
+
+/photos/food?taste={category} -> send items of specific category food
+
+
+*/
+
+// GET request /photos/food/taste route -> available category
+router.get("/taste", (req: Request, res: Response, next: NextFunction) => {
+  try {
+    res.status(200).json(data.taste);
+  } catch (err) {
+    //error handling
+    console.log(err);
+    res.status(500).json({
+      error: err,
+    });
+  }
+});
+
 // GET request /photos/food route
 router.get("/", (req: Request, res: Response, next: NextFunction) => {
   try {
     //if query parameters does not exist then send all food items
     if (!req.query.taste) {
-      console.log(data.data, data);
       res.status(200).json(data.data);
     }
     // If query parameters exist then sending that type of food object
