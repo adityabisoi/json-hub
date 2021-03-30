@@ -27,7 +27,7 @@ router.get("/:index", (req: Request, res: Response, next: NextFunction) => {
     if (data.data.length > idx) {
       res.status(200).json({ data: data.data[idx] });
     } else {
-      res.status(400).json({ message: "No data found at the given index" })
+      res.status(404).json({ message: "No data found at the given index" })
     }
   }
   catch (err) {
