@@ -17,9 +17,9 @@ typewriter
 
 
 function toggle(idx){
-  console.log("button clicked",idx);
+  console.log("button clicked",$("#btn"+idx).html());
   
-  ($(".btn").html()==="READ MORE") ? $(".btn").html("READ LESS") : $(".btn").html("READ MORE"); 
+  ($("#btn"+idx).html()==="READ MORE") ? $("#btn"+idx).html("READ LESS") : $("#btn"+idx).html("READ MORE"); 
   $("#"+idx).toggle(1000);
   
   

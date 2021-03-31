@@ -4,14 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Prettier -->
-    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?autoload=true&amp;skin=sunburst&amp;lang=css" defer></script>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/stylesheets/master.css"/>
-    <!-- Semantic ui  -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" /> -->
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <!-- Typerwriter -->
@@ -20,15 +16,8 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- <div class="ui menu">
-        <div class="right menu">
-            <a class="item">Home</a>
-            <a class="item">Message</a>
-            <a class="item">Others</a>
-        </div> 
-    </div> -->
     <div class="header">
-        <nav>
+        <!-- <nav>
             <div class="">
                 <ul class="main-nav">
                     <li><a href="#">Home</a></li>
@@ -36,7 +25,7 @@
                     <li><a href="#">Other</a></li>
                 </ul>
             </div>
-        </nav>
+        </nav> -->
         <div class="header-content">
             <p class="title" id="app"></p>
             <div class="description">
@@ -55,8 +44,9 @@
                 
                 <div class="content">
                     <h1><u><%= data[outer].heading %></u></h1>
+
                     <p>
-                        The task shows dummy data realted to daily life activities.
+                        <%= data[outer].desc %>
                     </p>
                     <div class="routes" id=<%=outer%>>
                         <% data[outer].routes.forEach(function(routeinfo){ %>
@@ -91,12 +81,13 @@
                     </div> 
                     
                 </div>
-                <button class="btn" onclick="toggle(<%=outer%>)" >READ MORE</button>
+                <% const btnid = "btn"+outer%>
+                <button class="btn" id=<%=btnid%> onclick="toggle(<%=outer%>)" >READ MORE</button>
         <% } %>
         
     </div>
     <footer>
-        <p>Made with 💖 by me</p>
+        <p>Made with 💖 by a Homo Sapien</p>
     </footer>
     
     <script src="/scripts/script.js"></script>
