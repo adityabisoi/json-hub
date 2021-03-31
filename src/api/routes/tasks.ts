@@ -10,7 +10,7 @@ router.get("/", (req: Request, res: Response, next: NextFunction) => {
     // console.log("/-count: ", count);
     if (count) {
       let result = [];
-      for (let i: any = 0; i < parseInt(count); i++) {
+      for (let i: any = 0; i < parseInt(count) && i < data.data.length; i++) {
         result.push(data.data[i]);
       }
       res.status(200).json({ data: result });
@@ -37,7 +37,7 @@ router.get("/:index", (req: Request, res: Response, next: NextFunction) => {
       if (count) {
         let result = [];
         const size: number = idx + parseInt(count);
-        for (let i: any = idx; i < size; i++) {
+        for (let i: any = idx; i < size && i < data.data.length; i++) {
           // console.log("insdie loop:  ", data.data[i]);
           result.push(data.data[i]);
         }
