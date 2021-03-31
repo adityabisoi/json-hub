@@ -6,11 +6,20 @@ const router = express.Router();
 // GET request /tasks route
 router.get("/", (req: Request, res: Response, next: NextFunction) => {
   try {
-    console.log(data);
-    res.status(200).json(data);
+    let count: any = req.query.count;
+    // console.log("/-count: ", count);
+    if (count) {
+      let result = [];
+      for (let i: any = 0; i < parseInt(count); i++) {
+        result.push(data.data[i]);
+      }
+      res.status(200).json({ data: result });
+    } else {
+      res.status(200).json(data);
+    }
   } catch (err) {
     //error handling
-    console.log(err);
+    // console.log(err);
     res.status(500).json({
       error: err,
     });
@@ -22,8 +31,8 @@ router.get("/:index", (req: Request, res: Response, next: NextFunction) => {
   try {
     const idx: number = parseInt(req.params.index);
     let count: any = req.query.count;
-    console.log("index: ", idx)
-    console.log("count: ", count);
+    // console.log("index: ", idx)
+    // console.log("count: ", count);
     if (data.data.length > idx) {
       if (count) {
         let result = [];
