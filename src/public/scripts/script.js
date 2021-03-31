@@ -14,3 +14,17 @@ typewriter
   .typeString('REST FETCH')
   .pauseFor(2000)
   .start();
+
+
+function toggle(idx){
+  console.log("button clicked",idx);
+  
+  ($(".btn").html()==="READ MORE") ? $(".btn").html("READ LESS") : $(".btn").html("READ MORE"); 
+  $("#"+idx).toggle(1000);
+  
+  
+}
+
+
+ 
+ 

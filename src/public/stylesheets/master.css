@@ -8,6 +8,7 @@ body {
   font-family: "terminal";
   margin: 0;
 }
+
 .header {
   display: block;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
@@ -68,6 +69,9 @@ body {
   margin-bottom: 2vh;
   
 }
+.header-content a{
+  color: white;
+}
 .description {
   text-align: justify;
   font-size: 1.5em;
@@ -84,9 +88,27 @@ body {
   
   padding: 5vh;
 }
+.content{
+  margin-bottom: 2vh;
+}
+
+.routes{
+  display: none;
+}
+.container .btn{
+  text-decoration: none;
+  background-color:transparent;
+  text-transform: uppercase;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 1vh;
+  font-size: 1em;
+  color: white;
+}
+
+
 .row{
   display: flex;
-  
 }
 
 .left-section {
@@ -100,13 +122,16 @@ body {
   width: 30vw;
   margin: auto;
   align-items: center;
+  
 }
+
 .terminal-bar {
   width: 100%;
   height: 35px;
   background: linear-gradient(270deg, #ebebeb, #d4d4d4);
   margin: 0 auto;
   float: none;
+  
   border-radius: 10px 10px 0 0;
 }
 .terminal-bar-red,
@@ -140,6 +165,8 @@ body {
   color: #fff;
   font-family: monospace;
   font-size: 15px;
+  height: 30vh;
+  overflow: auto;
 }
 .terminal-content p {
   margin: 0;
@@ -167,3 +194,4 @@ footer{
     width: 100%;
   }
 }
+

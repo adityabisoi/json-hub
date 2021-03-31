@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Prettier -->
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?autoload=true&amp;skin=sunburst&amp;lang=css" defer></script>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/stylesheets/master.css"/>
     <!-- Semantic ui  -->
@@ -41,71 +45,60 @@
                 and development without the need for creating sample data manually.
             </div>
             <p class="icons">
-                <i class="fab fa-github"></i>
+                <a  href="https://github.com/adityabisoi/REST-fetch"><i class="fab fa-github"></i></a>
             </p>  
         </div>
            
     </div>
     <div class="container">
-        <% for(let idx=0; idx<data.length ;idx++) {%>
-            <% if(true){%>
-                <div class="row">
-                    <div class="left-section">
-                        <h1><%= data[idx].heading %></h1>
-                        <p>
-                            <%= data[idx].content %>
-                        </p>
-                    </div>
-                    <div class="right-section">
-                        <div class="wrap">
-                            <div class="terminal">
-                                <div class="terminal-bar">
-                                    <div class="terminal-bar-red"></div>
-                                    <div class="terminal-bar-yellow"></div>
-                                    <div class="terminal-bar-green"></div>
+        <% for(let outer=0; outer<data.length ;outer++) {%>
+                
+                <div class="content">
+                    <h1><u><%= data[outer].heading %></u></h1>
+                    <p>
+                        The task shows dummy data realted to daily life activities.
+                    </p>
+                    <div class="routes" id=<%=outer%>>
+                        <% data[outer].routes.forEach(function(routeinfo){ %>
+                            <div class="row">
+                            
+                                <div class="left-section">
+                                    <h3><%= routeinfo.route %></h3>
+                                    <p>
+                                        <%= routeinfo.content %>
+                                    </p>
                                 </div>
-                                <div class="terminal-content">
-                                    <p>$ pwd</p>
-                                    <p><%= data[idx].terminalcontent %></p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-            <%} else{%>
-                <div class="row">
-                    <div class="left-section">
-                        <div class="wrap">
-                            <div class="terminal">
-                                <div class="terminal-bar">
-                                    <div class="terminal-bar-red"></div>
-                                    <div class="terminal-bar-yellow"></div>
-                                    <div class="terminal-bar-green"></div>
-                                </div>
-                                <div class="terminal-content">
-                                    <p>$ pwd</p>
-                                    <p><%= data[idx].terminalcontent %></p>
+                                <div  class="right-section" >
+                                    <div class="wrap">
+                                        <div class="terminal">
+                                            <div class="terminal-bar">
+                                                <div class="terminal-bar-red"></div>
+                                                <div class="terminal-bar-yellow"></div>
+                                                <div class="terminal-bar-green"></div>
+                                            </div>
+                                            <div class="terminal-content">
+                                                <!-- <p>$ pwd</p> -->
+                                                
+                                                <pre ><%=routeinfo.output%></pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
                                 </div>
                             </div>
-                        </div>  
-                    </div>
-                    <div class="right-section">
-                        <h1><%= data[idx].heading %></h1>
-                        <p>
-                            <%= data[idx].content %>
-                        </p>
-                    </div>
-                   
+                        <% }) %>
+                    </div> 
+                    
                 </div>
-            <%}%>
+                <button class="btn" onclick="toggle(<%=outer%>)" >READ MORE</button>
         <% } %>
         
     </div>
     <footer>
         <p>Made with 💖 by me</p>
     </footer>
+    
     <script src="/scripts/script.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous"></script> -->
 </body>
