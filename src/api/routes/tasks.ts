@@ -26,6 +26,7 @@ router.get("/", (req: Request, res: Response, next: NextFunction) => {
   }
 });
 
+
 //GET request /tasks/index
 router.get("/:index", (req: Request, res: Response, next: NextFunction) => {
   try {
@@ -48,6 +49,7 @@ router.get("/:index", (req: Request, res: Response, next: NextFunction) => {
     } else {
       res.status(404).json({ message: "No data found at the given index" })
     }
+
   }
   catch (err) {
     console.log("tasks: ", err);

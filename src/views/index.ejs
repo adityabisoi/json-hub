@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico"/>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/stylesheets/master.css"/>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <!-- Typerwriter -->
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+       
+    <title>REST FETCH</title>
+</head>
+<body>
+    <div class="header">
+        <!-- <nav>
+            <div class="">
+                <ul class="main-nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Other</a></li>
+                </ul>
+            </div>
+        </nav> -->
+        <div class="header-content">
+            <p class="title" id="app"></p>
+            <div class="description">
+                A community-owned REST API service for developers. Fetch provides REST API 
+                endpoints which can be easily used during testing 
+                and development without the need for creating sample data manually.
+            </div>
+            <p class="icons">
+                <a  href="https://github.com/adityabisoi/REST-fetch"><i class="fab fa-github"></i></a>
+            </p>  
+        </div>
+           
+    </div>
+    <div class="container">
+        <% for(let outer=0; outer<data.length ;outer++) {%>
+                
+                <div class="content">
+                    <h1><u><%= data[outer].heading %></u></h1>
+
+                    <p>
+                        <%= data[outer].desc %>
+                    </p>
+                    <div class="routes" id=<%=outer%>>
+                        <% data[outer].routes.forEach(function(routeinfo){ %>
+                            <div class="row">
+                            
+                                <div class="left-section">
+                                    <h3><%= routeinfo.route %></h3>
+                                    <p>
+                                        <%= routeinfo.content %>
+                                    </p>
+                                </div>
+                                <div  class="right-section" >
+                                    <div class="wrap">
+                                        <div class="terminal">
+                                            <div class="terminal-bar">
+                                                <div class="terminal-bar-red"></div>
+                                                <div class="terminal-bar-yellow"></div>
+                                                <div class="terminal-bar-green"></div>
+                                            </div>
+                                            <div class="terminal-content">
+                                                <!-- <p>$ pwd</p> -->
+                                                
+                                                <pre ><%=routeinfo.output%></pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                </div>
+                            </div>
+                        <% }) %>
+                    </div> 
+                    
+                </div>
+                <% const btnid = "btn"+outer%>
+                <button class="btn" id=<%=btnid%> onclick="toggle(<%=outer%>)" >READ MORE</button>
+        <% } %>
+        
+    </div>
+    <footer>
+        <p>Made with 💖 by a Homo Sapien</p>
+    </footer>
+    
+    <script src="/scripts/script.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous"></script> -->
+</body>
+</html>
