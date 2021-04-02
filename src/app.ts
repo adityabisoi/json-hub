@@ -18,6 +18,7 @@ const usersRoute = require("./api/routes/users");
 const testRoute = require("./api/routes/usertest");
 const taskRoute = require("./api/routes/tasks"); //include tasks route
 const photoRoute = require("./api/routes/photos");
+const foodPhotoRoute = require("./api/routes/foodphotos"); //include foodphotos route
 
 const options = {
   useNewUrlParser: true,
@@ -26,17 +27,17 @@ const options = {
 };
 // Connect to database
 var url;
-if(process.env.USE_DOCKER == `true`){
-    url = `mongodb://${process.env.MONGO_NON_ROOT_USERNAME}:${process.env.MONGO_NON_ROOT_PASSWORD}@mongodb:27017/${process.env.MONGO_INITDB_DATABASE}`
-}else{
-    url = `${process.env.DB_CONNECTION_URL}`
+if (process.env.USE_DOCKER == `true`) {
+  url = `mongodb://${process.env.MONGO_NON_ROOT_USERNAME}:${process.env.MONGO_NON_ROOT_PASSWORD}@mongodb:27017/${process.env.MONGO_INITDB_DATABASE}`;
+} else {
+  url = `${process.env.DB_CONNECTION_URL}`;
 }
 
 console.log(url);
 
 mongoose.connect(url, options).then(() => {
-    console.log("Connected")
-})
+  console.log("Connected");
+});
 
 app.use(morgan("dev"));
 app.use(express.json());
@@ -65,7 +66,8 @@ app.use("/", homeRoute);
 app.use("/users", usersRoute);
 app.use("/usertest", testRoute);
 app.use("/tasks", taskRoute); // Added task route
-app.use("/photos",photoRoute)
+app.use("/photos/food", foodPhotoRoute); //Added foodphoto route
+app.use("/photos", photoRoute);
 
 // Handle error
 interface ErrorWithStatus extends Error {
