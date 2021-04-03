@@ -36,6 +36,7 @@ router.get("/:userId", (req: Request, res: Response, next: NextFunction) => {
                 });
             }
         })
+        // Single user invalid
         .catch((err: string) => {
             console.log(err);
             res.status(500).json({
@@ -44,13 +45,11 @@ router.get("/:userId", (req: Request, res: Response, next: NextFunction) => {
         });
 });
 
-router.patch("/:id", (req: Request, res: Response, next: NextFunction) => {
+router.patch("/:userId", (req: Request, res: Response, next: NextFunction) => {
     const jsonData=req.body;
-    
-    // jsonData['timestamp']=dateFormat(new Date(), "yyyy-mm-dd HH-MM")
-    User.findById(req.params.id).exec().then((user:any)=>{
+    User.findById(req.params.userId).exec().then((user:any)=>{
         
-        const { first_name=user.first_name,last_name=user.last_name,email=user.email }=jsonData;
+        const { first_name=user.first_name,last_name=user.last_name,email=user.email } = jsonData;
         
         res.status(200).json({ first_name:first_name,
             last_name:last_name,
