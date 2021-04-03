@@ -2,5 +2,5 @@
 **/dist
 **/package.json
 **/package-lock.json
-**/.eslintrc.json
+**/.eslintrc
 **/tsconfig.json

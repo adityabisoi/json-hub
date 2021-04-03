@@ -1,83 +1,83 @@
-import express, { Application, Request, Response, NextFunction } from 'express'
-import mongoose from 'mongoose'
-const router = express.Router()
+import express, { Application, Request, Response, NextFunction } from "express";
+import mongoose from "mongoose";
+const router = express.Router();
 
-const User = require('../models/user')
+const User = require("../models/user");
 
-router.get('/', (req: Request, res: Response, next: NextFunction) => {
+router.get("/", (req: Request, res: Response, next: NextFunction) => {
     User.find().exec()
         .then((data: string) => {
-            console.log(data)
-            res.status(200).json(data)
+            console.log(data);
+            res.status(200).json(data);
         })
         .catch((err: string) => {
-            console.log(err)
+            console.log(err);
             res.status(500).json({
-                error: err
-            })
-        })
-})
+                error: err,
+            });
+        });
+});
 
-router.post('/', (req: Request, res: Response, next: NextFunction) => {
+router.post("/", (req: Request, res: Response, next: NextFunction) => {
     const user = new User({
         _id: new mongoose.Types.ObjectId(),
         first_name: req.body.first_name,
         last_name: req.body.last_name,
-        email: req.body.email
-    })
+        email: req.body.email,
+    });
 
     user.save()
         .then((data: string) => {
-            console.log(data)
+            console.log(data);
             res.status(201).json({
-                data: data
-            })
+                data: data,
+            });
         })
         .catch((err: string) => {
-            console.log(err)
+            console.log(err);
             res.status(500).json({
-                error: err
-            })
-        })
-})
+                error: err,
+            });
+        });
+});
 
-router.get('/:testId', (req: Request, res: Response, next: NextFunction) => {
-    const id: string = req.params.testId
+router.get("/:testId", (req: Request, res: Response, next: NextFunction) => {
+    const id: string = req.params.testId;
 
     User.findById(id).exec()
         .then((data: string) => {
-            console.log(data)
+            console.log(data);
             if (data) {
                 res.status(200).json({
-                    data: data
-                })
+                    data: data,
+                });
             }
             else {
                 res.status(404).json({
-                    message: 'Id does not exist'
-                })
+                    message: "Id does not exist",
+                });
             }
         })
         .catch((err: string) => {
-            console.log(err)
+            console.log(err);
             res.status(500).json({
-                error: err
-            })
-        })
-})
+                error: err,
+            });
+        });
+});
 
-router.delete('/:testId', (req: Request, res: Response, next: NextFunction) => {
-    const id: any = req.params.testId
+router.delete("/:testId", (req: Request, res: Response, next: NextFunction) => {
+    const id: any = req.params.testId;
     User.remove({ _id: id }).exec()
         .then((data: any) => {
-            res.status(200).json(data)
+            res.status(200).json(data);
         })
         .catch((err: any) => {
-            console.log(err)
+            console.log(err);
             res.status(500).json({
-                error: err
-            })
-        })
-})
+                error: err,
+            });
+        });
+});
 
-module.exports = router
+module.exports = router;
