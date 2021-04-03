@@ -7,7 +7,7 @@ import path from "path";
 require("dotenv").config();
 
 const app: Application = express();
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + "/public"));
 app.set("views",path.join(__dirname,"views"));
 app.set("view engine","ejs");
 
@@ -26,7 +26,7 @@ const options = {
   useFindAndModify: false,
 };
 // Connect to database
-var url;
+let url;
 if (process.env.USE_DOCKER == `true`) {
   url = `mongodb://${process.env.MONGO_NON_ROOT_USERNAME}:${process.env.MONGO_NON_ROOT_PASSWORD}@mongodb:27017/${process.env.MONGO_INITDB_DATABASE}`;
 } else {
@@ -44,7 +44,7 @@ app.use(express.json());
 app.use(
   express.urlencoded({
     extended: false,
-  })
+  }),
 );
 
 // Add CORS
@@ -52,7 +52,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header(
     "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+    "Origin, X-Requested-With, Content-Type, Accept, Authorization",
   );
   if (req.method === "OPTIONS") {
     res.header("Access-Control-Allow-Methods", "GET, POST, PUT, PATCH, DELETE");
@@ -87,7 +87,7 @@ app.use(
         message: error.message,
       },
     });
-  }
+  },
 );
 
 module.exports = app;
