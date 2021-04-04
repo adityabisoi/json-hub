@@ -15,14 +15,24 @@
         "@typescript-eslint/no-explicit-any": [
             "off"
         ],
-        "@typescript-eslint/no-unused-expressions": [
-            "off"
-        ],
         "@typescript-eslint/no-var-requires": [
             "off"
         ],
         "@typescript-eslint/no-use-before-define": [
             "off"
+        ],
+        "@typescript-eslint/no-unused-expressions": [
+            "error"
+        ],
+        "sort-imports": ["error", {
+            "ignoreCase": false,
+            "ignoreDeclarationSort": false,
+            "ignoreMemberSort": false,
+            "memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
+            "allowSeparatedGroups": true
+        }],
+        "space-infix-ops": [
+            "error"
         ],
         "comma-dangle": [
             "error",
@@ -33,9 +43,6 @@
         ],
         "no-empty-pattern": [
             "off"
-        ],
-        "no-undef": [
-            "error"
         ],
         "no-var": [
             "error"
@@ -65,11 +72,11 @@
             "off"
         ],
         "space-before-function-paren": [
-            "off"
+            "error"
         ],
         "indent": [
-            "off"
-        ],
+            "error"
+        ]
     },
     "env": {
         "browser": true,

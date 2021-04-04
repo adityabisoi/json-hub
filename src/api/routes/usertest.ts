@@ -1,4 +1,4 @@
-import express, { Application, Request, Response, NextFunction } from "express";
+import express, { Application, NextFunction, Request, Response } from "express";
 import mongoose from "mongoose";
 const router = express.Router();
 

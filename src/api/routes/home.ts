@@ -1,6 +1,6 @@
-import express, { Application, Request, Response, NextFunction } from "express";
+import express, { Application, NextFunction, Request, Response } from "express";
 //data to be shown on website
-const data = require("../../views/data.js");
+import data from "../../views/data.js";
 const router = express.Router();
 
 

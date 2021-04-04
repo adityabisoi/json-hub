@@ -1,4 +1,4 @@
-import express, { Request, Response, NextFunction } from "express";
+import express, { NextFunction, Request, Response } from "express";
 const router = express.Router();
 
 const User = require("../models/user");
@@ -46,19 +46,19 @@ router.get("/:userId", (req: Request, res: Response, next: NextFunction) => {
 });
 
 router.patch("/:userId", (req: Request, res: Response, next: NextFunction) => {
-    const jsonData=req.body;
+    const jsonData = req.body;
     User.findById(req.params.userId).exec().then((user:any)=>{
         
-        const { first_name=user.first_name,last_name=user.last_name,email=user.email } = jsonData;
+        const { first_name = user.first_name,last_name = user.last_name,email = user.email } = jsonData;
         
         res.status(200).json({ first_name:first_name,
             last_name:last_name,
             email:email,
         });
     })
-    .catch((err:string)=>{
-        res.status(404).json({ message:"user not found" });
-    });
+        .catch((err:string)=>{
+            res.status(404).json({ message:"user not found" });
+        });
     
 });
 
