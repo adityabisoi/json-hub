@@ -97,8 +97,8 @@ There are two ways of installing the project on your local Machine 🚀
             
             `mongo --version`
         * If you see something that looks like <strong>bash mongo command not found</strong>, make sure to check all the previous steps.
-      * Enter the credentials in `.env.example` and rename it to `.env`.
-      * Make sure to set `USE_DOCKER= false` in `.env` file.
+      * Enter the credentials in `.env`.
+      * Make sure to set `USE_DOCKER=false` in `.env` file.
   
   * Run `npm run dev` to run the project in development
 
