@@ -9,7 +9,7 @@ router.get('/', (req: Request, res: Response, next: NextFunction) => {
 fs.readFile('./src/api/routes/comment.json', (err: string, data: string) => {
     if (err) {
       console.log(err)
-      res.status(500).json({
+      return res.status(500).json({
           error: err
       })
     }
@@ -20,33 +20,6 @@ fs.readFile('./src/api/routes/comment.json', (err: string, data: string) => {
   });
 })
 
-// This endpoint supports fetching comments with their id
-router.get('/:commentId', (req: Request, res: Response, next: NextFunction) => {
-    const id: string = req.params.commentId
-    fs.readFile('./src/api/routes/comment.json', (err: string, data: string) => {
-        if (err) {
-          console.log(err)
-          res.status(500).json({
-              error: err
-          })
-        }
-        let comments = JSON.parse(data);
-        let found: boolean=false
-        for(let comment of comments.comments){
-          //if the id entered is found
-            if(comment._id == id ){
-              res.status(200).json(comment)
-              found=true
-              break
-            }
-        }
-        // Incase the id entered is not present
-        if(!found){
-          res.status(404).json({
-              message: 'Id does not exist'
-          })
-        }
-    });
-})
+
 
 module.exports = router
