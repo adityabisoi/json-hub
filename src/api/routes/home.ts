@@ -1,6 +1,6 @@
 import express, { Application, NextFunction, Request, Response } from "express";
 //data to be shown on website
-import data from "../../views/data.js";
+import data from "../../views/data";
 const router = express.Router();
 
 
