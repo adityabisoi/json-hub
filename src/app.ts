@@ -1,6 +1,6 @@
 import express, { Application, NextFunction, Request, Response } from "express";
-import morgan from "morgan";
 import mongoose from "mongoose";
+import morgan from "morgan";
 import path from "path";
 
 require("dotenv").config();
@@ -16,6 +16,7 @@ const testRoute = require("./api/routes/usertest");
 const taskRoute = require("./api/routes/tasks"); //include tasks route
 const photoRoute = require("./api/routes/photos");
 const foodPhotoRoute = require("./api/routes/foodphotos"); //include foodphotos route
+const vehicleRoute = require("./api/routes/vehicles"); //include vehicles route
 
 const options = {
     useNewUrlParser: true,
@@ -65,6 +66,7 @@ app.use("/usertest", testRoute);
 app.use("/tasks", taskRoute); // Added task route
 app.use("/photos/food", foodPhotoRoute); //Added foodphoto route
 app.use("/photos", photoRoute);
+app.use("/vehicles", vehicleRoute); //Added vehicles route
 
 // Handle error
 interface ErrorWithStatus extends Error {

@@ -1,0 +1,42 @@
+{
+    "name": [
+        "swift",
+        "creta",
+        "i20",
+        "city",
+        "amaze",
+        "thar",
+        "scorpio",
+        "bolero",
+        "marazzo",
+        "model s",
+        "model 3",
+        "model x",
+        "model y"
+    ],
+    "manufacturer": [
+        "maruti",
+        "hyundai",
+        "honda",
+        "tata",
+        "mahindra",
+        "renault",
+        "ford",
+        "nissan",
+        "datsun",
+        "kia",
+        "mg",
+        "tesla"
+    ],
+    "type": ["suv", "minivan", "sedan", "cargo van", "minisuv"],
+    "fuel": ["hybrid", "electric", "diesel", "patrol"],
+    "color": ["black", "white", "green", "yellow", "blue", "red", "lime", "olive", "indigo"],
+    "vin": [
+        "U1MTJ97SUBEN55586",
+        "LK54TUF2ATVX14624",
+        "HJ2UNZV1L1SD11839",
+        "7J3HVRVMUXJT75742",
+        "2L2HM22394YH61393"
+    ],
+    "vrm": ["BX22GHM", "BC81XXS", "DI03UGZ", "MK89INV", "TE19HGU", "XR58HRL", "BS02LLL"]
+}
