@@ -1,10 +1,9 @@
 ---
 name: Bug report
 about: Create a report to help us improve
-title: ''
+title: ""
 labels: bug
-assignees: ''
-
+assignees: ""
 ---
 
 **Describe the bug -**
@@ -23,10 +22,11 @@ If needed, share logs related to your problem.
 If applicable, add screenshots/screen recordings to help explain your problem.
 
 **System Information (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
- - Device
+
+-   OS: [e.g. iOS]
+-   Browser [e.g. chrome, safari]
+-   Version [e.g. 22]
+-   Device
 
 **Additional context -**
 Add any other context about the problem here.

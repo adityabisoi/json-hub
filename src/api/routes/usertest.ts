@@ -5,7 +5,8 @@ const router = express.Router();
 const User = require("../models/user");
 
 router.get("/", (req: Request, res: Response, next: NextFunction) => {
-    User.find().exec()
+    User.find()
+        .exec()
         .then((data: string) => {
             console.log(data);
             res.status(200).json(data);
@@ -44,15 +45,15 @@ router.post("/", (req: Request, res: Response, next: NextFunction) => {
 router.get("/:testId", (req: Request, res: Response, next: NextFunction) => {
     const id: string = req.params.testId;
 
-    User.findById(id).exec()
+    User.findById(id)
+        .exec()
         .then((data: string) => {
             console.log(data);
             if (data) {
                 res.status(200).json({
                     data: data,
                 });
-            }
-            else {
+            } else {
                 res.status(404).json({
                     message: "Id does not exist",
                 });
@@ -68,7 +69,8 @@ router.get("/:testId", (req: Request, res: Response, next: NextFunction) => {
 
 router.delete("/:testId", (req: Request, res: Response, next: NextFunction) => {
     const id: any = req.params.testId;
-    User.remove({ _id: id }).exec()
+    User.remove({ _id: id })
+        .exec()
         .then((data: any) => {
             res.status(200).json(data);
         })
