@@ -57,7 +57,6 @@ There are 3 ways to install pre-commit package manager
 After completing the above steps, verify your installation by running
 
 > $ pre-commit --version
-> pre-commit 2.11.1
 
 ### Project Installation
 
