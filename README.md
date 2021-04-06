@@ -38,6 +38,29 @@ Try it out <a href="https://rest-fetch.herokuapp.com/)"><img src="https://github
 
 ## Installation
 
+### Before you setup project, make sure you have pre-commit installed on your machine. Skip the following if you have already installed.
+
+There are 3 ways to install pre-commit package manager
+
+-   Using pip:
+
+> $ pip install pre-commit
+
+-   Using homebrew:
+
+> $ brew install pre-commit
+
+-   Using conda (via conda-forge):
+
+> $ conda install -c conda-forge pre-commit
+
+After completing the above steps, verify your installation by running
+
+> $ pre-commit --version
+> pre-commit 2.11.1
+
+### Project Installation
+
 There are two ways of installing the project on your local Machine 🚀
 
 -   Using Docker
@@ -45,6 +68,8 @@ There are two ways of installing the project on your local Machine 🚀
     -   Fork and clone the project
     -   Install and configure your [Docker](https://www.docker.com/), following [this](https://docs.docker.com/engine/install/).
     -   Rename `.env.example` to `.env`.
+    -   Install the git hook scripts
+        -   `pre-commit install` on terminal
     -   Once docker is installed run the followig commands.
         -   `docker-compose build`
         -   Once the build is complete, run `docker-compose up`
@@ -55,6 +80,8 @@ There are two ways of installing the project on your local Machine 🚀
     -   Setup [mongodb atlas](https://www.mongodb.com/cloud/atlas) following [this tutorial](https://dev.to/dalalrohit/how-to-connect-to-mongodb-atlas-using-node-js-k9i)
     -   Enter the credentials in `.env.example` and rename it to `.env`.
     -   Make sure to set `USE_DOCKER= false` in `.env` file.
+    -   Install the git hook scripts
+        -   `pre-commit install` on terminal
     -   Run `npm run dev` to run the project in development
 
 ## Testing <img src="https://github.com/Samridhi-98/Images/blob/master/Images/test.svg" width="3%">
