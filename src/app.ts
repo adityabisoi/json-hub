@@ -17,6 +17,7 @@ const testRoute = require("./api/routes/usertest");
 const taskRoute = require("./api/routes/tasks"); //include tasks route
 const photoRoute = require("./api/routes/photos");
 const foodPhotoRoute = require("./api/routes/foodphotos"); //include foodphotos route
+const vehicleRoute = require("./api/routes/vehicles"); //include vehicles route
 
 const options = {
     useNewUrlParser: true,
@@ -66,7 +67,11 @@ app.use("/usertest", testRoute);
 app.use("/tasks", taskRoute); // Added task route
 app.use("/photos/food", foodPhotoRoute); //Added foodphoto route
 app.use("/photos", photoRoute);
+
+app.use("/vehicles", vehicleRoute); //Added vehicles route
+
 app.use("/animals", animalRoute);
+
 
 // Handle error
 interface ErrorWithStatus extends Error {
