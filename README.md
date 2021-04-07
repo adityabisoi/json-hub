@@ -44,19 +44,19 @@ There are 3 ways to install pre-commit package manager
 
 -   Using pip:
 
-> $ pip install pre-commit
+`$ pip install pre-commit`
 
 -   Using homebrew:
 
-> $ brew install pre-commit
+`$ brew install pre-commit`
 
 -   Using conda (via conda-forge):
 
-> $ conda install -c conda-forge pre-commit
+`$ conda install -c conda-forge pre-commit`
 
 After completing the above steps, verify your installation by running
 
-> $ pre-commit --version
+`$ pre-commit --version`
 
 ### Project Installation
 
