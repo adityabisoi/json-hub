@@ -1,20 +1,24 @@
 # Related Issue
-- closes #issue goes here
+
+-   closes #issue goes here
 
 # Proposed Changes
-- change 1
-- change 2
+
+-   change 1
+-   change 2
 
 # Additional Info
-- any additional information or context
+
+-   any additional information or context
 
 # Checklist
-- [ ] Tests
-- [ ] Translations
-- [ ] Documentation
+
+-   [ ] Tests
+-   [ ] Translations
+-   [ ] Documentation
 
 # Screenshots
 
-Original                |  Updated
-:---------------------------:|:--------------------------:
-** original screenshot ** | ** updated screenshot **
+|         Original          |         Updated          |
+| :-----------------------: | :----------------------: |
+| ** original screenshot ** | ** updated screenshot ** |

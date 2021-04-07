@@ -7,8 +7,8 @@ require("dotenv").config();
 
 const app: Application = express();
 app.use(express.static(__dirname + "/public"));
-app.set("views",path.join(__dirname,"views"));
-app.set("view engine","ejs");
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "ejs");
 
 const homeRoute = require("./api/routes/home");
 const usersRoute = require("./api/routes/users");
@@ -68,7 +68,7 @@ app.use("/photos", photoRoute);
 
 // Handle error
 interface ErrorWithStatus extends Error {
-  status: number;
+    status: number;
 }
 
 app.use((req: Request, res: Response, next: NextFunction) => {
@@ -77,14 +77,12 @@ app.use((req: Request, res: Response, next: NextFunction) => {
     next(error);
 });
 
-app.use(
-    (error: ErrorWithStatus, req: Request, res: Response, next: NextFunction) => {
-        res.status(error.status || 500).json({
-            error: {
-                message: error.message,
-            },
-        });
-    },
-);
+app.use((error: ErrorWithStatus, req: Request, res: Response, next: NextFunction) => {
+    res.status(error.status || 500).json({
+        error: {
+            message: error.message,
+        },
+    });
+});
 
 module.exports = app;
