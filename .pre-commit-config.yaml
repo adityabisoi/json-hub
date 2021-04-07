@@ -9,3 +9,4 @@ repos:
           - id: eslint
             files: \.[jt]sx?$ # *.js, *.jsx, *.ts and *.tsx
             types: [file]
+            args: [--fix]
