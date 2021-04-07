@@ -21,7 +21,7 @@ router.get("/taste", (req: Request, res: Response, next: NextFunction) => {
     try {
         res.status(200).json({ data: data.taste });
     } catch (err) {
-    //error handling
+        //error handling
         console.log(err);
         res.status(500).json({
             error: err,
@@ -32,7 +32,7 @@ router.get("/taste", (req: Request, res: Response, next: NextFunction) => {
 // GET request /photos/food route
 router.get("/", (req: Request, res: Response, next: NextFunction) => {
     try {
-    //if query parameters does not exist then send all food items
+        //if query parameters does not exist then send all food items
         if (!req.query.taste) {
             res.status(200).json({ data: data.data });
         }
@@ -47,7 +47,7 @@ router.get("/", (req: Request, res: Response, next: NextFunction) => {
             res.status(200).json({ data: sendData });
         }
     } catch (err) {
-    //error handling
+        //error handling
         console.log(err);
         res.status(500).json({
             error: err,

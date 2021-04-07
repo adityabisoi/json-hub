@@ -9,7 +9,7 @@ router.get("/", (req: Request, res: Response, next: NextFunction) => {
         console.log(data);
         res.status(200).json(data);
     } catch (err) {
-    //error handling
+        //error handling
         console.log(err);
         res.status(500).json({
             error: err,

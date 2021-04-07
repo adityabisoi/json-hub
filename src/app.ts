@@ -7,9 +7,10 @@ require("dotenv").config();
 
 const app: Application = express();
 app.use(express.static(__dirname + "/public"));
-app.set("views",path.join(__dirname,"views"));
-app.set("view engine","ejs");
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "ejs");
 
+const animalRoute = require("./api/routes/animals");
 const homeRoute = require("./api/routes/home");
 const usersRoute = require("./api/routes/users");
 const testRoute = require("./api/routes/usertest");
@@ -66,11 +67,15 @@ app.use("/usertest", testRoute);
 app.use("/tasks", taskRoute); // Added task route
 app.use("/photos/food", foodPhotoRoute); //Added foodphoto route
 app.use("/photos", photoRoute);
+
 app.use("/vehicles", vehicleRoute); //Added vehicles route
+
+app.use("/animals", animalRoute);
+
 
 // Handle error
 interface ErrorWithStatus extends Error {
-  status: number;
+    status: number;
 }
 
 app.use((req: Request, res: Response, next: NextFunction) => {
@@ -79,14 +84,12 @@ app.use((req: Request, res: Response, next: NextFunction) => {
     next(error);
 });
 
-app.use(
-    (error: ErrorWithStatus, req: Request, res: Response, next: NextFunction) => {
-        res.status(error.status || 500).json({
-            error: {
-                message: error.message,
-            },
-        });
-    },
-);
+app.use((error: ErrorWithStatus, req: Request, res: Response, next: NextFunction) => {
+    res.status(error.status || 500).json({
+        error: {
+            message: error.message,
+        },
+    });
+});
 
 module.exports = app;
