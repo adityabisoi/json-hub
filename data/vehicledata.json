@@ -1,42 +1,103 @@
 {
-    "name": [
-        "swift",
-        "creta",
-        "i20",
-        "city",
-        "amaze",
-        "thar",
-        "scorpio",
-        "bolero",
-        "marazzo",
-        "model s",
-        "model 3",
-        "model x",
-        "model y"
-    ],
-    "manufacturer": [
-        "maruti",
-        "hyundai",
-        "honda",
-        "tata",
-        "mahindra",
-        "renault",
-        "ford",
-        "nissan",
-        "datsun",
-        "kia",
-        "mg",
-        "tesla"
-    ],
-    "type": ["suv", "minivan", "sedan", "cargo van", "minisuv"],
-    "fuel": ["hybrid", "electric", "diesel", "patrol"],
-    "color": ["black", "white", "green", "yellow", "blue", "red", "lime", "olive", "indigo"],
-    "vin": [
-        "U1MTJ97SUBEN55586",
-        "LK54TUF2ATVX14624",
-        "HJ2UNZV1L1SD11839",
-        "7J3HVRVMUXJT75742",
-        "2L2HM22394YH61393"
-    ],
-    "vrm": ["BX22GHM", "BC81XXS", "DI03UGZ", "MK89INV", "TE19HGU", "XR58HRL", "BS02LLL"]
+    "data": [
+        {
+            "name": "Dzire",
+            "manufacturer": "Maruti",
+            "type": "sedan",
+            "fuel": "petrol",
+            "color": "black",
+            "vin": "U1MTJ97SUBEN55586",
+            "vrm": "Az22HHM"
+        },
+        {
+            "name": "Swift",
+            "manufacturer": "Maruti",
+            "type": "hatchback",
+            "fuel": "diesel",
+            "color": "white",
+            "vin": "LK54TUF2ATVX14624",
+            "vrm": "BY23GHM"
+        },
+        {
+            "name": "Wagon R",
+            "manufacturer": "Maruti Suzuki",
+            "type": "hatchback",
+            "fuel": "CNG",
+            "color": "gray",
+            "vin": "LK65TUF2ATVX14624",
+            "vrm": "CZ23GHM"
+        },
+        {
+            "name": "Go",
+            "manufacturer": "Datsun",
+            "type": "petrol",
+            "fuel": "diesel",
+            "color": "pink",
+            "vin": "PK54TUF2ASYX14624",
+            "vrm": "DG23GHM"
+        },
+        {
+            "name": "Venture",
+            "manufacturer": "Tata",
+            "type": "minivan",
+            "fuel": "hybrid",
+            "color": "yellow",
+            "vin": "HJ2UNZV1L1SD11839",
+            "vrm": "BS02LLL"
+        },
+        {
+            "name": "City",
+            "manufacturer": "Honda",
+            "type": "sedan",
+            "fuel": "hybrid",
+            "color": "blue",
+            "vin": "7J3HVRVMUXJT75742",
+            "vrm": "XR58HRL"
+        },
+        {
+            "name": "Solati",
+            "manufacturer": "Hyundai",
+            "type": "cargo van",
+            "fuel": "petrol",
+            "color": "red",
+            "vin": "2L2HM22394YH61393",
+            "vrm": "TE19HGU"
+        },
+        {
+            "name": "Model S",
+            "manufacturer": "Tesla",
+            "type": "mini suv",
+            "fuel": "electric",
+            "color": "indigo",
+            "vin": "P1MTJ97TESEN55586",
+            "vrm": "MK89INV"
+        },
+        {
+            "name": "Model 3",
+            "manufacturer": "Tesla",
+            "type": "suv",
+            "fuel": "electric",
+            "color": "lime",
+            "vin": "MW54TUF2ATVX15624",
+            "vrm": "DI03UGZ"
+        },
+        {
+            "name": "Model X",
+            "manufacturer": "Tesla",
+            "type": "sedan",
+            "fuel": "electric",
+            "color": "lime",
+            "vin": "IK2UNZV1L1SD11839",
+            "vrm": "BC81XXS"
+        },
+        {
+            "name": "Model Y",
+            "manufacturer": "Tesla",
+            "type": "hatchback",
+            "fuel": "hybrid",
+            "color": "white",
+            "vin": "8I3HVRVMUXJT75742",
+            "vrm": "BX22GHM"
+        }
+    ]
 }
