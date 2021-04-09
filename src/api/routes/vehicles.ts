@@ -1,19 +1,16 @@
 import express, { Application, NextFunction, Request, Response } from "express";
-const data = require("../../../data/photodata.json");
+import { monitorEventLoopDelay } from "node:perf_hooks";
+const data = require("../../../data/vehicledata.json");
 
 const router = express.Router();
 
-// GET request /photos route
+// vehicles/ -> send all the vehicle data
+
 router.get("/", (req: Request, res: Response, next: NextFunction) => {
     try {
-        console.log(data);
         res.status(200).json(data);
     } catch (err) {
-        //error handling
-        console.log(err);
-        res.status(500).json({
-            error: err,
-        });
+        res.status(500).json({ error: err });
     }
 });
 

@@ -10,7 +10,7 @@ assignees: ""
 A clear and concise description of what you want to add.
 
 **Is your feature request related to a problem? Please describe.** :bulb:
-A clear and concise description of what the problem is. 
+A clear and concise description of what the problem is.
 
 **Describe the solution you'd like** :zap:
 A clear and concise description of what you want to happen.
@@ -23,7 +23,7 @@ If applicable, add screenshots to help explain your idea.
 
 **Device Information [optional]:**
 
-- OS: [e.g. iOS/Android]
+-   OS: [e.g. iOS/Android]
 
 **Additional context**
 Add any other context about the problem here.
