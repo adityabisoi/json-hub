@@ -26,13 +26,18 @@ router.get("/:type", (req: Request, res: Response, next: NextFunction) => {
         let result = null;
         for (let i = 0; i < data.data.length; i++) {
             if (type === data.data[i].type) {
-                if(option === "breed"){
-                    result = data.data[i].breed;
-                    break;
-                }
-                else if(option === "picture"){
-                    result = data.data[i].picture;
-                    break;
+                if(option){
+                    if(option === "breed"){
+                        result = data.data[i].breed;
+                        break;
+                    }
+                    else if(option === "picture"){
+                        result = data.data[i].picture;
+                        break;
+                    }
+                    else{
+                        break;
+                    }
                 }
                 else{
                     result = data.data[i];
@@ -43,7 +48,7 @@ router.get("/:type", (req: Request, res: Response, next: NextFunction) => {
         if (result !== null) {
             res.status(200).json({ data: result });
         } else {
-            res.status(200).json(data);
+            res.status(400).json({error:"invalid request"});
         }
     }
     catch (err) {
