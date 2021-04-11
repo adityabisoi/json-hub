@@ -16,7 +16,12 @@ router.get("/", (req: Request, res: Response, next: NextFunction) => {
                     result.push(data.data[i]);
                 }
             }
-            res.status(200).json({ data: result });
+            if (result.length) {
+                res.status(200).json({ data: result });
+            }
+            else {
+                res.status(400).json({ message: "invalid request" });
+            }
         }
         else {
             res.status(200).json(data);
@@ -26,9 +31,9 @@ router.get("/", (req: Request, res: Response, next: NextFunction) => {
     }
 });
 
-router.get("/:index", (req: Request, res: Response, next: NextFunction) => {
+router.get("/:id", (req: Request, res: Response, next: NextFunction) => {
     try {
-        const idx: number = parseInt(req.params.index);
+        const idx: number = parseInt(req.params.id);
         if (idx < data.data.length) {
             res.status(200).json({ data: data.data[idx] });
         }
