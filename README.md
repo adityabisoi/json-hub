@@ -1,17 +1,17 @@
 <p align="center">
-	
+
 <img src="https://github.com/Samridhi-98/Images/blob/master/Images/restfetchpng.PNG"  width="100%" >
 
 </p>
 
 <h2>About Us <a><img src="https://github.com/Samridhi-98/Images/blob/master/Images/reading.svg" width="4%"></a></h2>
 <p>
-	
+
 [![GitHub contributors](https://img.shields.io/github/contributors/adityabisoi/REST-fetch)](https://github.com/adityabisoi/REST-fetch/graphs/contributors/)
 [![Issues](https://img.shields.io/github/issues/adityabisoi/REST-fetch)](https://github.com/adityabisoi/REST-fetch/issues)
 [![PRs](https://img.shields.io/github/issues-pr/adityabisoi/REST-fetch)](https://github.com/adityabisoi/REST-fetch/pulls)
-[![Forks](https://img.shields.io/github/forks/adityabisoi/REST-fetch)](https://github.com/adityabisoi/REST-fetch) 
-[![Stars](https://img.shields.io/github/stars/adityabisoi/REST-fetch)](https://github.com/adityabisoi/REST-fetch) 
+[![Forks](https://img.shields.io/github/forks/adityabisoi/REST-fetch)](https://github.com/adityabisoi/REST-fetch)
+[![Stars](https://img.shields.io/github/stars/adityabisoi/REST-fetch)](https://github.com/adityabisoi/REST-fetch)
 [![Join the chat at https://gitter.im/fetch-lobby/community](https://badges.gitter.im/fetch-lobby/community.svg)](https://gitter.im/fetch-lobby/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 </p>
@@ -32,7 +32,7 @@ A community-owned REST API service for testers and developers. Fetch provides RE
 
 <h3>
 <em>
-Try it out <a target="_blank" href="https://rest-fetch.herokuapp.com/"> <img src="https://github.com/Samridhi-98/Images/blob/master/Images/play.svg" width="2%"></a> 
+Try it out <a target="_blank" href="https://rest-fetch.herokuapp.com/"> <img src="https://github.com/Samridhi-98/Images/blob/master/Images/play.svg" width="2%"></a>
 </em>
 </h3>
 
@@ -57,6 +57,23 @@ There are 3 ways to install pre-commit package manager
 After completing the above steps, verify your installation by running
 
 `$ pre-commit --version`
+
+### Maintaining Consistency
+
+It is absolutely necessary for us to maintain consistent coding styles for multiple developers working on this same project across various editors and IDEs. We have created a editorconfig file and urge you to download editorconfig plugin before further installation.
+
+Setup for 3 major editors
+
+-   For vscode
+
+    -   Download the following [plugin](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig) on your editor
+
+-   For atom
+
+    -   Download the following [plugin](https://atom.io/packages/editorconfig) on your editor
+
+-   For Sublime text
+    -   Download the following [plugin](https://github.com/sindresorhus/editorconfig-sublime) on your editor
 
 ### Project Installation
 
