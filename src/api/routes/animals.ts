@@ -21,18 +21,34 @@ router.get("/", (req: Request, res: Response, next: NextFunction) => {
 router.get("/:type", (req: Request, res: Response, next: NextFunction) => {
     try {
         const type = req.params.type;
+        const option = req.query.option;
         console.log(type);
         let result = null;
         for (let i = 0; i < data.data.length; i++) {
             if (type === data.data[i].type) {
-                result = data.data[i];
-                break;
+                if(option){
+                    if(option === "breed"){
+                        result = data.data[i].breed;
+                        break;
+                    }
+                    else if(option === "picture"){
+                        result = data.data[i].picture;
+                        break;
+                    }
+                    else{
+                        break;
+                    }
+                }
+                else{
+                    result = data.data[i];
+                    break;
+                } 
             }
         }
         if (result !== null) {
             res.status(200).json({ data: result });
         } else {
-            res.status(200).json(data);
+            res.status(400).json({error:"invalid request"});
         }
     }
     catch (err) {
