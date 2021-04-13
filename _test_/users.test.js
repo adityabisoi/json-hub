@@ -1,5 +1,5 @@
 const supertest = require('supertest');
-const endpoint = 'https://rest-fetch.herokuapp.com/users'
+const endpoint = 'http://localhost:3000/users'
 
 describe("Testing the users API", () => {
 
