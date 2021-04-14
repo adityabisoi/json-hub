@@ -48,7 +48,7 @@ router.get("/:type", (req: Request, res: Response, next: NextFunction) => {
         if (result !== null) {
             res.status(200).json({ data: result });
         } else {
-            res.status(400).json({error:"invalid request"});
+            res.status(400).json({ error:"invalid request" });
         }
     }
     catch (err) {
