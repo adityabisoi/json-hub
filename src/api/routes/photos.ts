@@ -16,8 +16,8 @@ router.get("/", (req: Request, res: Response, next: NextFunction) => {
         });
     }
 });
-router.get("/:index", (req: Request, res: Response, next: NextFunction) => {
-    const idx:number = parseInt(req.params.index);
+router.get("/:id", (req: Request, res: Response, next: NextFunction) => {
+    const idx:number = parseInt(req.params.id);
     const size = data.data.length;
     try{
         if(idx >= size){
