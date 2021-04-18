@@ -18,14 +18,13 @@ router.get("/", (req: Request, res: Response, next: NextFunction) => {
             res.status(200).json(data);
         }
     } catch (err) {
-    //error handling
-    // console.log(err);
+        //error handling
+        // console.log(err);
         res.status(500).json({
             error: err,
         });
     }
 });
-
 
 //GET request /tasks/index
 router.get("/:index", (req: Request, res: Response, next: NextFunction) => {
@@ -49,9 +48,7 @@ router.get("/:index", (req: Request, res: Response, next: NextFunction) => {
         } else {
             res.status(404).json({ message: "No data found at the given index" });
         }
-
-    }
-    catch (err) {
+    } catch (err) {
         console.log("tasks: ", err);
         res.status(500).json({
             error: err,
