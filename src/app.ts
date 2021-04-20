@@ -20,6 +20,7 @@ const commentRoute = require('./api/routes/comments')//importing the comments en
 const photoRoute = require("./api/routes/photos");
 const foodPhotoRoute = require("./api/routes/foodphotos"); //include foodphotos route
 const vehicleRoute = require("./api/routes/vehicles"); //include vehicles route
+const songRoute = require("./api/routes/songs"); //include songs route
 
 const options = {
     useNewUrlParser: true,
@@ -71,6 +72,12 @@ app.use('/comments', commentRoute)//Routing the app to use the comments endpoint
 app.use("/photos/food", foodPhotoRoute); //Added foodphoto route
 app.use("/photos", photoRoute);
 app.use("/vehicles", vehicleRoute); //Added vehicles route
+
+app.use("/animals", animalRoute);
+
+app.use("/songs", songRoute);
+
+
 app.use("/animals", animalRoute);   //Added animal route
 app.use("/address", addressRoute);   //Added address route
 
