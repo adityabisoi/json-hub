@@ -21,6 +21,7 @@ const commentRoute = require('./api/routes/comments')
 const photoRoute = require("./api/routes/photos");
 const foodPhotoRoute = require("./api/routes/foodphotos"); //include foodphotos route
 const vehicleRoute = require("./api/routes/vehicles"); //include vehicles route
+const songRoute = require("./api/routes/songs"); //include songs route
 
 const options = {
     useNewUrlParser: true,
@@ -80,6 +81,9 @@ app.use("/photos", photoRoute);
 app.use("/vehicles", vehicleRoute); //Added vehicles route
 
 app.use("/animals", animalRoute);
+
+app.use("/songs", songRoute);
+
 
 
 
