@@ -32,8 +32,8 @@ router.get("/:id", (req: Request, res: Response, next: NextFunction) => {
         console.log(err);
         res.status(500).json({
             error: err,
-        })
+        });
     }
-})
+});
 
 module.exports = router;
