@@ -16,7 +16,7 @@ const homeRoute = require("./api/routes/home");
 const usersRoute = require("./api/routes/users");
 const testRoute = require("./api/routes/usertest");
 const taskRoute = require("./api/routes/tasks"); //include tasks route
-const commentRoute = require('./api/routes/comments')//importing the comments endpoint file
+const commentRoute = require("./api/routes/comments");//importing the comments endpoint file
 const photoRoute = require("./api/routes/photos");
 const foodPhotoRoute = require("./api/routes/foodphotos"); //include foodphotos route
 const vehicleRoute = require("./api/routes/vehicles"); //include vehicles route
@@ -68,7 +68,7 @@ app.use("/", homeRoute);
 app.use("/users", usersRoute);
 app.use("/usertest", testRoute);
 app.use("/tasks", taskRoute); // Added task route
-app.use('/comments', commentRoute)//Routing the app to use the comments endpoint
+app.use("/comments", commentRoute);//Routing the app to use the comments endpoint
 app.use("/photos/food", foodPhotoRoute); //Added foodphoto route
 app.use("/photos", photoRoute);
 app.use("/vehicles", vehicleRoute); //Added vehicles route
