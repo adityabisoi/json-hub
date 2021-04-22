@@ -3,16 +3,6 @@ const data = require("../../../data/songdata.json");
 
 const router = express.Router();
 
-const fetchData = (key:string,value:string)=>{
-    const result:any = data.data.filter(function (song:any){
-        if(song[key] === value){
-            return song;
-        }
-    });
-    return result;
-};
-
-
 // GET request /songs
 router.get("/", (req: Request, res: Response, next: NextFunction) => {
     try {
@@ -21,21 +11,21 @@ router.get("/", (req: Request, res: Response, next: NextFunction) => {
         const language:any = req.query.language;
         if(req.query){
             if(artist){
-                const result = fetchData("singer",String(artist));
+                const result = data.data.filter( (song:any)=> song.singer === artist);
                 if(result.length)
                     res.status(200).json({ data:result });
                 else
                     res.status(404).json({ message: "Invalid artist" });    
             }
             else if(genre){
-                const result = fetchData("genre",String(genre));
+                const result = data.data.filter( (song:any)=> song.genre === genre);;
                 if(result.length)
                     res.status(200).json({ data:result });
                 else
                     res.status(404).json({ message: "Invalid genre" });
             }
             else if(language){
-                const result = fetchData("language",String(language));
+                const result = data.data.filter( (song:any)=> song.language === language);
                 if(result.length)
                     res.status(200).json({ data:result });
                 else
