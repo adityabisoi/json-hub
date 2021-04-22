@@ -1,72 +1,72 @@
 {
     "data": [{
             "street": "127/Shreyas Complex,Navrangpura",
-            "city": "ahmedabad",
-            "state": "gujarat",
-            "country": "india",
+            "city": "Ahmedabad",
+            "state": "Gujarat",
+            "country": "India",
             "pincode": "380009"
         },
         {
             "street": "72,Pragee shopping centre,bajaj road",
-            "city": "mumbai",
-            "state": "maharastra",
-            "country": "india",
+            "city": "Mumbai",
+            "state": "Maharastra",
+            "country": "India",
             "pincode": "400056"
         },
         {
             "street": "A/7, New Sonal Industrial Estate",
-            "city": "mumbai",
-            "state": "maharastra",
-            "country": "india",
+            "city": "Mumbai",
+            "state": "Maharastra",
+            "country": "India",
             "pincode": "400072"
         },
         {
             "street": "Transport nagar jpr 03",
-            "city": "jaipur",
-            "state": "rajasthan",
-            "country": "india",
+            "city": "Jaipur",
+            "state": "Rajasthan",
+            "country": "India",
             "pincode": "264035"
         },
         {
             "street": "127/89 Lingampally",
-            "city": "hyderabad",
-            "state": "andhra pradesh",
-            "country": "india",
+            "city": "Hyderabad",
+            "state": "Andhra Pradesh",
+            "country": "India",
             "pincode": "500094"
         },
         {
             "street": "A47 Lingampally",
-            "city": "hyderabad",
-            "state": "andhra pradesh",
-            "country": "india",
+            "city": "Hyderabad",
+            "state": "Andhra Pradesh",
+            "country": "India",
             "pincode": "500164"
         },
         {
             "street": "Ganesh Nagar,charkop kandivali (west)",
-            "city": "mumbai",
-            "state": "maharastra",
-            "country": "india",
+            "city": "Mumbai",
+            "state": "Maharastra",
+            "country": "India",
             "pincode": "400067"
         },
         {
             "street": "39rd floor sheetal house princess street",
-            "city": "bangluru",
-            "state": "karnataka",
-            "country": "india",
+            "city": "Bangluru",
+            "state": "Karnataka",
+            "country": "India",
             "pincode": "400002"
         },
         {
-            "street": "indo ind est2 2 navghar,bassein road(vasai Road)",
-            "city": "hyderabad",
-            "state": "andhra pradesh",
-            "country": "Iindia",
+            "street": "Indo ind est2 2 navghar,bassein road(vasai Road)",
+            "city": "Hyderabad",
+            "state": "Andhra Pradesh",
+            "country": "India",
             "pincode": "401202"
         },
         {
             "street": "6 Shammik chamber devaji RPD ",
-            "city": "lucknow",
-            "state": "uttar pradesh",
-            "country": "india",
+            "city": "Lucknow",
+            "state": "Uttar Pradesh",
+            "country": "India",
             "pincode": "400009"
         }
     ]

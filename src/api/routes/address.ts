@@ -10,19 +10,27 @@ router.get("/", (req: Request, res: Response, next: NextFunction) => {
         const state: any = req.query.state;
         const country: any = req.query.country;
         let result = [];
-
-        for (let i = 0; i < data.data.length; i++) {
-            if (city && city === data.data[i].city) {
-                result.push(data.data[i]);
-            }
-            else if (state && state === data.data[i].state) {
-                result.push(data.data[i]);
-            }
-            else if (country && country === data.data[i].country) {
-                result.push(data.data[i]);
-            }
+        if (city) {
+            result = data.data.filter((address: any) => {
+                if (address["city"].toLowerCase() === city.toLowerCase()) {
+                    return address;
+                }
+            });
         }
-        // console.log(Object.keys(req.query));
+        else if (state) {
+            result = data.data.filter((address: any) => {
+                if (address["state"].toLowerCase() === state.toLowerCase()) {
+                    return address;
+                }
+            });
+        }
+        else if (country) {
+            result = data.data.filter((address: any) => {
+                if (address["country"].toLowerCase() === country.toLowerCase()) {
+                    return address;
+                }
+            });
+        }
         if (Object.keys(req.query).length === 0) {
             res.status(200).json(data);
         }
@@ -59,8 +67,8 @@ router.get("/:id", (req: Request, res: Response, next: NextFunction) => {
         console.log(err);
         res.status(500).json({
             error: err,
-        })
+        });
     }
-})
+});
 
 module.exports = router;
