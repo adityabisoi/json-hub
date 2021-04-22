@@ -6,39 +6,26 @@ const router = express.Router();
 // GET request /songs
 router.get("/", (req: Request, res: Response, next: NextFunction) => {
     try {
-        const artist:any = req.query.artist;
-        const genre:any = req.query.genre;
-        const language:any = req.query.language;
-        if(req.query){
-            if(artist){
-                const result = data.data.filter( (song:any)=> song.singer === artist);
-                if(result.length)
-                    res.status(200).json({ data:result });
-                else
-                    res.status(404).json({ message: "Invalid artist" });    
+        if (req.query) {
+            const artist:any = req.query.artist;
+            const genre:any = req.query.genre;
+            const language:any = req.query.language;
+            if (!artist && !genre && !language) {
+                res.status(404).json({ message: "Invalid query data" });
+            } else {
+                const result = data.data
+                    .filter((song: any) => song.singer === (artist ?? song.singer))
+                    .filter((song: any) => song.genre === (genre ?? song.genre))
+                    .filter((song: any) => song.language === (language ?? song.language));
+
+                if (result.length) 
+                    res.status(200).json({ data: result });
+                else 
+                    res.status(404).json({ message: "No record found" });
             }
-            else if(genre){
-                const result = data.data.filter( (song:any)=> song.genre === genre);;
-                if(result.length)
-                    res.status(200).json({ data:result });
-                else
-                    res.status(404).json({ message: "Invalid genre" });
-            }
-            else if(language){
-                const result = data.data.filter( (song:any)=> song.language === language);
-                if(result.length)
-                    res.status(200).json({ data:result });
-                else
-                    res.status(404).json({ message: "Invalid language" });
-            }
-            else{
-                res.status(404).json({ message: "Invalid query" });
-            }
-        }
-        else{
+        } else {
             res.status(200).json(data);
         }
-        
     } catch (err) {
         console.log(err);
         res.status(500).json({
