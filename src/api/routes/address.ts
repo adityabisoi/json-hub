@@ -9,27 +9,22 @@ router.get("/", (req: Request, res: Response, next: NextFunction) => {
         const city: any = req.query.city;
         const state: any = req.query.state;
         const country: any = req.query.country;
-        let result = [];
-        if (city) {
-            result = data.data.filter((address: any) => address["city"].toLowerCase() === city.toLowerCase());
-        }
-        else if (state) {
-            result = data.data.filter((address: any) => address["state"].toLowerCase() === state.toLowerCase());
-        }
-        else if (country) {
-            result = data.data.filter((address: any) => address["country"].toLowerCase() === country.toLowerCase());
-        }
-        if (Object.keys(req.query).length === 0) {
+        if (Object.keys(req.query).length) {
+            if (!city && !state && !country)
+                res.status(404).json({ message: "Invalid query" });
+            else {
+                let result = data.data
+                    .filter((address: any) => address.city === (city ?? address.city))
+                    .filter((address: any) => address.state === (state ?? address.state))
+                    .filter((address: any) => address.country === (country ?? address.country));
+
+                if (result.length)
+                    res.status(200).json({ data: result });
+                else
+                    res.status(404).json({ message: "No data found" });
+            }
+        } else {
             res.status(200).json(data);
-        }
-        else if (result.length) {
-            res.status(200).json({ data: result });
-        }
-        else if (!city && !state && !country) {
-            res.status(404).json({ message: "Invalid query" });
-        }
-        else {
-            res.status(404).json({ message: "No data found" });
         }
     }
     catch (err) {
