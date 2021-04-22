@@ -11,25 +11,13 @@ router.get("/", (req: Request, res: Response, next: NextFunction) => {
         const country: any = req.query.country;
         let result = [];
         if (city) {
-            result = data.data.filter((address: any) => {
-                if (address["city"].toLowerCase() === city.toLowerCase()) {
-                    return address;
-                }
-            });
+            result = data.data.filter((address: any) => address["city"].toLowerCase() === city.toLowerCase());
         }
         else if (state) {
-            result = data.data.filter((address: any) => {
-                if (address["state"].toLowerCase() === state.toLowerCase()) {
-                    return address;
-                }
-            });
+            result = data.data.filter((address: any) => address["state"].toLowerCase() === state.toLowerCase());
         }
         else if (country) {
-            result = data.data.filter((address: any) => {
-                if (address["country"].toLowerCase() === country.toLowerCase()) {
-                    return address;
-                }
-            });
+            result = data.data.filter((address: any) => address["country"].toLowerCase() === country.toLowerCase());
         }
         if (Object.keys(req.query).length === 0) {
             res.status(200).json(data);
