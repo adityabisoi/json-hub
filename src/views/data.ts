@@ -330,5 +330,169 @@ const data = [
             },
         ],
     },
+    {
+        heading: "Address",
+        desc: "The address route provides dummy address data.",
+        routes: [
+            {
+                route: "GET /address/",
+                content: "Returns all the available dummy addresses",
+                output: `
+        [
+          {
+              "street": "127/Shreyas Complex,Navrangpura",
+              "city": "Ahmedabad",
+              "state": "Gujarat",
+              "country": "India",
+              "pincode": "380009"
+          },
+          {
+              "street": "72,Pragee shopping centre,bajaj road",
+              "city": "Mumbai",
+              "state": "Maharastra",
+              "country": "India",
+              "pincode": "400056"
+          },
+          {
+              "street": "A/7, New Sonal Industrial Estate",
+              "city": "Mumbai",
+              "state": "Maharastra",
+              "country": "India",
+              "pincode": "400072"
+          },
+          {
+              "street": "Transport nagar jpr 03",
+              "city": "Jaipur",
+              "state": "Rajasthan",
+              "country": "India",
+              "pincode": "264035"
+          },
+          {
+              "street": "127/89 Lingampally",
+              "city": "Hyderabad",
+              "state": "Andhra Pradesh",
+              "country": "India",
+              "pincode": "500094"
+          },
+      ]`,
+            },
+            {
+                route: "GET /address/2",
+                content: "Returns dummy address from perticular index",
+                output: `
+      {
+        "street": "A/7, New Sonal Industrial Estate",
+        "city": "Mumbai",
+        "state": "Maharastra",
+        "country": "India",
+        "pincode": "400072"
+      
+      }`,
+            },
+        ],
+    },
+    {
+        heading: "Song",
+        desc: "The song route provides song data.",
+        routes: [
+            {
+                route: "GET /songs/",
+                content: "Returns all the available songs",
+                output: `
+        [
+          {
+              "name": "Chan Kitta",
+              "singer": "Ayushmann Khurrana",
+              "language": "punjabi",
+              "genre": "romance",
+              "link": "https://www.youtube.com/watch?v=JFYCc577kjQ"
+          },
+          {
+              "name": "Afreen Afreem",
+              "singer": "Rahat Fateh Ali Khan",
+              "language": "urdu",
+              "genre": "ghazal",
+              "link": "https://www.youtube.com/watch?v=kw4tT7SCmaY"
+          },
+          {
+              "name": "Lut Gaye",
+              "singer": "Jubin Nautiyal",
+              "language": "hindi",
+              "genre": "romance",
+              "link": "https://www.youtube.com/watch?v=sCbbMZ-q4-I"
+          },
+          {
+              "name": "Dope Shope",
+              "singer": "Yo Yo Honey Singh",
+              "language": "punjabi",
+              "genre": "pop",
+              "link": "https://www.youtube.com/watch?v=NrXdauEv9HY"
+          },
+          {
+              "name": "Tunak Tunak Tun",
+              "singer": "Daler Mehndi",
+              "language": "punjabi",
+              "genre": "indian pop",
+              "link": "https://www.youtube.com/watch?v=vTIIMJ9tUc8"
+          },
+      ]`,
+            },
+            {
+                route: "GET /songs/5",
+                content: "Returns song data from perticular index",
+                output: `
+      {
+        "name": "Bohemian Rhapsody",
+        "singer": "Queen",
+        "language": "english",
+        "genre": "classic rock",
+        "link": "https://www.youtube.com/watch?v=fJ9rUzIMcZQ"
+      }`,
+            },
+        ],
+    },
+    {
+        heading: "Comments",
+        desc: "The comments route provide dummy comments.",
+        routes: [
+            {
+                route: "GET /comments/",
+                content: "Returns all the available dummy comments",
+                output: `
+        [
+          {
+              "profile": "https://images.unsplash.com/photo-1552207802-77bcb0d13122?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8c2hpcHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+              "name": "USER1",
+              "data": " Lorem Ipsum"
+          },
+          {
+              "profile": "https://images.unsplash.com/photo-1523536777042-c391e30190ef?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDZ8SnBnNktpZGwtSGt8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+              "name": "USER2",
+              "data": "dolor sit amet"
+          },
+          {
+              "profile": "https://images.unsplash.com/photo-1589676383923-3c4e9ec0b94d?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDE1fEpwZzZLaWRsLUhrfHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+              "name": "USER3",
+              "data": "consectetur adipiscing elit"
+          },
+          {
+              "profile": "https://images.unsplash.com/photo-1540126034813-121bf29033d2?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8cGFuZGF8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+              "name": "USER4",
+              "data": "sed do eiusmod tempor"
+          },
+          {
+              "profile": "https://images.unsplash.com/photo-1604336755604-96ee6fa9f3f1?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8Z2lyYWZmZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+              "name": "USER5",
+              "data": "incididunt ut labore et dolore"
+          },
+          {
+              "profile": "https://images.unsplash.com/photo-1516255648388-71880c3cf449?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8bGVhcGFyZHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+              "name": "USER6",
+              "data": "Ut enim ad minim veniam,"
+          },
+      ]`,
+            },
+        ],
+    },  
 ];
 export default data;
