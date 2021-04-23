@@ -21,7 +21,7 @@ router.get("/", (req: Request, res: Response, next: NextFunction) => {
                 if (result.length) 
                     res.status(200).json({ data: result });
                 else 
-                    res.status(404).json({ message: "No record found" });
+                    res.status(204).json({ message: "No record found" });
             }
         } else {
             res.status(200).json(data);
