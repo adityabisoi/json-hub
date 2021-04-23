@@ -13,7 +13,7 @@ router.get("/", (req: Request, res: Response, next: NextFunction) => {
             if (!city && !state && !country)
                 res.status(404).json({ message: "Invalid query" });
             else {
-                let result = data.data
+                const result = data.data
                     .filter((address: any) => address.city === (city ?? address.city))
                     .filter((address: any) => address.state === (state ?? address.state))
                     .filter((address: any) => address.country === (country ?? address.country));
@@ -21,7 +21,7 @@ router.get("/", (req: Request, res: Response, next: NextFunction) => {
                 if (result.length)
                     res.status(200).json({ data: result });
                 else
-                    res.status(404).json({ message: "No data found" });
+                    res.status(204).json({ message: "No data found" });
             }
         } else {
             res.status(200).json(data);
