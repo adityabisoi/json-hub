@@ -7,7 +7,7 @@ const router = express.Router();
 router.get("/", (req: Request, res: Response, next: NextFunction) => {
     try {
         if (req.query) {
-            const artist:  any = req.query.artist;
+            const artist: any = req.query.artist;
             const genre: any = req.query.genre;
             const language: any = req.query.language;
             if (!artist && !genre && !language) {
