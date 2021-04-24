@@ -5,8 +5,6 @@ const fs = require("fs");
 
 //endpoint for /GET requests for comments
 router.get("/", (req: Request, res: Response, next: NextFunction) => {
-//reading the contents of comments json file
-    fs.readFile("./src/api/routes/comment.json", (err: string, data: string) => {
     //reading the contents of comments json file
     fs.readFile("../../../data/commentdata.json", (err: string, data: string) => {
         if (err) {
