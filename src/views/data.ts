@@ -177,7 +177,8 @@ const data = [
     },
     {
         heading: "FoodPhotos",
-        desc: "The foodphotos route returns photos of food item with their source link,name and taste.",
+        desc:
+            "The foodphotos route returns photos of food item with their source link,name and taste.",
         routes: [
             {
                 route: "GET /photos/food/",
@@ -219,7 +220,8 @@ const data = [
     },
     {
         heading: "Animal",
-        desc: "The animal route returns dummy data realted to animals with their type,breed and photos.",
+        desc:
+            "The animal route returns dummy data realted to animals with their type,breed and photos.",
         routes: [
             {
                 route: "GET /animals/dog",
@@ -336,7 +338,7 @@ const data = [
         routes: [
             {
                 route: "GET /address/",
-                content: "Returns all the available dummy addresses",
+                content: "Returns all the available dummy addresses.",
                 output: `
         [
           {
@@ -378,7 +380,7 @@ const data = [
             },
             {
                 route: "GET /address/2",
-                content: "Returns dummy address from perticular index",
+                content: "Returns dummy address from perticular index.",
                 output: `
       {
         "street": "A/7, New Sonal Industrial Estate",
@@ -389,6 +391,93 @@ const data = [
       
       }`,
             },
+            {
+                route: "GET /address?city=Mumbai",
+                content: "Returns dummy address from perticular city.",
+                output: `[
+
+                {
+                    "street": "72,Pragee shopping centre,bajaj road",
+                    "city": "Mumbai",
+                    "state": "Maharastra",
+                    "country": "India",
+                    "pincode": "400056"
+                },
+                {
+                    "street": "A/7, New Sonal Industrial Estate",
+                    "city": "Mumbai",
+                    "state": "Maharastra",
+                    "country": "India",
+                    "pincode": "400072"
+                },
+                {
+                    "street": "Ganesh Nagar,charkop kandivali (west)",
+                    "city": "Mumbai",
+                    "state": "Maharastra",
+                    "country": "India",
+                    "pincode": "400067"
+                }
+            
+            ]`,
+            },
+            {
+                route: "GET /address?state=Maharastra",
+                content: "Returns dummy address from perticular state.",
+                output: `[
+
+                  {
+                      "street": "72,Pragee shopping centre,bajaj road",
+                      "city": "Mumbai",
+                      "state": "Maharastra",
+                      "country": "India",
+                      "pincode": "400056"
+                  },
+                  {
+                      "street": "A/7, New Sonal Industrial Estate",
+                      "city": "Mumbai",
+                      "state": "Maharastra",
+                      "country": "India",
+                      "pincode": "400072"
+                  },
+                  {
+                      "street": "Ganesh Nagar,charkop kandivali (west)",
+                      "city": "Mumbai",
+                      "state": "Maharastra",
+                      "country": "India",
+                      "pincode": "400067"
+                  }
+              
+              ]`,
+            },
+            {
+                route: "GET /address?city=Mumbai&state=Maharastra&country=India",
+                content: "Return dummy data after chaining multiple address query parameter.",
+                output: `[
+
+                {
+                    "street": "72,Pragee shopping centre,bajaj road",
+                    "city": "Mumbai",
+                    "state": "Maharastra",
+                    "country": "India",
+                    "pincode": "400056"
+                },
+                {
+                    "street": "A/7, New Sonal Industrial Estate",
+                    "city": "Mumbai",
+                    "state": "Maharastra",
+                    "country": "India",
+                    "pincode": "400072"
+                },
+                {
+                    "street": "Ganesh Nagar,charkop kandivali (west)",
+                    "city": "Mumbai",
+                    "state": "Maharastra",
+                    "country": "India",
+                    "pincode": "400067"
+                }
+            
+            ]`,
+            },
         ],
     },
     {
@@ -398,8 +487,7 @@ const data = [
             {
                 route: "GET /songs/",
                 content: "Returns all the available songs",
-                output: `
-        [
+                output: `[
           {
               "name": "Chan Kitta",
               "singer": "Ayushmann Khurrana",
@@ -435,11 +523,11 @@ const data = [
               "genre": "indian pop",
               "link": "https://www.youtube.com/watch?v=vTIIMJ9tUc8"
           },
-      ]`,
+        ]`,
             },
             {
                 route: "GET /songs/5",
-                content: "Returns song data from perticular index",
+                content: "Returns song data from perticular index.",
                 output: `
       {
         "name": "Bohemian Rhapsody",
@@ -449,6 +537,98 @@ const data = [
         "link": "https://www.youtube.com/watch?v=fJ9rUzIMcZQ"
       }`,
             },
+            {
+                route: "GET /songs?artist=Ayushmann Khurrana",
+                content: "Returns song data from perticular artist.",
+                output: `[
+                {
+                    "name": "Chan Kitta",
+                    "singer": "Ayushmann Khurrana",
+                    "language": "punjabi",
+                    "genre": "romance",
+                    "link": "https://www.youtube.com/watch?v=JFYCc577kjQ"
+                }
+            
+            ]`,
+            },
+            {
+                route: "GET /songs?genre=pop",
+                content: "Returns song data from perticular genre.",
+                output: `[
+
+              {
+                  "name": "Dope Shope",
+                  "singer": "Yo Yo Honey Singh",
+                  "language": "punjabi",
+                  "genre": "pop",
+                  "link": "https://www.youtube.com/watch?v=NrXdauEv9HY"
+              },
+              {
+                  "name": "Oonchi Hai Building",
+                  "singer": "Anu Malik",
+                  "language": "hindi",
+                  "genre": "pop",
+                  "link": "https://www.youtube.com/watch?v=QmHTmr8Kazs"
+              },
+              {
+                  "name": "Brown Munde",
+                  "singer": "AP DHILLON",
+                  "language": "punjabi",
+                  "genre": "pop",
+                  "link": "https://www.youtube.com/watch?v=VNs_cCtdbPc"
+              }
+          
+          ]`,
+            },
+            {
+                route: "GET /songs?language=punjabi",
+                content: "Returns song data from perticular language.",
+                output: `[
+                  {
+                      "name": "Chan Kitta",
+                      "singer": "Ayushmann Khurrana",
+                      "language": "punjabi",
+                      "genre": "romance",
+                      "link": "https://www.youtube.com/watch?v=JFYCc577kjQ"
+                  },
+                  {
+                      "name": "Dope Shope",
+                      "singer": "Yo Yo Honey Singh",
+                      "language": "punjabi",
+                      "genre": "pop",
+                      "link": "https://www.youtube.com/watch?v=NrXdauEv9HY"
+                  },
+                  {
+                      "name": "Tunak Tunak Tun",
+                      "singer": "Daler Mehndi",
+                      "language": "punjabi",
+                      "genre": "indian pop",
+                      "link": "https://www.youtube.com/watch?v=vTIIMJ9tUc8"
+                  },
+                  {
+                      "name": "Brown Munde",
+                      "singer": "AP DHILLON",
+                      "language": "punjabi",
+                      "genre": "pop",
+                      "link": "https://www.youtube.com/watch?v=VNs_cCtdbPc"
+                  }
+              
+              ]`,
+            },
+            {
+                route: "GET /songs?artist=A.R. Rahman&genre=sufi&language=urdu",
+                content: "Return dummy songs data after chaining multiple song query parameter.",
+                output: `[
+                {
+                    "name": "Kun Faya Kun",
+                    "singer": "A.R. Rahman",
+                    "language": "urdu",
+                    "genre": "sufi",
+                    "link": "https://www.youtube.com/watch?v=T94PHkuydcw"
+                }
+            
+            ]`,
+            },
         ],
     },
     {
@@ -457,7 +637,7 @@ const data = [
         routes: [
             {
                 route: "GET /comments/",
-                content: "Returns all the available dummy comments",
+                content: "Returns all the available dummy comments.",
                 output: `
         [
           {
@@ -493,6 +673,6 @@ const data = [
       ]`,
             },
         ],
-    },  
+    },
 ];
 export default data;
