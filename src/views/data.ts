@@ -177,8 +177,7 @@ const data = [
     },
     {
         heading: "FoodPhotos",
-        desc:
-            "The foodphotos route returns photos of food item with their source link,name and taste.",
+        desc: "The foodphotos route returns photos of food item with their source link,name and taste.",
         routes: [
             {
                 route: "GET /photos/food/",
@@ -220,8 +219,7 @@ const data = [
     },
     {
         heading: "Animal",
-        desc:
-            "The animal route returns dummy data realted to animals with their type,breed and photos.",
+        desc: "The animal route returns dummy data realted to animals with their type,breed and photos.",
         routes: [
             {
                 route: "GET /animals/dog",
@@ -450,33 +448,62 @@ const data = [
               ]`,
             },
             {
+                route: "GET /address?city=Hyderabad&state=Andhra Pradesh",
+                content: "Return dummy data after chaining city and state query parameter.",
+                output: `[
+
+                {
+                    "street": "127/89 Lingampally",
+                    "city": "Hyderabad",
+                    "state": "Andhra Pradesh",
+                    "country": "India",
+                    "pincode": "500094"
+                },
+                {
+                    "street": "A47 Lingampally",
+                    "city": "Hyderabad",
+                    "state": "Andhra Pradesh",
+                    "country": "India",
+                    "pincode": "500164"
+                },
+                {
+                    "street": "Indo ind est2 2 navghar,bassein road(vasai Road)",
+                    "city": "Hyderabad",
+                    "state": "Andhra Pradesh",
+                    "country": "India",
+                    "pincode": "401202"
+                }
+            
+            ]`,
+            },
+            {
                 route: "GET /address?city=Mumbai&state=Maharastra&country=India",
                 content: "Return dummy data after chaining multiple address query parameter.",
                 output: `[
 
-                {
-                    "street": "72,Pragee shopping centre,bajaj road",
-                    "city": "Mumbai",
-                    "state": "Maharastra",
-                    "country": "India",
-                    "pincode": "400056"
-                },
-                {
-                    "street": "A/7, New Sonal Industrial Estate",
-                    "city": "Mumbai",
-                    "state": "Maharastra",
-                    "country": "India",
-                    "pincode": "400072"
-                },
-                {
-                    "street": "Ganesh Nagar,charkop kandivali (west)",
-                    "city": "Mumbai",
-                    "state": "Maharastra",
-                    "country": "India",
-                    "pincode": "400067"
-                }
-            
-            ]`,
+            {
+                "street": "72,Pragee shopping centre,bajaj road",
+                "city": "Mumbai",
+                "state": "Maharastra",
+                "country": "India",
+                "pincode": "400056"
+            },
+            {
+                "street": "A/7, New Sonal Industrial Estate",
+                "city": "Mumbai",
+                "state": "Maharastra",
+                "country": "India",
+                "pincode": "400072"
+            },
+            {
+                "street": "Ganesh Nagar,charkop kandivali (west)",
+                "city": "Mumbai",
+                "state": "Maharastra",
+                "country": "India",
+                "pincode": "400067"
+            }
+        
+        ]`,
             },
         ],
     },
@@ -488,6 +515,7 @@ const data = [
                 route: "GET /songs/",
                 content: "Returns all the available songs",
                 output: `[
+
           {
               "name": "Chan Kitta",
               "singer": "Ayushmann Khurrana",
@@ -616,18 +644,41 @@ const data = [
               ]`,
             },
             {
-                route: "GET /songs?artist=A.R. Rahman&genre=sufi&language=urdu",
-                content: "Return dummy songs data after chaining multiple song query parameter.",
+                route: "GET /songs?genre=pop&language=punjabi",
+                content:
+                    "Return dummy songs data after chaining genre and language query parameter.",
                 output: `[
+
                 {
-                    "name": "Kun Faya Kun",
-                    "singer": "A.R. Rahman",
-                    "language": "urdu",
-                    "genre": "sufi",
-                    "link": "https://www.youtube.com/watch?v=T94PHkuydcw"
+                    "name": "Dope Shope",
+                    "singer": "Yo Yo Honey Singh",
+                    "language": "punjabi",
+                    "genre": "pop",
+                    "link": "https://www.youtube.com/watch?v=NrXdauEv9HY"
+                },
+                {
+                    "name": "Brown Munde",
+                    "singer": "AP DHILLON",
+                    "language": "punjabi",
+                    "genre": "pop",
+                    "link": "https://www.youtube.com/watch?v=VNs_cCtdbPc"
                 }
             
             ]`,
+            },
+            {
+                route: "GET /songs?artist=A.R. Rahman&genre=sufi&language=urdu",
+                content: "Return dummy songs data after chaining multiple song query parameter.",
+                output: `[
+            {
+                "name": "Kun Faya Kun",
+                "singer": "A.R. Rahman",
+                "language": "urdu",
+                "genre": "sufi",
+                "link": "https://www.youtube.com/watch?v=T94PHkuydcw"
+            }
+        
+        ]`,
             },
         ],
     },
