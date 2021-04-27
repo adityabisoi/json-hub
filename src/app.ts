@@ -78,7 +78,6 @@ app.use("/songs", songRoute);
 app.use("/animals", animalRoute);
 app.use("/songs", songRoute);
 app.use("/shows", showsRoute);
-
 app.use("/animals", animalRoute);   //Added animal route
 app.use("/address", addressRoute);   //Added address route
 app.use("/books", bookRoute);   //Added books route
