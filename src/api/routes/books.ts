@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get("/", (req: Request, res: Response, next: NextFunction) => {
     try {
-        if (req.query) {
+        if (Object.keys(req.query).length) {
             const author: any = req.query.author;
             const price: any = req.query.price;
             const title: any = req.query.title;

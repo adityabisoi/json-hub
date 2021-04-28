@@ -6,7 +6,7 @@ const router = express.Router();
 // GET request /songs
 router.get("/", (req: Request, res: Response, next: NextFunction) => {
     try {
-        if (req.query) {
+        if (Object.keys(req.query).length) {
             const artist: any = req.query.artist;
             const genre: any = req.query.genre;
             const language: any = req.query.language;
