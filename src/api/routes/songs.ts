@@ -18,10 +18,8 @@ router.get("/", (req: Request, res: Response, next: NextFunction) => {
                     .filter((song: any) => song.genre === (genre ?? song.genre))
                     .filter((song: any) => song.language === (language ?? song.language));
 
-                if (result.length) 
-                    res.status(200).json({ data: result });
-                else 
-                    res.status(204).json({ message: "No record found" });
+                if (result.length) res.status(200).json({ data: result });
+                else res.status(204).json({ message: "No record found" });
             }
         } else {
             res.status(200).json(data);
