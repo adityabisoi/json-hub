@@ -177,8 +177,7 @@ const data = [
     },
     {
         heading: "FoodPhotos",
-        desc:
-            "The foodphotos route returns photos of food item with their source link,name and taste.",
+        desc: "The foodphotos route returns photos of food item with their source link,name and taste.",
         routes: [
             {
                 route: "GET /photos/food/",
@@ -220,8 +219,7 @@ const data = [
     },
     {
         heading: "Animal",
-        desc:
-            "The animal route returns dummy data realted to animals with their type,breed and photos.",
+        desc: "The animal route returns dummy data realted to animals with their type,breed and photos.",
         routes: [
             {
                 route: "GET /animals/dog",
@@ -647,8 +645,7 @@ const data = [
             },
             {
                 route: "GET /songs?genre=pop&language=punjabi",
-                content:
-                    "Return dummy songs data after chaining genre and language query parameter.",
+                content: "Return dummy songs data after chaining genre and language query parameter.",
                 output: `[
 
                 {
@@ -733,8 +730,7 @@ const data = [
         routes: [
             {
                 route: "GET /shows/",
-                content:
-                    "Return all the available shows with title,genre,season,episodes,rating,description.",
+                content: "Return all the available shows with title,genre,season,episodes,rating,description.",
                 output: `
     [
       {
@@ -922,8 +918,7 @@ const data = [
     },
     {
         heading: "Books",
-        desc:
-            "The book route returns all data realted to books having title,author,price,description,rating.",
+        desc: "The book route returns all data realted to books having title,author,price,description,rating.",
         routes: [
             {
                 route: "GET /books/",
