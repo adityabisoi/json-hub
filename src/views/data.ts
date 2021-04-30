@@ -177,7 +177,8 @@ const data = [
     },
     {
         heading: "FoodPhotos",
-        desc: "The foodphotos route returns photos of food item with their source link,name and taste.",
+        desc:
+            "The foodphotos route returns photos of food item with their source link,name and taste.",
         routes: [
             {
                 route: "GET /photos/food/",
@@ -219,7 +220,8 @@ const data = [
     },
     {
         heading: "Animal",
-        desc: "The animal route returns dummy data realted to animals with their type,breed and photos.",
+        desc:
+            "The animal route returns dummy data realted to animals with their type,breed and photos.",
         routes: [
             {
                 route: "GET /animals/dog",
@@ -646,7 +648,7 @@ const data = [
             {
                 route: "GET /songs?genre=pop&language=punjabi",
                 content:
-          "Return dummy songs data after chaining genre and language query parameter.",
+                    "Return dummy songs data after chaining genre and language query parameter.",
                 output: `[
 
                 {
@@ -731,7 +733,8 @@ const data = [
         routes: [
             {
                 route: "GET /shows/",
-                content: "Return all the available shows with title,genre,season,episodes,rating,description.",
+                content:
+                    "Return all the available shows with title,genre,season,episodes,rating,description.",
                 output: `
     [
       {
@@ -790,58 +793,254 @@ const data = [
       },
     }`,
             },
+            {
+                route: "GET /shows?genre=drama",
+                content: "Return show data specific to a perticular genre from showsdata.json.",
+                output: `
+              [
+                {
+                    "title": "Money Heist",
+                    "genre": [
+                        "drama",
+                        "thriller"
+                    ],
+                    "rating": "8.3",
+                    "season": "2",
+                    "episodes": "31",
+                    "description": "Eight thieves take hostages and lock themselves in the Royal Mint of Spain as a criminal mastermind manipulates the police to carry out his plan."
+                },
+                {
+                    "title": "The Big Bang Theory",
+                    "genre": [
+                        "sitcom",
+                        "drama"
+                    ],
+                    "rating": "8.1",
+                    "season": "12",
+                    "episodes": "279",
+                    "description": "A woman who moves into an apartment across the hall from two brilliant but socially awkward physicists shows them how little they know about life outside of the laboratory."
+                },
+                {
+                    "title": "Little Things",
+                    "genre": [
+                        "comedy",
+                        "drama"
+                    ],
+                    "rating": "8.3",
+                    "season": "3",
+                    "episodes": "21",
+                    "description": "A cohabiting couple in their 20s navigate the ups and downs of work, modern-day relationships and finding themselves in contemporary Bengaluru."
+                },
+              ]`,
+            },
+            {
+                route: "GET /shows?rating=8.9",
+                content: "Return show data with specific rating from showsdata.json.",
+                output: `
+              [
+                {
+                    "title": "Friends",
+                    "genre": [
+                        "comedy",
+                        "romance"
+                    ],
+                    "rating": "8.9",
+                    "season": "10",
+                    "episodes": "236",
+                    "description": "Ross Geller, Rachel Green, Monica Geller, Joey Tribbiani, Chandler Bing, and Phoebe Buffay are six 20 something year olds living in New York City. Over the course of 10 years and seasons, these friends go through family,love,drama,friendship and comedy."
+                },
+                {
+                    "title": "The Office",
+                    "genre": [
+                        "comedy",
+                        "drama",
+                        "romance"
+                    ],
+                    "rating": "8.9",
+                    "season": "9",
+                    "episodes": "201",
+                    "description": "A mockumentary on a group of typical office workers, where the workday consists of ego clashes, inappropriate behavior, and tedium."
+                }
+            
+            ]`,
+            },
+            {
+                route: "GET /shows?season=10",
+                content: "Return show data based on season count from showsdata.json.",
+                output: `
+            [
+              {
+                  "title": "Friends",
+                  "genre": [
+                      "comedy",
+                      "romance"
+                  ],
+                  "rating": "8.9",
+                  "season": "10",
+                  "episodes": "236",
+                  "description": "Ross Geller, Rachel Green, Monica Geller, Joey Tribbiani, Chandler Bing, and Phoebe Buffay are six 20 something year olds living in New York City. Over the course of 10 years and seasons, these friends go through family,love,drama,friendship and comedy."
+              }
+            ]`,
+            },
+            {
+                route: "GET /shows?rating=9.8&genre=comedy",
+                content: "Return show data based on rating and season count from showsdata.json.",
+                output: `
+            [
+              {
+                  "title": "Friends",
+                  "genre": [
+                      "comedy",
+                      "romance"
+                  ],
+                  "rating": "8.9",
+                  "season": "10",
+                  "episodes": "236",
+                  "description": "Ross Geller, Rachel Green, Monica Geller, Joey Tribbiani, Chandler Bing, and Phoebe Buffay are six 20 something year olds living in New York City. Over the course of 10 years and seasons, these friends go through family,love,drama,friendship and comedy."
+              },
+            ]`,
+            },
+            {
+                route: "GET /shows?genre=comedy&season=10&rating=8.9",
+                content: "Return show data after chaining multiple show query parameter.",
+                output: `
+            [
+              {
+                  "title": "Friends",
+                  "genre": [
+                      "comedy",
+                      "romance"
+                  ],
+                  "rating": "8.9",
+                  "season": "10",
+                  "episodes": "236",
+                  "description": "Ross Geller, Rachel Green, Monica Geller, Joey Tribbiani, Chandler Bing, and Phoebe Buffay are six 20 something year olds living in New York City. Over the course of 10 years and seasons, these friends go through family,love,drama,friendship and comedy."
+              }
+            ]`,
+            },
         ],
     },
     {
         heading: "Books",
-        desc: "The book route returns all data realted to books having title,author,price,description,rating.",
+        desc:
+            "The book route returns all data realted to books having title,author,price,description,rating.",
         routes: [
             {
                 route: "GET /books/",
                 content: "Return all the available book data.",
                 output: `
-    [
-      {
-        "title": "The Story Of My Experiments With The Truth",
-        "author": "Mohandas Karamchand Gandhi",
-        "rating": "4.5",
-        "descritpion": "Mohandas Karamchand Gandhi has always been a very prominent figure in Indian history. From his unbeatable spirit to inspiring courage, from various controversies to his life as the father of the nation, Gandhi has always been an interesting, inspiring and impressive personality to read about.",
-        "price": "₹159"
-    },
-    {
-        "title": "The Guide",
-        "author": "R.K. Narayan",
-        "rating": "4.5",
-        "descritpion": "R.K Narayan is best known for stories based in and around the fictional village of Malgudi. The Guide is yet another story set up in Malgudi. R.K. Narayan won the Sahitya Akademi Award for the book in 1960. The Guide is the story of a tour guide who transforms himself into a spiritual Guru and then the greatest holy man of India. The book was also adapted as a film which starred the legendary actor Dev Anand.",
-        "price": "₹156"
-    },
-    {
-        "title": "A Fine Balance",
-        "author": "Rohinton Mistry",
-        "rating": "4.4",
-        "descritpion": "A fine balance revolves around various characters in Mumbai (then Bombay) during the time of turmoil and government emergencies. The story of friendship and love that progresses among the characters of the book will keep you hooked till the end.",
-        "price": "₹1,075"
-    },
-    {
-        "title": "Midnight’s Children",
-        "author": "Salman Rushdie",
-        "rating": "4.3",
-        "descritpion": "Midnight’s Children portrays the journey of India from British rule to independence and then partition. The book received a great response, winning the Booker Prize in 1981 and the “Booker of Bookers” Prize (commemorating the best among all the Booker winners) twice – in 1993 and 2008! The book travels to various parts of the country including Kashmir, Agra and Mumbai and incorporates many actual historic events.",
-        "price": "₹300"
-    }
-    ]`,
+                [
+                {
+                  "title": "The Story Of My Experiments With The Truth",
+                  "author": "Mohandas Karamchand Gandhi",
+                  "rating": "4.5",
+                  "descritpion": "Mohandas Karamchand Gandhi has always been a very prominent figure in Indian history. From his unbeatable spirit to inspiring courage, from various controversies to his life as the father of the nation, Gandhi has always been an interesting, inspiring and impressive personality to read about.",
+                  "price": "₹159"
+                },
+                {
+                  "title": "The Guide",
+                  "author": "R.K. Narayan",
+                  "rating": "4.5",
+                  "descritpion": "R.K Narayan is best known for stories based in and around the fictional village of Malgudi. The Guide is yet another story set up in Malgudi. R.K. Narayan won the Sahitya Akademi Award for the book in 1960. The Guide is the story of a tour guide who transforms himself into a spiritual Guru and then the greatest holy man of India. The book was also adapted as a film which starred the legendary actor Dev Anand.",
+                  "price": "₹156"
+                },
+                {
+                  "title": "A Fine Balance",
+                  "author": "Rohinton Mistry",
+                  "rating": "4.4",
+                  "descritpion": "A fine balance revolves around various characters in Mumbai (then Bombay) during the time of turmoil and government emergencies. The story of friendship and love that progresses among the characters of the book will keep you hooked till the end.",
+                  "price": "₹1,075"
+                },
+                {
+                  "title": "Midnight’s Children",
+                  "author": "Salman Rushdie",
+                  "rating": "4.3",
+                  "descritpion": "Midnight’s Children portrays the journey of India from British rule to independence and then partition. The book received a great response, winning the Booker Prize in 1981 and the “Booker of Bookers” Prize (commemorating the best among all the Booker winners) twice – in 1993 and 2008! The book travels to various parts of the country including Kashmir, Agra and Mumbai and incorporates many actual historic events.",
+                  "price": "₹300"
+                }
+              ]`,
             },
             {
                 route: "GET /books/2",
                 content: "Return book data at index 2 from booksdata.json.",
                 output: `
-    {
-      "title": "Midnight’s Children",
-      "author": "Salman Rushdie",
-      "rating": "4.3",
-      "descritpion": "Midnight’s Children portrays the journey of India from British rule to independence and then partition. The book received a great response, winning the Booker Prize in 1981 and the “Booker of Bookers” Prize (commemorating the best among all the Booker winners) twice – in 1993 and 2008! The book travels to various parts of the country including Kashmir, Agra and Mumbai and incorporates many actual historic events.",
-      "price": "₹300"
-    }`,
+                {
+                  "title": "Midnight’s Children",
+                  "author": "Salman Rushdie",
+                  "rating": "4.3",
+                  "descritpion": "Midnight’s Children portrays the journey of India from British rule to independence and then partition. The book received a great response, winning the Booker Prize in 1981 and the “Booker of Bookers” Prize (commemorating the best among all the Booker winners) twice – in 1993 and 2008! The book travels to various parts of the country including Kashmir, Agra and Mumbai and incorporates many actual historic events.",
+                  "price": "₹300"
+                }`,
+            },
+            {
+                route: "GET /books?author=Vikram Seth",
+                content: "Return book data with specific author name from booksdata.json.",
+                output: `
+              [
+                {
+                    "title": "A Suitable Boy",
+                    "author": "Vikram Seth",
+                    "rating": "4.0",
+                    "descritpion": "Published in 1993, this 1349-pages-long-book is one of the longest novels ever published in a single volume in the English Language. The story focuses on India post-partition as a family looks for a suitable boy to marry their daughter.",
+                    "price": "₹947"
+                }
+              ]`,
+            },
+            {
+                route: "GET /books?price=₹268",
+                content: "Return book data with specific author name from booksdata.json.",
+                output: `
+              [
+                {
+                    "title": "The Interpreter Of Maladies",
+                    "author": "Jhumpa Lahiri",
+                    "rating": "4.5",
+                    "descritpion": "This is a collection of nine stories by Lahiri. The stories are based on lives of Indians and Indian Americans who are lost between the two cultures. The book was published in 1999 and won the Pulitzer Prize for Fiction and the Hemingway Foundation/PEN Award in the year 2000 and has sold over 15 million copies worldwide.",
+                    "price": "₹268"
+                }
+              ]`,
+            },
+            {
+                route: "GET /books?title=The Glass Palace",
+                content: "Return book data with specific title from booksdata.json.",
+                output: `
+              [
+                {
+                    "title": "The Glass Palace",
+                    "author": "Amitav Ghosh",
+                    "rating": "4.5",
+                    "descritpion": "This book won Grand Prize for Fiction at the Frankfurt International e-Book Awards in 2001. The story is set in Burma and focuses on various issues during the British invasion in 1885. The novel beautifully portrays the circumstances and incidents that made Burma, India and Malaya what they are today. This story of the empire, love and the changing society is definitely worth reading.",
+                    "price": "₹248"
+                }
+              ]`,
+            },
+            {
+                route: "GET /books?author=Vikram Seth&price=₹947",
+                content: "Return book data with specific title from booksdata.json.",
+                output: `
+              [
+                {
+                    "title": "A Suitable Boy",
+                    "author": "Vikram Seth",
+                    "rating": "4.0",
+                    "descritpion": "Published in 1993, this 1349-pages-long-book is one of the longest novels ever published in a single volume in the English Language. The story focuses on India post-partition as a family looks for a suitable boy to marry their daughter.",
+                    "price": "₹947"
+                }
+              ]`,
+            },
+            {
+                route: "GET /books?title=God of Small Things&author=Arundhati Roy&price=₹275",
+                content: "Return book data after chaining multiple book query parameter.",
+                output: `
+              [
+                {
+                    "title": "God of Small Things",
+                    "author": "Arundhati Roy",
+                    "rating": "4.1",
+                    "descritpion": "The debut novel by Roy, which took almost four years to finish is a story of fraternal twins and how small things make a large difference in people’s lives and behavior. The book was awarded the Booker Prize in 1997 and is Roy’s only published novel so far. The story narrated in third person is set in Kerala, and takes place in 1969.",
+                    "price": "₹275"
+                }
+              ]`,
             },
         ],
     },
