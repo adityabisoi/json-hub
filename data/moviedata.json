@@ -1,0 +1,53 @@
+{
+    "data": [
+        {
+            "title": "3-Idiots",
+            "director": "Rajkumar Hirani",
+            "genre": ["comedy"],
+            "rating": "8.4",
+            "description": "Two friends are searching for their long lost companion. They revisit their college days and recall the memories of their friend who inspired them to think differently, even as the rest of the world called them idiots."
+        },
+        {
+            "title": "Bajirao Mastani",
+            "director": " Sanjay Leela Bhansali",
+            "genre": ["historical", "drama"],
+            "rating": "7.9",
+            "description": "An account of the romance between the Maratha general, Baji Rao I and Mastani, princess of Bundelkhand."
+        },
+        {
+            "title": "Baahubali",
+            "director": " S.S. Rajamouli",
+            "genre": ["action", "drama"],
+            "rating": "8.0",
+            "description": "In ancient India, an adventurous and daring man becomes involved in a decades-old feud between two warring peoples."
+        },
+        {
+            "title": "Ajab Prem Ki Ghazab Kahani",
+            "director": "Rajkumar Santoshi",
+            "genre": ["romance"],
+            "rating": "6.9",
+            "description": "The wacky adventures of a young man who is willing to sacrifice his own love to insure the happiness of others, and get the girl-of-his-dreams married to the boy-of-her-dreams."
+        },
+        {
+            "title": "Zindagi Na Milegi Dobara",
+            "director": "Zoya Aktar",
+            "genre": ["romance"],
+            "rating": "8.2",
+            "description": "Three friends decide to turn their fantasy vacation into reality after one of their friends gets engaged."
+        },
+        {
+            "title": "Piku",
+            "director": "Shoojit Sircar",
+            "genre": ["comedy"],
+            "rating": "7.9",
+            "description": "A quirky comedy about the relationship between a daughter and her aging father, whose eccentricities drive everyone crazy."
+        },
+        {
+            "title": "Bhoothnath",
+            "director": "Vivek Sharma",
+            "genre": ["horror"],
+            "rating": "6.3",
+            "description": "Moving into a new house, a family witnesses an unfriendly ghost who wants to drive them away from the house. However, he befriends a little boy who changes his outlook forever."
+        }
+    ]
+}
