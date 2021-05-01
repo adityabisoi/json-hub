@@ -23,6 +23,7 @@ const vehicleRoute = require("./api/routes/vehicles"); //include vehicles route
 const songRoute = require("./api/routes/songs"); //include songs route
 const bookRoute = require("./api/routes/books"); //include books route
 const showsRoute = require("./api/routes/shows"); //include shows route
+const productRoute = require("./api/routes/products"); //include products route
 
 const options = {
     useNewUrlParser: true,
@@ -81,6 +82,7 @@ app.use("/shows", showsRoute);
 app.use("/animals", animalRoute);   //Added animal route
 app.use("/address", addressRoute);   //Added address route
 app.use("/books", bookRoute);   //Added books route
+app.use("/products", productRoute);   //Added products route
 
 
 // Handle error
