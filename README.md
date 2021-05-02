@@ -55,48 +55,90 @@ There are two ways of installing the project on your local Machine 🚀
       * Enter the credentials in `.env.example` and rename it to `.env`.
       * Make sure to set `USE_DOCKER= false` in `.env` file.
     * Using local MongoDB server :
-      * Download the [MongoDB MSI Installer Package](https://www.mongodb.com/try/download/community). Make sure you select MSI as the package you want to download.
-      * Install MongoDB with the Installation Wizard
-        * Navigate to your downloads folder and double click on the .msi package you just downloaded
-        * Click <strong>Next</strong> to start installation.
-        * Accept the licence agreement then click <strong>Next</strong>.
-        * Select the <strong>Complete</strong> setup.
-        * Select <strong>Run service as Network Service user</strong> and make a note of the data directory, we’ll need this later.
-        * We won’t need Mongo Compass, so deselect it and click <strong>Next</strong>.
-        * Click <strong>Install</strong> to begin installation.
-        * Hit <strong>Finish</strong> to complete installation.
-      * Create the Data Folders to Store our Databases
-        * Navigate to the C Drive on your PC and create a new folder called <strong>data</strong> here.
-        * Inside the data folder you just created, create another folder called <strong>db</strong>.
-      * Setup Alias Shortcuts for Mongo and Mongod
-        * Open your terminal running Git Bash.
-        * Change directory to your home directory with the following command: 
-          
-          `cd ~`
-        * Here, we’re going to create a file called .bash_profile using the following command: 
-        
-          `touch .bash_profile`
-        * Open the newly created .bash_profile with vim using the following command: Open the newly created .bash_profile with vim using the following command:
-
-          `vim .bash_profile`
-        * In vim, hit the <strong>I</strong> key on the keyboard to enter insert mode.
-        * In your explorer go to C → Program Files → MongoDB → Server . Now you should see the version of your MongoDB.
-        * Paste in the following code into vim, make sure your replace the 4.0 with your version that you see in explorer
-
-          `alias mongod="/c/Program\ files/MongoDB/Server/4.0/bin/mongod.exe"`
-
-
-          `alias mongo="/c/Program\ Files/MongoDB/Server/4.0/bin/mongo.exe"`
-        * Hit the Escape key on your keyboard to exit the insert mode. Then type to save and exit Vim.
-
-          `:wq!`
-      * Verify That Setup was Successful 
-        * Close down the current terminal and quit the application.
-        * Re-launch the terminal.
-        * Type the following commands into the terminal:
+      * Setup on Windows
+        * Download the [MongoDB MSI Installer Package](https://www.mongodb.com/try/download/community). Make sure you select MSI as the package you want to download.
+        * Install MongoDB with the Installation Wizard
+          * Navigate to your downloads folder and double click on the .msi package you just downloaded
+          * Click <strong>Next</strong> to start installation.
+          * Accept the licence agreement then click <strong>Next</strong>.
+          * Select the <strong>Complete</strong> setup.
+          * Select <strong>Run service as Network Service user</strong> and make a note of the data directory, we’ll need this later.
+          * We won’t need Mongo Compass, so deselect it and click <strong>Next</strong>.
+          * Click <strong>Install</strong> to begin installation.
+          * Hit <strong>Finish</strong> to complete installation.
+        * Create the Data Folders to Store our Databases
+          * Navigate to the C Drive on your PC and create a new folder called <strong>data</strong> here.
+          * Inside the data folder you just created, create another folder called <strong>db</strong>.
+        * Setup Alias Shortcuts for Mongo and Mongod
+          * Open your terminal running Git Bash.
+          * Change directory to your home directory with the following command: 
             
+            `cd ~`
+          * Here, we’re going to create a file called .bash_profile using the following command: 
+          
+            `touch .bash_profile`
+          * Open the newly created .bash_profile with vim using the following command: Open the newly created .bash_profile with vim using the following command:
+
+            `vim .bash_profile`
+          * In vim, hit the <strong>I</strong> key on the keyboard to enter insert mode.
+          * In your explorer go to C → Program Files → MongoDB → Server . Now you should see the version of your MongoDB.
+          * Paste in the following code into vim, make sure your replace the 4.0 with your version that you see in explorer
+
+            `alias mongod="/c/Program\ files/MongoDB/Server/4.0/bin/mongod.exe"`
+
+
+            `alias mongo="/c/Program\ Files/MongoDB/Server/4.0/bin/mongo.exe"`
+          * Hit the Escape key on your keyboard to exit the insert mode. Then type to save and exit Vim.
+
+            `:wq!`
+        * Verify That Setup was Successful 
+          * Close down the current terminal and quit the application.
+          * Re-launch the terminal.
+          * Type the following commands into the terminal:
+              
+              `mongo --version`
+          * If you see something that looks like <strong>bash mongo command not found</strong>, make sure to check all the previous steps.
+
+      * Setup on Mac
+        * Download the [MongoDB TGZ Package](https://www.mongodb.com/try/download/community). 
+        * Extract the Tarball
+          * In your downloads folder, double click on the .tgz file to extract it. The result should be a folder called mongodb-osx...
+        * Move the Binaries to the Local User
+          * Open up a Terminal and type <strong>sudo mv</strong> after the prompt (username$).
+          * Click and drag the extracted mongodb folder into the Terminal.
+          * Next hit space and type <strong>/usr/local/mongodb</strong>.
+          * Now hit enter to execute the move.
+          * You might be prompted for the password. This will be the password you use to log on to the Mac. When you type, nothing will change on screen. Just make sure you typed the right password then hit enter.
+          * After the prompt type open <strong>/usr/local/mongodb</strong>.
+          * Confirm that the move was successful.
+        * Adding the MongoDB Binaries to Environment Variables
+          * Change directory to your home folder with <strong>cd ~</strong> and hit enter.
+          * Check that you are inside User/username with the command <strong>pwd</strong> and hit enter (print working directory).
+          * Create a bash profile with <strong>touch .bash_profile</strong>
+          * Edit the new bash_profile with Vim, using <strong>vim .bash_profile</strong>
+          * Hit the <strong>I</strong> key on the keyboard to enter Insert mode.
+          * Now paste in the following:
+
+            `export PATH=$PATH:/usr/local/mongodb/bin`
+          * Hit the <strong>Escape</strong> key to exit Insert mode in vim. Then type <strong>:wq!</strong> and hit enter to exit and save.
+        * Creating the Local Data Storage Location for MongoDB
+          * Create a folder called data and inside create another called db at the root of your computer with the following command:
+            
+            `sudo mkdir -p /data/db`
+          * Check your current username with <strong>whoami</strong> and hit enter to see your username. 
+            
+          * Set the current user to own the newly created data folder with the following command, replacing <your-username> with the one you got in Step B above. 
+          
+            `sudo chown <your-username> /data/db`
+          * Once you’ve hit enter and you see your prompt again, then you should be good to go.
+        * Test the setup
+          * Quit the Terminal and reopen it. 
+          * Type the following command after your prompt:
+
             `mongo --version`
-        * If you see something that looks like <strong>bash mongo command not found</strong>, make sure to check all the previous steps.
+          *  If you get something like this then congratulations, you’ve successfully installed mongoDB!
+
+            `MongoDB shell version v4.0.3`
       * Enter the credentials in `.env`.
       * Make sure to set `USE_DOCKER=false` in `.env` file.
   
