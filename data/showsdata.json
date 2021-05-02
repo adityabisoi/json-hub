@@ -1,0 +1,75 @@
+{
+    "data": [{
+            "title": "Friends",
+            "genre": ["comedy", "romance"],
+            "rating": "8.9",
+            "season": "10",
+            "episodes": "236",
+            "description": "Ross Geller, Rachel Green, Monica Geller, Joey Tribbiani, Chandler Bing, and Phoebe Buffay are six 20 something year olds living in New York City. Over the course of 10 years and seasons, these friends go through family,love,drama,friendship and comedy."
+        },
+        {
+            "title": "Money Heist",
+            "genre": ["drama", "thriller"],
+            "rating": "8.3",
+            "season": "2",
+            "episodes": "31",
+            "description": "Eight thieves take hostages and lock themselves in the Royal Mint of Spain as a criminal mastermind manipulates the police to carry out his plan."
+        },
+        {
+            "title": "Sherlock Homles",
+            "genre": ["detective", "fiction"],
+            "rating": "9.1",
+            "season": "4",
+            "episodes": "13",
+            "description": "A modern update finds the famous sleuth and his doctor partner solving crime in 21st century London."
+        },
+        {
+            "title": "The Big Bang Theory",
+            "genre": ["sitcom", "drama"],
+            "rating": "8.1",
+            "season": "12",
+            "episodes": "279",
+            "description": "A woman who moves into an apartment across the hall from two brilliant but socially awkward physicists shows them how little they know about life outside of the laboratory."
+        },
+        {
+            "title": "Little Things",
+            "genre": ["comedy", "drama"],
+            "rating": "8.3",
+            "season": "3",
+            "episodes": "21",
+            "description": "A cohabiting couple in their 20s navigate the ups and downs of work, modern-day relationships and finding themselves in contemporary Bengaluru."
+        },
+        {
+            "title": "Suits",
+            "genre": ["comedy", "legal drama"],
+            "rating": "8.3",
+            "season": "9",
+            "episodes": "134",
+            "description": "On the run from a drug deal gone bad, brilliant college dropout Mike Ross, finds himself working with Harvey Specter, one of New York City's best lawyers."
+        },
+        {
+            "title": "Breaking Bad",
+            "genre": ["thriller", "suspense", "drama", "dark comedy"],
+            "rating": "9.5",
+            "season": "5",
+            "episodes": "62",
+            "description": "A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future."
+        },
+        {
+            "title": "The Office",
+            "genre": ["comedy", "drama", "romance"],
+            "rating": "8.9",
+            "season": "9",
+            "episodes": "201",
+            "description": "A mockumentary on a group of typical office workers, where the workday consists of ego clashes, inappropriate behavior, and tedium."
+        },
+        {
+            "title": "Game of Thrones",
+            "genre": ["comedy", "drama", "epic", "suspense"],
+            "rating": "9.3",
+            "season": "8",
+            "episodes": "73",
+            "description": "Nine noble families fight for control over the lands of Westeros, while an ancient enemy returns after being dormant for millennia."
+        }
+    ]
+}

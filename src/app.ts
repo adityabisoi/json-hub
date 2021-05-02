@@ -10,14 +10,21 @@ app.use(express.static(__dirname + "/public"));
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
-const animalRoute = require("./api/routes/animals");
+const addressRoute = require("./api/routes/address");   //import address route
+const animalRoute = require("./api/routes/animals");    //import animal route
 const homeRoute = require("./api/routes/home");
 const usersRoute = require("./api/routes/users");
 const testRoute = require("./api/routes/usertest");
 const taskRoute = require("./api/routes/tasks"); //include tasks route
+const commentRoute = require("./api/routes/comments");//importing the comments endpoint file
 const photoRoute = require("./api/routes/photos");
 const foodPhotoRoute = require("./api/routes/foodphotos"); //include foodphotos route
 const vehicleRoute = require("./api/routes/vehicles"); //include vehicles route
+const songRoute = require("./api/routes/songs"); //include songs route
+const bookRoute = require("./api/routes/books"); //include books route
+const showsRoute = require("./api/routes/shows"); //include shows route
+const movieRoute = require("./api/routes/movies");
+const productRoute = require("./api/routes/products"); //include products route
 
 const options = {
     useNewUrlParser: true,
@@ -65,13 +72,19 @@ app.use("/", homeRoute);
 app.use("/users", usersRoute);
 app.use("/usertest", testRoute);
 app.use("/tasks", taskRoute); // Added task route
+app.use("/comments", commentRoute);//Routing the app to use the comments endpoint
 app.use("/photos/food", foodPhotoRoute); //Added foodphoto route
 app.use("/photos", photoRoute);
-
 app.use("/vehicles", vehicleRoute); //Added vehicles route
-
+app.use("/songs", songRoute);
 app.use("/animals", animalRoute);
-
+app.use("/songs", songRoute);
+app.use("/shows", showsRoute);
+app.use("/animals", animalRoute);   //Added animal route
+app.use("/address", addressRoute);   //Added address route
+app.use("/books", bookRoute);   //Added books route
+app.use("/movies", movieRoute);
+app.use("/products", productRoute);   //Added products route
 
 // Handle error
 interface ErrorWithStatus extends Error {
