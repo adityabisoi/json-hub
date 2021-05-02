@@ -1,0 +1,74 @@
+{
+    "data": [{
+            "name": "school bag",
+            "brand": "rockstore",
+            "price": "999",
+            "image": "https://unsplash.com/photos/_H0fjILH5Vw",
+            "description": "The bag have 3 main zippered compartments, one well-padded laptop partition, 2 water bottle /umbrella pockets and Organizer Pockets inside. Suitable for casual usage, school / college / office n travel."
+        },
+        {
+            "name": "smart watch",
+            "brand": "digital work",
+            "price": "1299",
+            "image": "https://unsplash.com/photos/UkO7K1CPFS8",
+            "description": "The brilliant 1.3 colour display is now full capacitive touch, supporting taps and swipes, so it is easy to read and operate."
+        },
+        {
+            "name": "denim jacket",
+            "brand": "fab fabric",
+            "price": "1999",
+            "image": "https://unsplash.com/photos/UNSj7BtOK0Q",
+            "description": "Made with a Cotton blend, this denim jacket is designed with style and function in mind. Wear it out to lunch with friends or dress it up for date night, this essential staple can be worn for many occasions."
+        },
+        {
+            "name": "mouse pad",
+            "brand": "electrika",
+            "price": "499",
+            "image": "https://unsplash.com/photos/PL6ClUWwDEw",
+            "description": "Speed-type surface mousepad is designed with the use of great technology and craftsmanship especially for professional gamers."
+        },
+        {
+            "name": "gaming controller",
+            "brand": "playclub",
+            "price": "1599",
+            "image": "https://unsplash.com/photos/UCFDB6O48d0",
+            "description": "Experience the modernized design of the Xbox wireless controller in robot white, featuring sculpted surfaces and refined geometry for enhanced comfort and effortless control during gameplay."
+        },
+        {
+            "name": "digital camera",
+            "brand": "electrika",
+            "price": "5999",
+            "image": "https://unsplash.com/photos/b8J3ert6B6s",
+            "description": "Capturing sharp images is easy thanks to the fast, accurate AF and the large grip that provides a firm, steady hold on the camera. Built-in Wi-Fi / NFC connectivity enables the seamless upload of photos and videos to social media."
+        },
+        {
+            "name": "speaker",
+            "brand": "digimob",
+            "price": "10000",
+            "image": "https://unsplash.com/photos/u8-QI4tRES0",
+            "description": "A compact, lightweight and IPX 6 Water Resistant design makes it the perfect companion for a number of sceneries. Stay prepared with the boAt Stone 170. It is packed with an 1800mAh Battery, with a push of up to 6 hours of play time per listening session."
+        },
+        {
+            "name": "toothbrush",
+            "brand": "kirana",
+            "price": "50",
+            "image": "https://unsplash.com/photos/GU626U1eTC0",
+            "description": "With the unique cup shaped bristles it cleans in between teeth and along gum line to protect you against cavity."
+        },
+        {
+            "name": "notebook",
+            "brand": "bookish",
+            "price": "39",
+            "image": "https://unsplash.com/photos/3ym6i13Y9LU",
+            "description": "Bookish notebooks are made to the highest quality standards. Made from superior quality paper and pulp, the pages are whiter, brighter and smoother. The superior cut and excellent finish ensure the pages are in perfect alignment without any folded corners."
+        },
+        {
+            "name": "mechanical pencil",
+            "brand": "bookish",
+            "price": "199",
+            "image": "https://unsplash.com/photos/DUOTbkFqvFw",
+            "description": "Accessories made of matte brass. Clip made of matt stainless steel. Mini removable sharpener embedded in the feed button."
+        }
+
+    ]
+}

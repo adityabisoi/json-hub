@@ -1,0 +1,74 @@
+{
+    "data": [
+        {
+            "name": "Chan Kitta",
+            "singer": "Ayushmann Khurrana",
+            "language": "punjabi",
+            "genre": "romance",
+            "link": "https://www.youtube.com/watch?v=JFYCc577kjQ"
+        },
+        {
+            "name": "Afreen Afreem",
+            "singer": "Rahat Fateh Ali Khan",
+            "language": "urdu",
+            "genre": "ghazal",
+            "link": "https://www.youtube.com/watch?v=kw4tT7SCmaY"
+        },
+        {
+            "name": "Lut Gaye",
+            "singer": "Jubin Nautiyal",
+            "language": "hindi",
+            "genre": "romance",
+            "link": "https://www.youtube.com/watch?v=sCbbMZ-q4-I"
+        },
+        {
+            "name": "Dope Shope",
+            "singer": "Yo Yo Honey Singh",
+            "language": "punjabi",
+            "genre": "pop",
+            "link": "https://www.youtube.com/watch?v=NrXdauEv9HY"
+        },
+        {
+            "name": "Tunak Tunak Tun",
+            "singer": "Daler Mehndi",
+            "language": "punjabi",
+            "genre": "indian pop",
+            "link": "https://www.youtube.com/watch?v=vTIIMJ9tUc8"
+        },
+        {
+            "name": "Bohemian Rhapsody",
+            "singer": "Queen",
+            "language": "english",
+            "genre": "classic rock",
+            "link": "https://www.youtube.com/watch?v=fJ9rUzIMcZQ"
+        },
+        {
+            "name": "Oonchi Hai Building",
+            "singer": "Anu Malik",
+            "language": "hindi",
+            "genre": "pop",
+            "link": "https://www.youtube.com/watch?v=QmHTmr8Kazs"
+        },
+        {
+            "name": "Brown Munde",
+            "singer": "AP DHILLON",
+            "language": "punjabi",
+            "genre": "pop",
+            "link": "https://www.youtube.com/watch?v=VNs_cCtdbPc"
+        },
+        {
+            "name": "Kun Faya Kun",
+            "singer": "A.R. Rahman",
+            "language": "urdu",
+            "genre": "sufi",
+            "link": "https://www.youtube.com/watch?v=T94PHkuydcw"
+        },
+        {
+            "name": "Tera Yaar Hoon Main",
+            "singer": "Arijit Singh",
+            "language": "hindi",
+            "genre": "friendship",
+            "link": "https://www.youtube.com/watch?v=EatzcaVJRMs"
+        }
+    ]
+}
