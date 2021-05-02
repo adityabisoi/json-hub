@@ -105,6 +105,44 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ## Contributors <img src="https://github.com/Samridhi-98/Images/blob/master/Images/contributors.svg" width="3%">
 
+## How to setup a local MongoDB Connection 
+
+## Installing MongoDB:
+You need to install MongoDB on your computer before you can connect to it. You can install MongoDB by following these instructions (Mac and Windows).Once you have completed the installation process, try typing mongo --version into your command line.
+
+## Starting MongoDB:
+You can start MongoDB on your computer with the mongod command.Keep the mongod window running when you want to work with your local MongoDB. MongoDB stops when you close the window.
+
+## Adding items to a database:
+One way to add items to a MongoDB database is through the Mongo Shell. To open up the Mongo Shell, you open another command line window and run mongo.
+
+## Accessing MongoDB with MongoDB Compass:
+MongoDB Compass gives you another way to access MongoDB. It’s an app that makes checking (and editing) databases easier if you’re not a fan of the command line.To use MongoDB Compass, you have to install it first.To connect to your local MongoDB, you set Hostname to localhost and Port to 27017. These values are the default for all local MongoDB connections.
+
+## Connecting to MongoDB with a Node server:
+When we build applications, we connect to MongoDB through our applications (not through Mongo Shell nor MongoDB Compass).To connect to MongoDB, we need to use the mongodb package. Alternatively, you can also use Mongoose.
+
+## Connecting with MongoDB native driver:
+First you have to install and require the mongodb package. Then use the following command 
+npm install mongodb --save 
+const MongoClient = require('mongodb').MongoClient
+
+## You can connect to your local MongoDB with this url:
+const url = 'mongodb://127.0.0.1:27017'
+
+With the Mongo Client, you need to specify the database you’re using after you connect to MongoDB. 
+
+## Connecting with Mongoose:
+To connect with Mongoose, you need to download and require mongoose. Then use the following command.
+npm install mongoose --save.
+const mongoose = require('mongoose')
+
+## Connect method
+When you use Mongoose, the connection url should include the database you’re connecting to.You can connect to MongoDB with the connect method.
+mongoose.connect(url, { useNewUrlParser: true })
+
+
+
 <table>
 	<tr>
 		<td>
