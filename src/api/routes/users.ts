@@ -69,7 +69,7 @@ router.patch("/:userId", (req: Request, res: Response, next: NextFunction) => {
                 occupation: occupation,
                 phoneno: phoneno,
                 gender: gender,
-                dob: dob
+                dob: dob,
             });
         })
         .catch((err: string) => {

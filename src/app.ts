@@ -25,6 +25,7 @@ const bookRoute = require("./api/routes/books"); //include books route
 const showsRoute = require("./api/routes/shows"); //include shows route
 const movieRoute = require("./api/routes/movies");
 const productRoute = require("./api/routes/products"); //include products route
+const sportRoute = require("./api/routes/sports");
 
 const options = {
     useNewUrlParser: true,
@@ -85,6 +86,7 @@ app.use("/address", addressRoute);   //Added address route
 app.use("/books", bookRoute);   //Added books route
 app.use("/movies", movieRoute);
 app.use("/products", productRoute);   //Added products route
+app.use("/sports", sportRoute);
 
 // Handle error
 interface ErrorWithStatus extends Error {
