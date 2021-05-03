@@ -29,7 +29,7 @@ router.post("/", (req: Request, res: Response, next: NextFunction) => {
         occupation: req.body.occupation,
         phoneno: req.body.phoneno,
         gender: req.body.gender,
-        dob: req.body.dob
+        dob: req.body.dob,
     });
 
     user.save()
