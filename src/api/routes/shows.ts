@@ -15,8 +15,8 @@ router.get("/", (req: Request, res: Response, next: NextFunction) => {
             else {
                 let result = data.data
                     .filter((shows: any) => shows.season === (season ?? shows.season))
-                    .filter((shows: any) => shows.rating === (rating ?? shows.rating))
-                if (genre) result = data.data.filter((shows: any) => shows.genre.includes(genre))
+                    .filter((shows: any) => shows.rating === (rating ?? shows.rating));
+                if (genre) result = data.data.filter((shows: any) => shows.genre.includes(genre));
 
                 if (result.length)
                     res.status(200).json({ data: result });
