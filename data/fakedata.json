@@ -4,17 +4,32 @@
         {
             "first_name": "Becky",
             "last_name": "Blasbad",
-            "email": "beck1blas4@gmail.com"
+            "email": "beck1blas4@gmail.com",
+            "country":"India",
+            "occupation":"engineer",
+            "phoneno":"4248930799",
+            "gender":"m",
+            "dob":"1996-01-17"
         },
         {
             "first_name": "Andry",
             "last_name": "Gentry",
-            "email": "Anrygen002@gmail.com"
+            "email": "Anrygen002@gmail.com",
+            "country":"China",
+            "occupation":"cinematographer",
+            "phoneno":"77885836672",
+            "gender":"f",
+            "dob":"1994-03-17"
         },
         {
             "first_name": "David",
             "last_name": "Griffin",
-            "email": "Devdavid9@gmail.com"
+            "email": "Devdavid9@gmail.com",
+            "country":"England",
+            "occupation":"footballer",
+            "phoneno":"3209412679",
+            "gender":"m",
+            "dob":"1995-05-17"
         }
     ]
 }

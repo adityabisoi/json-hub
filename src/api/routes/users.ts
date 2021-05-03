@@ -54,9 +54,23 @@ router.patch("/:userId", (req: Request, res: Response, next: NextFunction) => {
                 first_name = user.first_name,
                 last_name = user.last_name,
                 email = user.email,
+                country = user.country,
+                occupation = user.occupation,
+                phoneno = user.phoneno,
+                gender = user.gender,
+                dob = user.dob,
             } = jsonData;
 
-            res.status(200).json({ first_name: first_name, last_name: last_name, email: email });
+            res.status(200).json({
+                first_name: first_name,
+                last_name: last_name,
+                email: email,
+                country: country,
+                occupation: occupation,
+                phoneno: phoneno,
+                gender: gender,
+                dob: dob
+            });
         })
         .catch((err: string) => {
             res.status(404).json({ message: "user not found" });

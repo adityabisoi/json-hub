@@ -25,6 +25,11 @@ router.post("/", (req: Request, res: Response, next: NextFunction) => {
         first_name: req.body.first_name,
         last_name: req.body.last_name,
         email: req.body.email,
+        country: req.body.country,
+        occupation: req.body.occupation,
+        phoneno: req.body.phoneno,
+        gender: req.body.gender,
+        dob: req.body.dob
     });
 
     user.save()
