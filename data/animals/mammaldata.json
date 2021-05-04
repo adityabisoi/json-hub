@@ -1,6 +1,6 @@
 {
-    "data": [{
-
+    "data": [
+        {
             "type": "dog",
             "breed": [
                 "germen shepherd", "bulldog", "poodle"
