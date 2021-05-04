@@ -1,13 +1,12 @@
 import express, { Application, NextFunction, Request, Response } from "express";
-const data = require("../../../data/animaldata.json");
+const amphibianData = require("../../../data/animals/amphibiandata");
 
 const router = express.Router();
 
-//GET request /animals route
-router.get("/", (req: Request, res: Response, next: NextFunction) => {
+//GET request /animals/amphibians route
+router.get("/amphibians", (req: Request, res: Response, next: NextFunction) => {
     try {
-        console.log(data);
-        res.status(200).json(data);
+        res.status(200).json(amphibianData);
     }
     catch (err) {
         console.log(err);
@@ -17,22 +16,26 @@ router.get("/", (req: Request, res: Response, next: NextFunction) => {
     }
 });
 
-//GET request /animals?type route
-router.get("/:type", (req: Request, res: Response, next: NextFunction) => {
+//GET request /animals/amphibians/:type route
+router.get("/amphibians/:type", (req: Request, res: Response, next: NextFunction) => {
     try {
         const type = req.params.type;
         const option = req.query.option;
         console.log(type);
         let result = null;
-        for (let i = 0; i < data.data.length; i++) {
-            if (type === data.data[i].type) {
+        for (let i = 0; i < amphibianData.data.length; i++) {
+            if (type === amphibianData.data[i].type) {
                 if(option){
                     if(option === "breed"){
-                        result = data.data[i].breed;
+                        result = amphibianData.data[i].breed;
                         break;
                     }
                     else if(option === "picture"){
-                        result = data.data[i].picture;
+                        result = amphibianData.data[i].picture;
+                        break;
+                    }
+                    else if(option === "description"){
+                        result = amphibianData.data[i].description;
                         break;
                     }
                     else{
@@ -40,7 +43,7 @@ router.get("/:type", (req: Request, res: Response, next: NextFunction) => {
                     }
                 }
                 else{
-                    result = data.data[i];
+                    result = amphibianData.data[i];
                     break;
                 } 
             }

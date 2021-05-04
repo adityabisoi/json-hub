@@ -1,0 +1,43 @@
+{
+    "data": [{
+
+            "type": "frog",
+            "breed": [
+                "red-eyed tree frog", "blue poison dart frog", "mimic poison frog"
+            ],
+            "picture": [
+                "https://unsplash.com/photos/JLMEZxBcXCU",
+                "https://unsplash.com/photos/IniemNK2HtE",
+                "https://unsplash.com/photos/gb_R_cIUNTY"
+            ],
+            "description":"Frog, any of various tailless amphibians belonging to the order Anura. Used strictly, the term may be limited to any member of the family Ranidae (true frogs), but more broadly the name frog is often used to distinguish the smooth-skinned, leaping anurans from squat, warty, hopping ones, which are called toads."
+        },
+        {
+            "type": "salamander",
+            "breed": [
+                "red backed salamander", "olympic torrent salamander", "red salamander"
+            ],
+            "picture": [
+                "https://images.pexels.com/photos/106949/pexels-photo-106949.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+                "https://images.pexels.com/photos/3970721/pexels-photo-3970721.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+                "https://images.pexels.com/photos/7674470/pexels-photo-7674470.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+            ],
+            "description":"Salamander, (order Caudata), any member of a group of about 740 species of amphibians that have tails and that constitute the order Caudata. The order comprises 10 families, among which are newts and salamanders proper (family Salamandridae) as well as hellbenders, mud puppies, and lungless salamanders. They most commonly occur in freshwater and damp woodlands, principally in temperate regions of the Northern Hemisphere."
+        },
+        {
+            "type": "axolotl",
+            "breed": [
+                "leucistic", "golden albino", "wild type"
+            ],
+            "picture": [
+                "https://cdn.pixabay.com/photo/2017/04/01/10/32/axolotl-2193331_1280.jpg",
+                "https://cdn.pixabay.com/photo/2017/06/17/13/11/axolotl-2412189_1280.jpg",
+                "https://cdn.pixabay.com/photo/2017/04/01/10/22/axolotl-2193310_1280.jpg"
+            ],
+            "description":"Axolotl, (Ambystoma, formerly Rhyacosiredon or Siredon, mexicanum), salamander of the family Ambystomatidae (order Caudata), notable for its permanent retention of larval features, such as external gills. It is found in lakes near Mexico City, where it is considered edible. The name axolotl is also applied to any full-grown larva of Ambystoma tigrinum (tiger salamander) that has not yet lost its external gills."
+        }
+        
+        
+
+    ]
+}
