@@ -1,0 +1,131 @@
+{
+    "data": [{
+            "category": "cricket",
+            "players": [{
+                    "name": "Sachin Tendulkar",
+                    "age": "48",
+                    "nationality": "Indian",
+                    "jerseyNo": "10",
+                    "image": "http://www.espncricinfo.com/inline/content/image/501527.html?alt=1",
+                    "description": "Sachin Ramesh Tendulkar is an Indian former international cricketer who served as captain of the Indian national team. He is widely regarded as one of the greatest batsmen in the history of cricket."
+                },
+                {
+                    "name": "Mahendra Singh Dhoni",
+                    "age": "39",
+                    "nationality": "Indian",
+                    "jerseyNo": "7",
+                    "image": "https://c.ndtvimg.com/2020-07/m7opt04g_ms-dhoni-afp_625x300_06_July_20.jpg",
+                    "description": "Mahendra Singh Dhoni, is a former Indian international cricketer who captained the Indian national team in limited-overs formats from 2007 to 2017 and in Test cricket from 2008 to 2014."
+                },
+                {
+                    "name": "Virat Kohli",
+                    "age": "32",
+                    "nationality": "Indian",
+                    "jerseyNo": "18",
+                    "image": "https://c.ndtvimg.com/2020-03/bthb68ug_virat-kohli-afp_625x300_27_March_20.jpg?q=60",
+                    "description": "Virat Kohli is an Indian cricketer and the current captain of the India national team. A right-handed top-order batsman, Kohli is regarded as one of the best contemporary batsmen in the world."
+                },
+                {
+                    "name": "Jasprit Bumrah",
+                    "age": "27",
+                    "nationality": "Indian",
+                    "jerseyNo": "93",
+                    "image": "https://images.financialexpress.com/2020/11/Jasprit-Bumrah.jpg",
+                    "description": "Jasprit Jasbirsingh Bumrah is an Indian international cricketer, who plays for the Indian national cricket team in all formats of the game.A right arm fast bowler, he consistently bowls at around 145-150 kph."
+                },
+                {
+                    "name": "AB de Villiers",
+                    "age": "37",
+                    "nationality": "South African",
+                    "jerseyNo": "17",
+                    "image": "https://c.ndtvimg.com/2021-03/nc24gt3_ab-de-villiers-bcci-ipl_625x300_25_March_21.jpg?q=60",
+                    "description": "Abraham Benjamin AB de Villiers is a South African cricketer. de Villiers was named as the ICC ODI Player of the Year three times during his 15-year international career and was one of the five wisden."
+                },
+                {
+                    "name": "Ricky Ponting",
+                    "age": "14",
+                    "nationality": "Australian",
+                    "jerseyNo": "10",
+                    "image": "https://c.ndtvimg.com/2020-03/6htbtv9o_ricky-ponting-world-cup-2003-final-afp_625x300_23_March_20.jpg",
+                    "description": "Ricky Thomas Ponting AO is an Australian cricket coach, commentator, and former cricketer. He is considered one of the most successful captains in international cricket history, with 220 victories in 324 matches with a winning ratio of 67.91%."
+                },
+                {
+                    "name": "Kane Williamson",
+                    "age": "30",
+                    "nationality": "New Zealand",
+                    "jerseyNo": "22",
+                    "image": "https://imagevars.gulfnews.com/2019/07/10/-New-Zealand-s-Kane-Williamson_16bdcd96f41_large.jpg",
+                    "description": "Kane Stuart Williamson is a New Zealand international cricketer who is currently the captain of the New Zealand national team in all formats. He is a right-handed batsman and an occasional off spin bowler. Williamson made his first-class cricket debut in December 2007."
+                }
+            ]
+        },
+        {
+            "category": "football",
+            "players": [{
+                    "name": "Lionel Messi",
+                    "age": "39",
+                    "nationality": "Argentine",
+                    "jerseyNo": "10",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Lionel_Messi_20180626_%28cropped%29.jpg",
+                    "description": "Lionel Andrés Messi is an Argentine professional footballer who plays as a forward and captains both Spanish club Barcelona and the Argentina national team."
+                },
+                {
+                    "name": "Cristiano Ronaldo",
+                    "age": "37",
+                    "nationality": "Portuguese",
+                    "jerseyNo": "07",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Cristiano_Ronaldo_2018.jpg",
+                    "description": "Cristiano Ronaldo dos Santos Aveiro GOIH ComM is a Portuguese professional footballer who plays as a forward for Serie A club Juventus and captains the Portugal national team."
+                },
+                {
+                    "name": "Lionel Messi",
+                    "age": "39",
+                    "nationality": "Argentine",
+                    "jerseyNo": "10",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Lionel_Messi_20180626_%28cropped%29.jpg",
+                    "description": "Lionel Andrés Messi is an Argentine professional footballer who plays as a forward and captains both Spanish club Barcelona and the Argentina national team."
+                },
+                {
+                    "name": "Lionel Messi",
+                    "age": "39",
+                    "nationality": "Argentine",
+                    "jerseyNo": "10",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Lionel_Messi_20180626_%28cropped%29.jpg",
+                    "description": "Lionel Andrés Messi is an Argentine professional footballer who plays as a forward and captains both Spanish club Barcelona and the Argentina national team."
+                },
+                {
+                    "name": "Neymar",
+                    "age": "29",
+                    "nationality": "Brazilian",
+                    "jerseyNo": "10",
+                    "image": "https://phantom-marca.unidadeditorial.es/c50a61d644f9c3be9b1087602cb679c7/resize/1320/f/jpg/assets/multimedia/imagenes/2021/05/01/16198703158008.jpg",
+                    "description": "Neymar da Silva Santos Júnior, known as Neymar, is a Brazilian professional footballer who plays as a forward for Ligue 1 club Paris Saint-Germain and the Brazil national team. He is widely regarded as one of the best players in the world."
+                },
+                {
+                    "name": "Sergio Ramos",
+                    "age": "35",
+                    "nationality": "Spanish",
+                    "jerseyNo": "04",
+                    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjDpWXlngokG87QuvdtAY3neQGK8LjSpl2zZnQUWDCUXLWVuoestGML4YRgTVDsuOHVfA&usqp=CAU",
+                    "description": "Sergio Ramos García is a Spanish professional footballer who plays as a centre-back and captains both La Liga club Real Madrid and the Spanish national team. He has also played as a right-back earlier in his career."
+                },
+                {
+                    "name": "Robert Lewandowski",
+                    "age": "32",
+                    "nationality": "Polish",
+                    "jerseyNo": "09",
+                    "image": "https://pbs.twimg.com/profile_images/1021793764149317632/LQvDAJIY_400x400.jpg",
+                    "description": "Robert Lewandowski is a Polish professional footballer who plays as a striker for Bundesliga club Bayern Munich and is the captain of the Poland national team."
+                },
+                {
+                    "name": "Sunil Chhetri",
+                    "age": "36",
+                    "nationality": "Indian",
+                    "jerseyNo": "11",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Sunil_Chhetri.jpg",
+                    "description": "Sunil Chhetri is an Indian professional footballer who plays as a striker or winger and captains both the Indian Super League side Bengaluru FC and the Indian national football team."
+                }
+            ]
+        }
+    ]
+}

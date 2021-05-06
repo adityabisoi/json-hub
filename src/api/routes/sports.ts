@@ -1,12 +1,12 @@
 import express, { Application, NextFunction, Request, Response } from "express";
-const cricketData = require("../../../data/sports/cricketdata.json");
+const data = require("../../../data/sports/sportdata.json");
 
 const router = express.Router();
 
-//GET request /sports/cricket route
-router.get("/cricket", (req: Request, res: Response, next: NextFunction) => {
+//GET request /sports route
+router.get("/", (req: Request, res: Response, next: NextFunction) => {
     try {
-        res.status(200).json(cricketData);
+        res.status(200).json(data);
     }
     catch (err) {
         console.log(err);
@@ -16,16 +16,15 @@ router.get("/cricket", (req: Request, res: Response, next: NextFunction) => {
     }
 });
 
-//GET request/sports/cricket/:id route
-router.get("/cricket/:id", (req: Request, res: Response, next: NextFunction) => {
+//GET request/sports/:category route
+router.get("/:category", (req: Request, res: Response, next: NextFunction) => {
     try {
-        const id: any = req.params.id;
-        if (id < cricketData.data.length) {
-            res.status(200).json({ data: cricketData.data[id] });
-        }
-        else {
-            res.status(404).json({ message: "No data found at the given index" });
-        }
+        const category: any = req.params.category;
+        const result = data.data.filter((sport: any) => sport.category === category);
+        if (result.length)
+            res.status(200).json(result);
+        else
+            res.status(404).json({ message: "Invalid category" });
     }
     catch (err) {
         console.log(err);
