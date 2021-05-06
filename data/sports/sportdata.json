@@ -1,7 +1,9 @@
 {
-    "data": [{
+    "data": [
+        {
             "category": "cricket",
-            "players": [{
+            "players": [
+                {
                     "name": "Sachin Tendulkar",
                     "age": "48",
                     "nationality": "Indian",
@@ -61,7 +63,8 @@
         },
         {
             "category": "football",
-            "players": [{
+            "players": [
+                {
                     "name": "Lionel Messi",
                     "age": "39",
                     "nationality": "Argentine",
