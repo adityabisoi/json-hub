@@ -17,28 +17,31 @@ router.get("/", (req: Request, res: Response, next: NextFunction) => {
 
 router.get("/:category", (req: Request, res: Response, next: NextFunction) => {
     const category: any = req.params.category;
-
-    let result = data.data.filter((animal: any) => animal.category === category)[0];
+    let result = data.data.find((animal: any) => animal.category === category);
     console.log(result);
     try {
-        if (result) {
-            if (Object.keys(req.query).length) {
-                const type: any = req.query.type;
-                if (!type) {
-                    res.status(404).json({ message: "Invalid query" });
-                } else {
-                    result = result.types.filter((animal: any) => animal.type === type);
-                    if (result.length) 
-                        res.status(200).json(result);
-                    else 
-                        res.status(204).json({ message: "No data found" });
+        if (result && Object.keys(req.query).length) {
+            const type: any = req.query.type;
+            if (!type) {
+                res.status(404).json({ message: "Invalid query" });
+            } else {
+                result = result.types.filter((animal: any) => animal.type === type);
+                if (result.length) {
+                    res.status(200).json(result);
+                } 
+                else {
+                    res.status(204).json({ message: "No data found" });
                 }
-            } 
-            else 
-                res.status(200).json(result);
+            }
         } 
-        else 
-            res.status(404).json({ message: "Invalid category" });
+        else {
+            if (result) {
+                res.status(200).json(result);
+            } 
+            else {
+                res.status(404).json({ message: "Invalid category" });
+            }
+        }
     } catch (err) {
         console.log(err);
         res.status(500).json({
