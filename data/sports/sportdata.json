@@ -1,7 +1,9 @@
 {
-    "data": [{
+    "data": [
+        {
             "category": "cricket",
-            "players": [{
+            "players": [
+                {
                     "name": "Sachin Tendulkar",
                     "age": "48",
                     "nationality": "Indian",
@@ -61,7 +63,8 @@
         },
         {
             "category": "football",
-            "players": [{
+            "players": [
+                {
                     "name": "Cristiano Ronaldo",
                     "age": "37",
                     "nationality": "Portuguese",
@@ -113,7 +116,8 @@
         },
         {
             "category": "basketball",
-            "players": [{
+            "players": [
+                {
                     "name": "LeBron James",
                     "age": "36",
                     "nationality": "American",
@@ -157,7 +161,8 @@
         },
         {
             "category": "hockey",
-            "players": [{
+            "players": [
+                {
                     "name": "Surender Kumar",
                     "age": "27",
                     "nationality": "Indian",
