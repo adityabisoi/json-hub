@@ -1,9 +1,7 @@
 {
-    "data": [
-        {
+    "data": [{
             "category": "cricket",
-            "players": [
-                {
+            "players": [{
                     "name": "Sachin Tendulkar",
                     "age": "48",
                     "nationality": "Indian",
@@ -63,30 +61,13 @@
         },
         {
             "category": "football",
-            "players": [
-                {
-                    "name": "Lionel Messi",
-                    "age": "39",
-                    "nationality": "Argentine",
-                    "jerseyNo": "10",
-                    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Lionel_Messi_20180626_%28cropped%29.jpg",
-                    "description": "Lionel Andrés Messi is an Argentine professional footballer who plays as a forward and captains both Spanish club Barcelona and the Argentina national team."
-                },
-                {
+            "players": [{
                     "name": "Cristiano Ronaldo",
                     "age": "37",
                     "nationality": "Portuguese",
                     "jerseyNo": "07",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Cristiano_Ronaldo_2018.jpg",
                     "description": "Cristiano Ronaldo dos Santos Aveiro GOIH ComM is a Portuguese professional footballer who plays as a forward for Serie A club Juventus and captains the Portugal national team."
-                },
-                {
-                    "name": "Lionel Messi",
-                    "age": "39",
-                    "nationality": "Argentine",
-                    "jerseyNo": "10",
-                    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Lionel_Messi_20180626_%28cropped%29.jpg",
-                    "description": "Lionel Andrés Messi is an Argentine professional footballer who plays as a forward and captains both Spanish club Barcelona and the Argentina national team."
                 },
                 {
                     "name": "Lionel Messi",
@@ -127,6 +108,89 @@
                     "jerseyNo": "11",
                     "image": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Sunil_Chhetri.jpg",
                     "description": "Sunil Chhetri is an Indian professional footballer who plays as a striker or winger and captains both the Indian Super League side Bengaluru FC and the Indian national football team."
+                }
+            ]
+        },
+        {
+            "category": "basketball",
+            "players": [{
+                    "name": "LeBron James",
+                    "age": "36",
+                    "nationality": "American",
+                    "jerseyNo": "23",
+                    "image": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSheZXnf27LhoKkcVFu_IbieY6fXIRG4U1Dvj8EMoH_qyWZyHtv",
+                    "description": "LeBron Raymone James Sr. is an American professional basketball player for the Los Angeles Lakers of the National Basketball Association. Widely considered one of the greatest NBA players in history, James is frequently compared to Michael Jordan in debates over the greatest basketball player of all time."
+                },
+                {
+                    "name": "Kareem Abdul-Jabbar",
+                    "age": "74",
+                    "nationality": "American",
+                    "jerseyNo": "33",
+                    "image": "https://cdn.britannica.com/70/202070-050-21762CBB/Kareem-Abdul-Jabbar-2005.jpg",
+                    "description": "Kareem Abdul-Jabbar is an American former professional basketball player who played 20 seasons in the National Basketball Association for the Milwaukee Bucks and the Los Angeles Lakers."
+                },
+                {
+                    "name": "Michael Jordan",
+                    "age": "58",
+                    "nationality": "American",
+                    "jerseyNo": "23",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Michael_Jordan_in_2014.jpg",
+                    "description": "Michael Jeffrey Jordan, also known by his initials MJ, is an American businessman and former professional basketball player. He is the principal owner and chairman of the Charlotte Hornets of the National Basketball Association and of 23XI Racing in the NASCAR Cup Series"
+                },
+                {
+                    "name": "Kobe Bryant",
+                    "age": "42",
+                    "nationality": "American",
+                    "jerseyNo": "24",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/8/82/Kobe_Bryant_2015.jpg",
+                    "description": "Kobe Bean Bryant was an American professional basketball player. A shooting guard, he spent his entire 20-year career with the Los Angeles Lakers in the National Basketball Association."
+                },
+                {
+                    "name": "Magic Johnson",
+                    "age": "61",
+                    "nationality": "American",
+                    "jerseyNo": "33",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Magic_Johnson_2014_%28cropped%29.jpg",
+                    "description": "Earvin Magic Johnson Jr. is an American former professional basketball player and former president of basketball operations of the Los Angeles Lakers of the National Basketball Association."
+                }
+            ]
+        },
+        {
+            "category": "hockey",
+            "players": [{
+                    "name": "Surender Kumar",
+                    "age": "27",
+                    "nationality": "Indian",
+                    "image": "https://images.news18.com/ibnlive/uploads/2020/08/1597986347_surender-kumar-1200.jpg",
+                    "description": "Surender Kumar is an Indian field hockey player, who plays as a defender for the Indian national team. He was part of the national team that participated in the 2016 Summer Olympics. He is from Karnal, Haryana."
+                },
+                {
+                    "name": "Krishan Pathak",
+                    "age": "24",
+                    "nationality": "Indian",
+                    "image": "https://thebridge.in/wp-content/uploads/2019/10/15134548_603505046504342_4126743704582839646_n.jpg",
+                    "description": "Krishan Bahadur Pathak is an Indian field hockey player who plays as a goalkeeper for the Indian national team."
+                },
+                {
+                    "name": "Dhyan Chand",
+                    "age": "74",
+                    "nationality": "Indian",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Dhyan_Chand_closeup.jpg",
+                    "description": "Major Dhyan Chand was an Indian field hockey player widely regarded as the greatest in the history of the sport. He was known for his extraordinary goal-scoring feats, in addition to earning three Olympic gold medals, in 1928, 1932 and 1936, during an era where India dominated field hockey"
+                },
+                {
+                    "name": "Manpreet Singh",
+                    "age": "28",
+                    "nationality": "Indian",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/7/76/Manpreet_Singh.jpg",
+                    "description": "Manpreet Singh Pawar is an Indian field hockey player and the captain of India men's national field hockey team since May 2017. He plays as a halfback. He first played for India in 2011 at the age of 19. He represented India at the 2012 Summer Olympics and was named Asia's Junior Player of the Year in 2014."
+                },
+                {
+                    "name": "P.R.Sreejesh",
+                    "age": "27",
+                    "nationality": "Indian",
+                    "image": "https://s01.sgp1.cdn.digitaloceanspaces.com/article/107023-bbzupsjril-1543644031.jpeg",
+                    "description": "Parattu Raveendran Sreejesh is an Indian professional field hockey player who plays as a goalkeeper and former captain of the Indian national team. In the Hockey India League, he plays for Uttar Pradesh Wizards. "
                 }
             ]
         }
