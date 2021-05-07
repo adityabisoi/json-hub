@@ -18,7 +18,6 @@ router.get("/", (req: Request, res: Response, next: NextFunction) => {
 router.get("/:category", (req: Request, res: Response, next: NextFunction) => {
     const category: any = req.params.category;
     let result = data.data.find((animal: any) => animal.category === category);
-    console.log(result);
     try {
         if (result && Object.keys(req.query).length) {
             const type: any = req.query.type;
@@ -28,17 +27,14 @@ router.get("/:category", (req: Request, res: Response, next: NextFunction) => {
                 result = result.types.filter((animal: any) => animal.type === type);
                 if (result.length) {
                     res.status(200).json(result);
-                } 
-                else {
+                } else {
                     res.status(204).json({ message: "No data found" });
                 }
             }
-        } 
-        else {
+        } else {
             if (result) {
                 res.status(200).json(result);
-            } 
-            else {
+            } else {
                 res.status(404).json({ message: "Invalid category" });
             }
         }
