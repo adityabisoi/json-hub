@@ -1,12 +1,11 @@
 import express, { Application, NextFunction, Request, Response } from "express";
-const data = require("../../../data/animaldata.json");
+const data = require("../../../data/animaldata");
 
 const router = express.Router();
 
-//GET request /animals route
+//GET request /animals/amphibians route
 router.get("/", (req: Request, res: Response, next: NextFunction) => {
     try {
-        console.log(data);
         res.status(200).json(data);
     }
     catch (err) {
@@ -14,42 +13,17 @@ router.get("/", (req: Request, res: Response, next: NextFunction) => {
         res.status(500).json({
             error: err,
         });
-    }
+    } 
 });
 
-//GET request /animals?type route
-router.get("/:type", (req: Request, res: Response, next: NextFunction) => {
+router.get("/:category", (req: Request, res: Response, next: NextFunction) => {
+    const category:any = req.params.category ;
+    const result = data.data.filter((animal:any)=>animal.category === category);
     try {
-        const type = req.params.type;
-        const option = req.query.option;
-        console.log(type);
-        let result = null;
-        for (let i = 0; i < data.data.length; i++) {
-            if (type === data.data[i].type) {
-                if(option){
-                    if(option === "breed"){
-                        result = data.data[i].breed;
-                        break;
-                    }
-                    else if(option === "picture"){
-                        result = data.data[i].picture;
-                        break;
-                    }
-                    else{
-                        break;
-                    }
-                }
-                else{
-                    result = data.data[i];
-                    break;
-                } 
-            }
-        }
-        if (result !== null) {
-            res.status(200).json({ data: result });
-        } else {
-            res.status(400).json({ error:"invalid request" });
-        }
+        if(result.length)
+            res.status(200).json(result);
+        else
+            res.status(404).json({ message: "Invalid category" });    
     }
     catch (err) {
         console.log(err);
@@ -58,5 +32,4 @@ router.get("/:type", (req: Request, res: Response, next: NextFunction) => {
         });
     }
 });
-
 module.exports = router;
