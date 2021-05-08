@@ -23,25 +23,31 @@ router.get("/:category", (req: Request, res: Response, next: NextFunction) => {
         const player: any = req.query.players;
         const result = data.data.find((sport: any) => sport.category === category);
         if (result && Object.keys(req.query).length) {
-            if (!player)
+            if (!player){
                 res.status(404).json({ message: "Invalid query" });
+            }
             else {
                 const players: any = [];
                 for (let i: any = 0; i < result.players.length; i++) {
-                    if (result.players[i].name === player)
+                    if (result.players[i].name === player){
                         players.push(result.players[i]);
+                    }
                 }
-                if (players.length)
+                if (players.length){
                     res.status(200).json({ data: players });
-                else
+                }
+                else{
                     res.status(204).json({ message: "No data found" });
+                }
             }
         }
         else {
-            if (result)
+            if (result){
                 res.status(200).json({ data: result });
-            else
+            }
+            else{
                 res.status(404).json({ message: "Invalid category" });
+            }
         }
     }
     catch (err) {
