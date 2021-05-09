@@ -135,3 +135,15 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 ## License <img src="https://github.com/Samridhi-98/Images/blob/master/Images/license.svg" width="3%">
 
 This project is licensed under the GPL V3 License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Installation of mongoDB and its set-up instructions
+
+Firstly, run sudo apt update
+
+To install mongodb, run sudo apt install mongodb-org
+
+To start MongoDB service, run sudo systemctl start mongod.service
+
+To start the service on boot, runn  sudo systemctl enable mongod
+
+To know the status of the service, run sudo systemctl status mongod
