@@ -100,6 +100,15 @@ There are two ways of installing the project on your local Machine 🚀
         -   `pre-commit install` on terminal
     -   Run `npm run dev` to run the project in development
 
+## Installation of mongodb and its set-up instructions
+
+ - Firstly, run sudo apt update
+ - To install mongodb, run sudo apt install mongodb-org
+ - To start MongoDB service, run sudo systemctl start mongod.service
+ - To start the service on boot, runn  sudo systemctl enable mongod
+ - To know the status of the service, run sudo systemctl status mongod
+
+
 ## Testing <img src="https://github.com/Samridhi-98/Images/blob/master/Images/test.svg" width="3%">
 
 -   The endpoint `usertest` which follows the same schema as the `users/` endpoint, must be used for testing
