@@ -100,6 +100,55 @@ There are two ways of installing the project on your local Machine 🚀
         -   `pre-commit install` on terminal
     -   Run `npm run dev` to run the project in development
 
+### Installation of mongoDB in different OS and its set-up instructions
+
+ ## Windows
+
+  - Install MongoDB Community Edition using the MongoDB Installer wizard which installs both the
+    MongoDB binaries as well as the default configuration file <install directory>\bin\mongod.cfg.
+  - Download the installer which is the MongoDB Community .msi installer
+  - Run the MongoDB installer.
+  - Follow the MongoDB Community Edition installation wizard.
+    - Choose Setup Type the Complete Custom setup type which installs MongoDB and the MongoDB tools
+      to the default location.
+    - Starting in MongoDB 4.0,configure and start MongoDB as a Windows service during the install and 
+      the MongoDB service is started upon successful installation. 
+  - To begin using MongoDB, connect a <mongo.exe shell> to the running MongoDB instance.    
+    - From Windows Explorer/File Explorer, go to <C:\Program Files\MongoDB\Server\4.4\bin\ directory>
+      and double-click on mongo.exe.
+  - The MongoDB instance is configured using the configuration file <install directory>\bin\mongod.
+     cfg. 
+  - Run MongoDB Community Edition as a Windows Service.
+
+  ## Linux
+
+  - Update the packages list and install the mongodb-org meta-package
+    - Run `$ sudo apt update`
+  - To install mongoDB
+    -  Run ` $ sudo apt install mongodb-org`
+  - To start MongoDB service
+    - Run ` $ sudo systemctl start mongod.service`
+  - To start the service on boot
+    - Run ` $ sudo systemctl enable mongod`
+  - To know the status of the service 
+    - Run ` $ sudo systemctl status mongod`
+
+  ## Mac
+
+  - Install and Run MongoDB with Homebrew
+  - Open the Terminal app and type ` $ brew update`
+  - After updating Homebrew use ` $ brew install mongodb`
+  - After downloading Mongo,create the “db” directory where the Mongo data files will live in the 
+    default location by running <mkdir -p /data/db>
+  - Run sudo chown -R `id -un` /data/db and enter your password for checking that that the </data/db  
+    directory> has the right permissions.
+  - Run the Mongo daemon which starts the Mongo server
+    - ` $ run mongod`
+  - Run the Mongo shell with the Mongo daemon running in one terminal,type mongo in another terminal
+    window which runs the Mongo shell which is an application to access data in MongoDB.  
+  - To exit the Mongo shell run quit()  
+  - To stop the Mongo daemon hit ctrl-c    
+
 ## Testing <img src="https://github.com/Samridhi-98/Images/blob/master/Images/test.svg" width="3%">
 
 -   The endpoint `usertest` which follows the same schema as the `users/` endpoint, must be used for testing
