@@ -17,7 +17,11 @@ router.get("/", (req: Request, res: Response, next: NextFunction) => {
             });
         });
 });
-
+router.post("/", (req: Request, res: Response, next: NextFunction) => {
+    const result = req.body;
+    result["timestamp"] = new Date();
+    res.status(200).json({ data: result });
+});
 router.get("/:userId", (req: Request, res: Response, next: NextFunction) => {
     const id: string = req.params.userId;
 
