@@ -17,7 +17,20 @@ router.get("/", (req: Request, res: Response, next: NextFunction) => {
             });
         });
 });
-
+router.post("/", (req: Request, res: Response, next: NextFunction) => {
+    const result = {
+        first_name: req.body.first_name,
+        last_name: req.body.last_name,
+        email: req.body.email,
+        country: req.body.country,
+        occupation: req.body.occupation,
+        phoneno: req.body.phoneno,
+        gender: req.body.gender,
+        dob: req.body.dob,
+        timestamp: new Date(),
+    };
+    res.status(200).json({ data: result });
+});
 router.get("/:userId", (req: Request, res: Response, next: NextFunction) => {
     const id: string = req.params.userId;
 
