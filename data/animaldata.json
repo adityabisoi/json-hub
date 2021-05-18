@@ -94,6 +94,43 @@
                     "description":"Cow, in common parlance, a domestic bovine, regardless of sex and age, usually of the species Bos taurus. In precise usage, the name is given to mature females of several large mammals, including cattle (bovines), moose, elephants, sea lions, and whales."
                 }
             ]
+        },
+        {
+            "category":"birds",
+            "types": [
+                {
+                    "type": "eagle",
+                    "breed": ["spotted eagle", "steppe eagle", "tawny eagle","black eagle","serpent eagle"],
+                    "picture": [
+                        "https://unsplash.com/photos/1qBKrNhAMcM",
+                        "https://unsplash.com/photos/F12BtzEeVyk",
+                        "https://unsplash.com/photos/WLWoUaMiYOQ"
+                    ],
+                    "description":"Eagle, any of many large, heavy-beaked, big-footed birds of prey belonging to the family Accipitridae (order Accipitriformes). In general, an eagle is any bird of prey more powerful than a buteo. An eagle may resemble a vulture in build and flight characteristics but has a fully feathered (often crested) head and strong feet equipped with great curved talons. A further difference is in foraging habits: eagles subsist mainly on live prey."
+
+                },
+                {
+                    "type": "duck",
+                    "breed": ["black east indian", "abacot ranger", "aylesbury","bali","blue swedish"],
+                    "picture": [
+                        "https://unsplash.com/photos/U624w82YI7I",
+                        "https://unsplash.com/photos/ZSCB-1GovZ8",
+                        "https://unsplash.com/photos/ep1O88tMli8"
+                    ],
+                    "description":"Duck, any of various species of relatively small, short-necked, large-billed waterfowl. In true ducks—i.e., those classified in the subfamily Anatinae in the waterfowl family Anatidae—the legs are placed rearward, as in swans, rather than forward, as in geese. The result is a distinctive waddling gait."
+                },
+                {
+                    "type": "sparrow",
+                    "breed": ["Spanish Sparrow", "Sindh Sparrow", "Russet Sparrow","Eurasian Tree Sparrow","House Sparrow"],
+                    "picture": [
+                        "https://unsplash.com/photos/Lg-eN4yB5_0",
+                        "https://unsplash.com/photos/Eb_2ItJvcI8",
+                        "https://unsplash.com/photos/OnjUjTTPJCs"
+                    ],
+                    "description":"Sparrow, any of a number of small, chiefly seed-eating birds having conical bills. The name sparrow is most firmly attached to birds of the Old World family Passeridae (order Passeriformes), particularly to the house sparrow (Passer domesticus) that is so common in temperate North America and Europe, but also to many New World members of the Emberizidae."
+                }
+            ]
         }
+        
     ]
 }
