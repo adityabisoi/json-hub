@@ -7,4 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+<<<<<<< HEAD
       - run: npm run lint
+=======
+      - run: |
+            npm i 
+            npm run lint
+>>>>>>> dc92676a363e913a57a3bea0324e7f9c02158370

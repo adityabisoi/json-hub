@@ -1,5 +1,9 @@
+import React from 'react';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import { Provider } from 'react-redux';
 import logo from './logo.svg';
 import './App.css';
+import routes from '../src/routing/routes';
 
 function App() {
   return (
@@ -7,7 +11,17 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+        <BrowserRouter>
+    <Provider store={store}>
+      <div className="App">
+        <div>
+          <Switch>
+            <Route path="/routes" component={routes} />
+          </Switch>
+        </div>
+      </div>
+    </Provider> 
+    </BrowserRouter> 
         </p>
         <a
           className="App-link"
