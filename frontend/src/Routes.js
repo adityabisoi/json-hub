@@ -21,7 +21,6 @@ class Routes extends Component {
           <li>sports routes</li>
           <li>tasks routes</li>
           <li>users routes</li>
-          <li>usertest routes</li>
           <li>vehicles routes</li>
         </ol>
       </div>
