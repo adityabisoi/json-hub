@@ -147,7 +147,32 @@ There are two ways of installing the project on your local Machine 🚀
   - Run the Mongo shell with the Mongo daemon running in one terminal,type mongo in another terminal
     window which runs the Mongo shell which is an application to access data in MongoDB.  
   - To exit the Mongo shell run quit()  
-  - To stop the Mongo daemon hit ctrl-c    
+  - To stop the Mongo daemon hit ctrl-c
+
+## Documentation and script to setup and run eslint and then add prettier code 
+
+  -  Install ESLint using npm or yarn:-
+   ```npm install eslint --save-dev``` or ```yarn add eslint --dev```
+  - Set up a configuration file, and the easiest way to do that is to use the --init flag:-
+    ```npx eslint --init``` or ```yarn run eslint --init```
+  - ```--init``` assumes you have a package.json file already.If you don't, make sure to run ```npm init``` or ```yarn init``` beforehand
+  -  Run ESLint on any file or directory like this:-
+      ```npx eslint yourfile.js``` or ```yarn run eslint yourfile.js```
+  - After running ```eslint --init```, you'll have a .eslintrc.{js,yml,json} file in your directory.
+    In it, you'll see some rules configured like this:-
+     {
+    "rules": {
+        "semi": ["error", "always"],
+        "quotes": ["error", "double"]
+    }
+} 
+
+  - Your .eslintrc.{js,yml,json} configuration file will also include the line:-
+     {
+    "extends": "eslint:recommended"
+} 
+  
+  -  In package.json, inside "scripts", add another script, ```"lint":"eslint '**/*.js' --ignore-pattern node_modules/"```
 
 ## Testing <img src="https://github.com/Samridhi-98/Images/blob/master/Images/test.svg" width="3%">
 
