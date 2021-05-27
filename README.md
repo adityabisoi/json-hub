@@ -147,8 +147,16 @@ There are two ways of installing the project on your local Machine 🚀
   - Run the Mongo shell with the Mongo daemon running in one terminal,type mongo in another terminal
     window which runs the Mongo shell which is an application to access data in MongoDB.  
   - To exit the Mongo shell run quit()  
-  - To stop the Mongo daemon hit ctrl-c    
+  - To stop the Mongo daemon hit ctrl-c
 
+## Documentation on setting up ESLint in VSCode
+
+  - Go to VSCode 
+  - Extensions (on left sidebar) 
+  - Search for ESLint 
+  - Install the extension
+  - Enable it across the JavaScript project
+  
 ## Testing <img src="https://github.com/Samridhi-98/Images/blob/master/Images/test.svg" width="3%">
 
 -   The endpoint `usertest` which follows the same schema as the `users/` endpoint, must be used for testing
