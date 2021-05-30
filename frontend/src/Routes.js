@@ -7,21 +7,21 @@ class Routes extends Component {
         <h2>ROUTES</h2>
         <p>Here are the API routes fetched in this project</p>
         <ol>
-          <li>address routes</li>
-          <li>animals routes</li>
-          <li>books routes</li>
-          <li>comments routes</li>
-          <li>foodphotos routes</li>
-          <li>home routes</li>
-          <li>movies routes</li>
-          <li>photos routes</li>
-          <li>products routes</li>
-          <li>shows routes</li>
-          <li>songs routes</li>
-          <li>sports routes</li>
-          <li>tasks routes</li>
-          <li>users routes</li>
-          <li>vehicles routes</li>
+          <li><a href="http://localhost:5000/address">/address</a></li>
+          <li><a href="http://localhost:5000/animals">/animals</a></li>
+          <li><a href="http://localhost:5000/books">/books</a></li>
+          <li><a href="http://localhost:5000/comments">/comments</a></li>
+          <li><a href="http://localhost:5000/foodphotos">/foodphotos</a></li>
+          <li><a href="http://localhost:5000/home">/home</a></li>
+          <li><a href="http://localhost:5000/movies">/movies</a></li>
+          <li><a href="http://localhost:5000/photos">/photos</a></li>
+          <li><a href="http://localhost:5000/products">/products</a></li>
+          <li><a href="http://localhost:5000/shows">/shows</a></li>
+          <li><a href="http://localhost:5000/songs">/songs</a></li>
+          <li><a href="http://localhost:5000/sports">/sports</a></li>
+          <li><a href="http://localhost:5000/tasks">/tasks</a></li>
+          <li><a href="http://localhost:5000/users">/users</a></li>
+          <li><a href="http://localhost:5000/vehicles">/vehicles</a></li>
         </ol>
       </div>
     );
