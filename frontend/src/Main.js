@@ -5,7 +5,7 @@ import {
   HashRouter
 } from "react-router-dom";
 import Home from "./Home";
-import Routes from "./Route";
+import Route from "./Route";
 import Contact from "./Contact";
 
 class Main extends Component {
@@ -21,7 +21,7 @@ class Main extends Component {
           </ul>
           <div className="content">
             <Route exact path="/" component={Home}/>
-            <Route path="/routes" component={Routes}/>
+            <Route path="/route" component={Route}/>
             <Route path="/contact" component={Contact}/>
           </div>
         </div>

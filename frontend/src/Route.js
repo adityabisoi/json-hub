@@ -1,6 +1,6 @@
 import React, { Component } from "react";
  
-class Routes extends Component {
+class Route extends Component {
   render() {
     return (
       <div>
@@ -28,4 +28,4 @@ class Routes extends Component {
   }
 }
  
-export default Routes;
+export default Route;
