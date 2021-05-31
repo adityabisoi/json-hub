@@ -5,7 +5,7 @@ import {
   HashRouter
 } from "react-router-dom";
 import Home from "./Home";
-import Routes from "./Routes";
+import Routes from "./Route";
 import Contact from "./Contact";
 
 class Main extends Component {
@@ -16,7 +16,7 @@ class Main extends Component {
           <h1>REST-fetch Website</h1>
           <ul className="header">
             <li><NavLink to="/">Home</NavLink></li>
-            <li><NavLink to="/routes">Routes</NavLink></li>
+            <li><NavLink to="/route">Route</NavLink></li>
             <li><NavLink to="/contact">Contact</NavLink></li>
           </ul>
           <div className="content">
