@@ -1,5 +1,6 @@
 # simple workflow implementing a CI pipeline to build docker image and push it to hub.docker.com
 name: Docker Image Build and Push CI
+
 # run the workflow on each push/pull request to the main branch 
 on:
   push:
