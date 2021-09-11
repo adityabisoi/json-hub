@@ -1,9 +1,3 @@
-<p align="center">
-
-<img src="https://github.com/Samridhi-98/Images/blob/master/Images/restfetchpng.PNG"  width="100%" >
-
-</p>
-
 <h2>About Us <a><img src="https://github.com/Samridhi-98/Images/blob/master/Images/reading.svg" width="4%"></a></h2>
 <p>
 
