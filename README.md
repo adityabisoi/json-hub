@@ -11,7 +11,7 @@
 </p>
 
 <p>
-A community-owned REST API service for testers and developers. Fetch provides REST API endpoints for different types of placeholders, which can be easily used during testing 	and development without the need for creating sample data manually.
+A community-owned REST API service for testers and developers. Placeholder Master provides REST API endpoints for different types of placeholders, which can be easily used during testing and development without the need for creating sample data manually.
 </p>
 
 ## Technology Stack <img src="https://github.com/Samridhi-98/Images/blob/master/Images/atom.svg" width="3%">
