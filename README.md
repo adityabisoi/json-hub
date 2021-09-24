@@ -186,3 +186,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 ## License <img src="https://github.com/Samridhi-98/Images/blob/master/Images/license.svg" width="3%">
 
 This project is licensed under the GPL V3 License - see the [LICENSE.md](LICENSE.md) file for details
+	
+##  Open Source Events 
+
+ <img  src="https://raw.githubusercontent.com/GirlScriptSummerOfCode/MentorshipProgram/master/GSsoc%20Type%20Logo%20Black.png" href="https://gssoc.girlscript.tech/" alt="DS-ALGO-SOLUTIONS">
