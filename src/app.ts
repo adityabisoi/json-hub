@@ -40,8 +40,6 @@ if (process.env.USE_DOCKER == `true`) {
     url = `${process.env.DB_CONNECTION_URL}`;
 }
 
-console.log(url);
-
 mongoose.connect(url, options).then(() => {
     console.log("Connected");
 });
