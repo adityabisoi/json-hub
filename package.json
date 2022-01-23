@@ -1,5 +1,5 @@
 {
-    "name": "fetch",
+    "name": "json-hub",
     "version": "1.0.0",
     "description": "A NodeJS based REST API service for development and testing",
     "main": "server.js",
@@ -13,14 +13,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/adityabisoi/fetch.git"
+        "url": "git+https://github.com/adityabisoi/json-hub.git"
     },
     "author": "Aditya Bisoi",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/adityabisoi/fetch/issues"
+        "url": "https://github.com/adityabisoi/json-hub/issues"
     },
-    "homepage": "https://github.com/adityabisoi/fetch#readme",
+    "homepage": "https://github.com/adityabisoi/json-hub#readme",
     "dependencies": {
         "dateformat": "^4.5.1",
         "dotenv": "^8.2.0",

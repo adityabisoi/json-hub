@@ -21,7 +21,7 @@ jobs:
       run:  docker login --username=${{ secrets.DOCKER_HUB_USERNAME }} --password=${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
     # build the docker image and tag it
     - name: Build docker-image
-      run: docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/rest-fetch:latest .
+      run: docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/json-hub:latest .
     # push the image to docker hub
     - name: Push to registry
-      run: docker push ${{ secrets.DOCKER_HUB_USERNAME }}/rest-fetch:latest
+      run: docker push ${{ secrets.DOCKER_HUB_USERNAME }}/json-hub:latest

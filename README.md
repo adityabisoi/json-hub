@@ -1,17 +1,17 @@
 <h2>About Us <a><img src="https://github.com/Samridhi-98/Images/blob/master/Images/reading.svg" width="4%"></a></h2>
 <p>
 
-[![GitHub contributors](https://img.shields.io/github/contributors/adityabisoi/REST-fetch)](https://github.com/adityabisoi/REST-fetch/graphs/contributors/)
-[![Issues](https://img.shields.io/github/issues/adityabisoi/REST-fetch)](https://github.com/adityabisoi/REST-fetch/issues)
-[![PRs](https://img.shields.io/github/issues-pr/adityabisoi/REST-fetch)](https://github.com/adityabisoi/REST-fetch/pulls)
-[![Forks](https://img.shields.io/github/forks/adityabisoi/REST-fetch)](https://github.com/adityabisoi/REST-fetch)
-[![Stars](https://img.shields.io/github/stars/adityabisoi/REST-fetch)](https://github.com/adityabisoi/REST-fetch)
+[![GitHub contributors](https://img.shields.io/github/contributors/adityabisoi/json-hub)](https://github.com/adityabisoi/json-hub/graphs/contributors/)
+[![Issues](https://img.shields.io/github/issues/adityabisoi/json-hub)](https://github.com/adityabisoi/json-hub/issues)
+[![PRs](https://img.shields.io/github/issues-pr/adityabisoi/json-hub)](https://github.com/adityabisoi/json-hub/pulls)
+[![Forks](https://img.shields.io/github/forks/adityabisoi/json-hub)](https://github.com/adityabisoi/json-hub)
+[![Stars](https://img.shields.io/github/stars/adityabisoi/json-hub)](https://github.com/adityabisoi/json-hub)
 [![Join the chat at https://gitter.im/fetch-lobby/community](https://badges.gitter.im/fetch-lobby/community.svg)](https://gitter.im/fetch-lobby/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 </p>
 
 <p>
-A community-owned REST API service for testers and developers. Placeholder Master provides REST API endpoints for different types of placeholders, which can be easily used during testing and development without the need for creating sample data manually.
+A community-owned REST API service for testers and developers. JSON Hub provides REST API endpoints for different types of placeholders, which can be easily used during testing and development without the need for creating sample data manually.
 </p>
 
 ## Technology Stack <img src="https://github.com/Samridhi-98/Images/blob/master/Images/atom.svg" width="3%">
@@ -26,7 +26,7 @@ A community-owned REST API service for testers and developers. Placeholder Maste
 
 <h3>
 <em>
-Try it out <a target="_blank" href="https://rest-fetch.herokuapp.com/"> <img src="https://github.com/Samridhi-98/Images/blob/master/Images/play.svg" width="2%"></a>
+Try it out <a target="_blank" href="https://json-hub.herokuapp.com/"> <img src="https://github.com/Samridhi-98/Images/blob/master/Images/play.svg" width="2%"></a>
 </em>
 </h3>
 
@@ -86,7 +86,7 @@ There are two ways of installing the project on your local Machine 🚀
 
 -   Conventional Setup
     -   Fork and clone the project
-    -   `cd fetch/` and run `npm install` to install dependencies
+    -   `cd json-hub/` and run `npm install` to install dependencies
     -   Setup [mongodb atlas](https://www.mongodb.com/cloud/atlas) following [this tutorial](https://dev.to/dalalrohit/how-to-connect-to-mongodb-atlas-using-node-js-k9i)
     -   Enter the credentials in `.env.example` and rename it to `.env`.
     -   Make sure to set `USE_DOCKER= false` in `.env` file.
@@ -163,21 +163,21 @@ To understand the aim, scope and technologies used in the project, please see th
 
 ## Help & support <img src="https://github.com/Samridhi-98/Images/blob/master/Images/help.svg" width="3%">
 
-If you are stuck somewhere or do not understand what to do, feel free to reach out to mentors/ admin in discord.
+If you are stuck somewhere or do not understand what to do, feel free to reach out to mentors/ admin in the [Gitter community channel](https://gitter.im/fetch-lobby/community).
 
 ## Contribution <img src="https://github.com/Samridhi-98/Images/blob/master/Images/contribution.svg" width="3%">
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 <br/>
-<strong> Please refer the <a href="https://github.com/adityabisoi/REST-fetch/blob/main/CONTRIBUTING.md">contribution guideline</a> before making any contribution. </strong>
+<strong> Please refer the <a href="https://github.com/adityabisoi/json-hub/blob/main/CONTRIBUTING.md">contribution guideline</a> before making any contribution. </strong>
 
 ## Contributors <img src="https://github.com/Samridhi-98/Images/blob/master/Images/contributors.svg" width="3%">
 
 <table>
 	<tr>
 		<td>
-			<a href="https://github.com/adityabisoi/REST-fetch/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=adityabisoi/REST-fetch" />
+			<a href="https://github.com/adityabisoi/json-hub/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=adityabisoi/json-hub" />
 </a>
 		</td>
 	</tr>

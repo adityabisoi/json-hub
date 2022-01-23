@@ -12,5 +12,5 @@ it('renders correctly without crashing',()=>{
 
 it('checks content of homepage',()=>{
     const {getByTestId} = render(<Home></Home>)
-    expect(getByTestId('home-div')).toHaveTextContent('REST-FETCH')
+    expect(getByTestId('home-div')).toHaveTextContent('JSON Hub')
 })

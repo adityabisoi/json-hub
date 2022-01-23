@@ -4,9 +4,9 @@ class Home extends Component {
   render() {
     return (
       <div data-testid="home-div">
-        <h2>REST-FETCH PROJECT</h2>
+        <h2>JSON Hub</h2>
         <p>A community-owned REST API service for testers and developers.
-        Fetch provides REST API endpoints for different types of placeholders,
+        JSON Hub provides REST API endpoints for different types of placeholders,
         which can be easily used during testing and development without the
         need for creating sample data manually.</p>
  

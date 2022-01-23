@@ -11,7 +11,7 @@ var typewriter = new Typewriter(app, {
 });
  
 typewriter
-  .typeString('REST FETCH')
+  .typeString('JSON Hub')
   .pauseFor(2000)
   .start();
 
