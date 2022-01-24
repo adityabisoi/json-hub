@@ -3,7 +3,7 @@ const endpoint = 'http://localhost:5000/photos'
 
 describe("Testing the photos endpoint", () => {
 
-    it("pPhotos route returns true for status", async () => {
+    it("Photos route returns true for status", async () => {
 
         const response = await supertest(endpoint).get('/');
         expect(response.status).toBe(200);
