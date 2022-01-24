@@ -1,5 +1,5 @@
 import express, { Application, NextFunction, Request, Response } from "express";
-const data = require("../../../data/animaldata");
+const data = require("../../data/animaldata");
 
 const router = express.Router();
 

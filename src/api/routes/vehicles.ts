@@ -1,6 +1,6 @@
 import express, { Application, NextFunction, Request, Response } from "express";
 import { monitorEventLoopDelay } from "node:perf_hooks";
-const data = require("../../../data/vehicledata.json");
+const data = require("../../data/vehicledata.json");
 
 const router = express.Router();
 
