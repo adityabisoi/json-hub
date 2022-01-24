@@ -218,56 +218,6 @@ const data = [
         ],
     },
     {
-        heading: "Animal",
-        desc: "The animal route returns dummy data realted to animals with their type,breed and photos.",
-        routes: [
-            {
-                route: "GET /animals/dog",
-                content: "Return the animal of type dog as specified in animaldata.json.",
-                output: `
-      {
-        "type": "dog",
-        "breed": [
-            "germen shepherd", "bulldog", "poodle"
-        ],
-        "picture": [
-            "https://unsplash.com/photos/lhUTb7bho8g",
-            "https://unsplash.com/photos/EQ_9CkVhgj8",
-            "https://unsplash.com/photos/n0YK1aH00Lg"
-        ]
-      }`,
-            },
-            {
-                route: "GET /animals/cat?options=breed",
-                content: "Return the animal of type cat with available breeds.",
-                output: `
-      [
-        {
-          "type": "cat",
-          "breed": [
-              "persian", "ragdoll", "savannah"
-          ],
-        },
-      ]`,
-            },
-            {
-                route: "GET /animals/lion?options=pictures",
-                content: "Return the animal of type lion with available pictures.",
-                output: `
-      [
-        {
-            "type": "lion",
-            "picture": [
-                "https://unsplash.com/photos/nddQ7DIF1ao",
-                "https://unsplash.com/photos/Ep8vE8Bm6Og",
-                "https://unsplash.com/photos/jW6uCZqE2Hcv"
-            ]
-        },
-      ]`,
-            },
-        ],
-    },
-    {
         heading: "Vehicles",
         desc: "The vehicles route returns dummy data realted to vehicle and its properties.",
         routes: [
