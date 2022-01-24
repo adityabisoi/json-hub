@@ -24,11 +24,11 @@ A community-owned REST API service for testers and developers. JSON Hub provides
 <li>CI/CD</li>
 </ul>
 
-<h3>
+<!-- <h3>
 <em>
 Try it out <a target="_blank" href="https://json-hub.herokuapp.com/"> <img src="https://github.com/Samridhi-98/Images/blob/master/Images/play.svg" width="2%"></a>
 </em>
-</h3>
+</h3> -->
 
 ## Installation
 

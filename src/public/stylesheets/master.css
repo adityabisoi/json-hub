@@ -76,6 +76,7 @@ body {
     font-size: 1.5em;
     color: white;
     margin: 0vh 20vw;
+    text-align: center;
 }
 
 .icons {
@@ -99,7 +100,7 @@ body {
     border: 1px solid white;
     border-radius: 5px;
     padding: 1vh;
-    font-size: 1em;
+    font-size: 0.8em;
     color: white;
 }
 
