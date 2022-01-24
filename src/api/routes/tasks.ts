@@ -1,5 +1,5 @@
 import express, { Application, NextFunction, Request, Response } from "express";
-const data = require("../../data/taskdata.json");
+const data = require("../../../data/taskdata.json");
 
 const router = express.Router();
 
