@@ -10,7 +10,6 @@ app.use(express.static(__dirname + "/public"));
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
-const animalRoute = require("./api/routes/animals");    //import animal route
 const homeRoute = require("./api/routes/home");
 const usersRoute = require("./api/routes/users");
 const testRoute = require("./api/routes/usertest");
@@ -75,10 +74,8 @@ app.use("/photos/food", foodPhotoRoute); //Added foodphoto route
 app.use("/photos", photoRoute);
 app.use("/vehicles", vehicleRoute); //Added vehicles route
 app.use("/songs", songRoute);
-app.use("/animals", animalRoute);
 app.use("/songs", songRoute);
 app.use("/shows", showsRoute);
-app.use("/animals", animalRoute);   //Added animal route
 app.use("/books", bookRoute);   //Added books route
 app.use("/movies", movieRoute);
 app.use("/products", productRoute);   //Added products route
