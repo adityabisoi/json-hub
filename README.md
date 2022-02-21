@@ -1,4 +1,3 @@
-<h2>About Us <a><img src="https://github.com/Samridhi-98/Images/blob/master/Images/reading.svg" width="4%"></a></h2>
 <p>
 
 [![GitHub contributors](https://img.shields.io/github/contributors/adityabisoi/json-hub)](https://github.com/adityabisoi/json-hub/graphs/contributors/)
@@ -9,7 +8,9 @@
 [![Join the chat at https://gitter.im/fetch-lobby/community](https://badges.gitter.im/fetch-lobby/community.svg)](https://gitter.im/fetch-lobby/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 </p>
-
+<p align="center" width="100%">
+    <img width="300" src="logo.jpg"> 
+</p>
 <p>
 A community-owned REST API service for testers and developers. JSON Hub provides REST API endpoints for different types of placeholders, which can be easily used during testing and development without the need for creating sample data manually.
 </p>
