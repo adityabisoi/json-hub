@@ -37,7 +37,7 @@ A community-owned REST API service for testers and developers. JSON Hub provides
 - [License](#license)
 - [Open Source Events](#open-source-events)
 ## Technology Stack
-<img src="https://github.com/Samridhi-98/Images/blob/master/Images/atom.svg" width="3%">
+
 
 <ul>
 <li>MongoDB</li>
@@ -175,31 +175,31 @@ There are two ways of installing the project on your local Machine 🚀
   - Enable it across the JavaScript project
   
 ## Testing 
-<img src="https://github.com/Samridhi-98/Images/blob/master/Images/test.svg" width="3%">
+
 
 -   The endpoint `usertest` which follows the same schema as the `users/` endpoint, must be used for testing
 -   All other endpoints except `usertest` should involve methods which **must not** change the data on the server (read-only)
 -   To test the endpoints provided by the application, tools such as [postman](https://www.postman.com/) can be used
 
 ## Documentation
- <img src="https://github.com/Samridhi-98/Images/blob/master/Images/doc.svg" width="3%">
+
 
 To understand the aim, scope and technologies used in the project, please see the [documentation](https://bit.ly/36PmwEc)
 
 ## Help & support 
-<img src="https://github.com/Samridhi-98/Images/blob/master/Images/help.svg" width="3%">
+
 
 If you are stuck somewhere or do not understand what to do, feel free to reach out to mentors/ admin in the [Gitter community channel](https://gitter.im/fetch-lobby/community).
 
 ## Contribution
- <img src="https://github.com/Samridhi-98/Images/blob/master/Images/contribution.svg" width="3%">
+ 
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 <br/>
 <strong> Please refer the <a href="https://github.com/adityabisoi/json-hub/blob/main/CONTRIBUTING.md">contribution guideline</a> before making any contribution. </strong>
 
 ## Contributors 
-<img src="https://github.com/Samridhi-98/Images/blob/master/Images/contributors.svg" width="3%">
+
 
 <table>
 	<tr>
@@ -212,7 +212,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 </table>
 
 ## License 
-<img src="https://github.com/Samridhi-98/Images/blob/master/Images/license.svg" width="3%">
+
 
 This project is licensed under the GPL V3 License - see the [LICENSE.md](LICENSE.md) file for details
 	
