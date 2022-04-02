@@ -15,7 +15,29 @@
 A community-owned REST API service for testers and developers. JSON Hub provides REST API endpoints for different types of placeholders, which can be easily used during testing and development without the need for creating sample data manually.
 </p>
 
-## Technology Stack <img src="https://github.com/Samridhi-98/Images/blob/master/Images/atom.svg" width="3%">
+## Table of Contents
+
+- [Technology Stack](#technology-stack)
+- [Installation](#installation)
+  - [Before you setup project, make sure you have pre-commit installed on your machine](#before-you-setup-project-make-sure-you-have-pre-commit-installed-on-your-machine-skip-the-following-if-you-have-already-installed)
+  - [Maintaining Consistency](#maintaining-consistency)
+  - [Project Installation](#project-installation)
+     - [Using Docker](#using-docker)
+     - [Conventional setup](#conventional-setup)
+  - [Installation of mongoDB in different OS and its set-up instructions](#installation-of-mongodb-in-different-os-and-its-set-up-instructions)
+    - [Windows](#windows)
+    - [Linux](#linux)
+    - [Mac](#mac)
+- [Documentation on setting up ESLint in VSCode](#documentation-on-setting-up-eslint-in-vscode)
+- [Testing](#testing)
+- [Documentation](#documentation)
+- [Help & support](#help--support)
+- [Contribution](#contribution)
+- [Contributors](#contributors)
+- [License](#license)
+- [Open Source Events](#open-source-events)
+## Technology Stack
+
 
 <ul>
 <li>MongoDB</li>
@@ -74,26 +96,26 @@ Setup for 3 major editors
 
 There are two ways of installing the project on your local Machine 🚀
 
--   Using Docker
+####  Using Docker
 
-    -   Fork and clone the project
-    -   Install and configure your [Docker](https://www.docker.com/), following [this](https://docs.docker.com/engine/install/).
-    -   Rename `.env.example` to `.env`.
-    -   Install the git hook scripts
-        -   `pre-commit install` on terminal
-    -   Once docker is installed run the followig commands.
-        -   `docker-compose build`
-        -   Once the build is complete, run `docker-compose up`
+  -   Fork and clone the project
+  -   Install and configure your [Docker](https://www.docker.com/), following [this](https://docs.docker.com/engine/install/).
+  -   Rename `.env.example` to `.env`.
+  -   Install the git hook scripts
+      -  `pre-commit install` on terminal
+  -   Once docker is installed run the followig commands.
+      -   `docker-compose build`
+      -   Once the build is complete, run `docker-compose up`
 
--   Conventional Setup
-    -   Fork and clone the project
-    -   `cd json-hub/` and run `npm install` to install dependencies
-    -   Setup [mongodb atlas](https://www.mongodb.com/cloud/atlas) following [this tutorial](https://dev.to/dalalrohit/how-to-connect-to-mongodb-atlas-using-node-js-k9i)
-    -   Enter the credentials in `.env.example` and rename it to `.env`.
-    -   Make sure to set `USE_DOCKER= false` in `.env` file.
-    -   Install the git hook scripts
-        -   `pre-commit install` on terminal
-    -   Run `npm run dev` to run the project in development
+####  Conventional Setup
+  -   Fork and clone the project
+  -   `cd json-hub/` and run `npm install` to install dependencies
+  -   Setup [mongodb atlas](https://www.mongodb.com/cloud/atlas) following [this tutorial](https://dev.to/dalalrohit/how-to-connect-to-mongodb-atlas-using-node-js-k9i)
+  -   Enter the credentials in `.env.example` and rename it to `.env`.
+  -   Make sure to set `USE_DOCKER= false` in `.env` file.
+  -   Install the git hook scripts
+      -   `pre-commit install` on terminal
+  -   Run `npm run dev` to run the project in development
 
 ### Installation of mongoDB in different OS and its set-up instructions
 
@@ -152,27 +174,32 @@ There are two ways of installing the project on your local Machine 🚀
   - Install the extension
   - Enable it across the JavaScript project
   
-## Testing <img src="https://github.com/Samridhi-98/Images/blob/master/Images/test.svg" width="3%">
+## Testing 
+
 
 -   The endpoint `usertest` which follows the same schema as the `users/` endpoint, must be used for testing
 -   All other endpoints except `usertest` should involve methods which **must not** change the data on the server (read-only)
 -   To test the endpoints provided by the application, tools such as [postman](https://www.postman.com/) can be used
 
-## Documentation <img src="https://github.com/Samridhi-98/Images/blob/master/Images/doc.svg" width="3%">
+## Documentation
+
 
 To understand the aim, scope and technologies used in the project, please see the [documentation](https://bit.ly/36PmwEc)
 
-## Help & support <img src="https://github.com/Samridhi-98/Images/blob/master/Images/help.svg" width="3%">
+## Help & support 
+
 
 If you are stuck somewhere or do not understand what to do, feel free to reach out to mentors/ admin in the [Gitter community channel](https://gitter.im/fetch-lobby/community).
 
-## Contribution <img src="https://github.com/Samridhi-98/Images/blob/master/Images/contribution.svg" width="3%">
+## Contribution
+ 
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 <br/>
 <strong> Please refer the <a href="https://github.com/adityabisoi/json-hub/blob/main/CONTRIBUTING.md">contribution guideline</a> before making any contribution. </strong>
 
-## Contributors <img src="https://github.com/Samridhi-98/Images/blob/master/Images/contributors.svg" width="3%">
+## Contributors 
+
 
 <table>
 	<tr>
@@ -184,7 +211,8 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 	</tr>
 </table>
 
-## License <img src="https://github.com/Samridhi-98/Images/blob/master/Images/license.svg" width="3%">
+## License 
+
 
 This project is licensed under the GPL V3 License - see the [LICENSE.md](LICENSE.md) file for details
 	
