@@ -9,7 +9,7 @@
 
 </p>
 <p align="center" width="100%">
-    <img width="300" src="logo.jpg"> 
+    <img width="290" src="logo.jpg"> 
 </p>
 <p>
 A community-owned REST API service for testers and developers. JSON Hub provides REST API endpoints for different types of placeholders, which can be easily used during testing and development without the need for creating sample data manually.
