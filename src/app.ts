@@ -1,4 +1,4 @@
-import express, { Application, NextFunction, Request, Response } from "express";
+import express, { Application, NextFunction, Request, Response, RequestHandler } from "express";
 import mongoose from "mongoose";
 import morgan from "morgan";
 import path from "path";
@@ -26,9 +26,7 @@ const productRoute = require("./api/routes/products"); //include products route
 const sportRoute = require("./api/routes/sports");
 
 const options = {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
+    useNewUrlParser: true
 };
 // Connect to database
 let url;
@@ -42,12 +40,12 @@ mongoose.connect(url, options).then(() => {
     console.log("Connected to database");
 });
 
-app.use(morgan("dev"));
-app.use(express.json());
+app.use(morgan("dev") as RequestHandler);
+app.use(express.json() as RequestHandler);
 app.use(
     express.urlencoded({
         extended: false,
-    }),
+    }) as RequestHandler
 );
 
 // Add CORS
