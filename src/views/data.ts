@@ -1,11 +1,11 @@
 const data = [
-  {
-		heading: "Photos",
-		desc: "Returns photos with source link and name.",
-		routes: [{
-				route: "GET /photos/",
-				content: "Return all the available photo data.",
-				output: `
+    {
+        heading: "Photos",
+        desc: "Returns photos with source link and name.",
+        routes: [{
+            route: "GET /photos/",
+            content: "Return all the available photo data.",
+            output: `
       [
         {
           "name": "red robot",
@@ -32,22 +32,22 @@ const data = [
           "picture": "https://robohash.org/6"
         }
       ]`,
-			},
-			{
-				route: "GET /photos/2",
-				content: "Returns the photo at index 2 as specified in photodata.json.",
-				output: `
+        },
+        {
+            route: "GET /photos/2",
+            content: "Returns the photo at index 2 as specified in photodata.json.",
+            output: `
       [
         {
           "name": "yellow robot",
           "picture": "https://robohash.org/2"
         },
       ]`,
-			},
-			{
-				route: "GET /photos/2?count=3",
-				content: "Starts from the photo at index 2 and returns a total of 3 photos.",
-				output: `
+        },
+        {
+            route: "GET /photos/2?count=3",
+            content: "Starts from the photo at index 2 and returns a total of 3 photos.",
+            output: `
       [
         {
           "name": "yellow robot",
@@ -62,16 +62,16 @@ const data = [
           "picture": "https://robohash.org/4"
         },
       ]`,
-			},
-		],
-	},
-  {
-		heading: "Comments",
-		desc: "Returns dummy comments.",
-		routes: [{
-			route: "GET /comments/",
-			content: "Returns all the available dummy comments.",
-			output: `
+        },
+        ],
+    },
+    {
+        heading: "Comments",
+        desc: "Returns dummy comments.",
+        routes: [{
+            route: "GET /comments/",
+            content: "Returns all the available dummy comments.",
+            output: `
     [
       {
           "profile": "https://images.unsplash.com/photo-1552207802-77bcb0d13122?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8c2hpcHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
@@ -104,25 +104,25 @@ const data = [
           "data": "Ut enim ad minim veniam,"
       },
   ]`,
-		}, ],
-	},
-	{
-		heading: "Tasks",
-		desc: "Returns dummy data realted to daily life activities.",
-		routes: [{
-				route: "GET /tasks/2",
-				content: "Returns the task at index 2 as specified in taskdata.json.",
-				output: `
+        } ],
+    },
+    {
+        heading: "Tasks",
+        desc: "Returns dummy data realted to daily life activities.",
+        routes: [{
+            route: "GET /tasks/2",
+            content: "Returns the task at index 2 as specified in taskdata.json.",
+            output: `
       {
         "task_name": "eating",
         "completed": false,
         "details": "having nice and healthy food"
       }`,
-			},
-			{
-				route: "GET /tasks/2?count=3",
-				content: "Starts from the task at index 2 and returns a total of 3 tasks.",
-				output: `
+        },
+        {
+            route: "GET /tasks/2?count=3",
+            content: "Starts from the task at index 2 and returns a total of 3 tasks.",
+            output: `
       [
         {
           "task_name": "eating",
@@ -140,11 +140,11 @@ const data = [
           "details": "write a diary entry or blog posts to have thoughts organized"
         }
       ]`,
-			},
-			{
-				route: "GET /tasks?count=2",
-				content: "Returns 2 tasks, starting at index 0 by default.",
-				output: `
+        },
+        {
+            route: "GET /tasks?count=2",
+            content: "Returns 2 tasks, starting at index 0 by default.",
+            output: `
       [
         {
           "task_name": "reading",
@@ -157,16 +157,16 @@ const data = [
           "details": "drink delicious chai or coffee"
         }
       ]`,
-			},
-		],
-	},
-	{
-		heading: "Users",
-		desc: "Returns dummy user data.",
-		routes: [{
-				route: "GET /users/",
-				content: "Return all the available dummy user data.",
-				output: `
+        },
+        ],
+    },
+    {
+        heading: "Users",
+        desc: "Returns dummy user data.",
+        routes: [{
+            route: "GET /users/",
+            content: "Return all the available dummy user data.",
+            output: `
       [
         {
           "id": "1",
@@ -187,22 +187,22 @@ const data = [
           "email": "Devdavid9@gmail.com"
         }
       ]`,
-			},
-			{
-				route: "GET /users/:userId",
-				content: "Return dummy user data with the matching Id.",
-				output: `
+        },
+        {
+            route: "GET /users/:userId",
+            content: "Return dummy user data with the matching Id.",
+            output: `
       {
         "id": "1",
         "first_name": "Becky",
         "last_name": "Blasbad",
         "email": "beck1blas4@gmail.com"
       }`,
-			},
-			{
-				route: "PATCH /users/",
-				content: "Returns dummy user data with the current timestamp.",
-				output: `
+        },
+        {
+            route: "PATCH /users/",
+            content: "Returns dummy user data with the current timestamp.",
+            output: `
       {
         "id": "1",
         "first_name": "Becky",
@@ -210,16 +210,16 @@ const data = [
         "email": "beck1blas4@gmail.com",
         "timestamp": "2021-03-31 18-00"
       }`,
-			},
-		],
-	},
-	{
-		heading: "Food Photos",
-		desc: "Returns photos of food with source link, name and taste.",
-		routes: [{
-				route: "GET /photos/food/",
-				content: "Return all the available foodphoto data.",
-				output: `
+        },
+        ],
+    },
+    {
+        heading: "Food Photos",
+        desc: "Returns photos of food with source link, name and taste.",
+        routes: [{
+            route: "GET /photos/food/",
+            content: "Return all the available foodphoto data.",
+            output: `
       [
         {
           "name": "pizza",
@@ -242,25 +242,25 @@ const data = [
           "picture": "https://b.zmtcdn.com/data/homepage_dish_data/4/742929dcb631403d7c1c1efad2ca2700.png"
         },
       ]`,
-			},
-			{
-				route: "GET /photos/food/taste",
-				content: "Return all the available food taste data.",
-				output: `[
+        },
+        {
+            route: "GET /photos/food/taste",
+            content: "Return all the available food taste data.",
+            output: `[
           {
             "taste": ["spicy", "nutty", "sweet"]
           }
         ]`,
-			},
-		],
-	},
-	{
-		heading: "Vehicles",
-		desc: "Returns placeholder vehicle data",
-		routes: [{
-				route: "GET /vehicles/2",
-				content: "Returns the vehicle data at index 2 as specified in vehicledata.json.",
-				output: `
+        },
+        ],
+    },
+    {
+        heading: "Vehicles",
+        desc: "Returns placeholder vehicle data",
+        routes: [{
+            route: "GET /vehicles/2",
+            content: "Returns the vehicle data at index 2 as specified in vehicledata.json.",
+            output: `
       {
         "name": "Model Y",
         "manufacturer": "Tesla",
@@ -270,11 +270,11 @@ const data = [
         "vin": "8I3HVRVMUXJT75742",
         "vrm": "BX22GHM"
       }`,
-			},
-			{
-				route: "GET /vehicles?manufacturer=Tesla",
-				content: "Return the vehicle data where manufacturer name is Tesla.",
-				output: `
+        },
+        {
+            route: "GET /vehicles?manufacturer=Tesla",
+            content: "Return the vehicle data where manufacturer name is Tesla.",
+            output: `
       [
         {
             "name": "Model Y",
@@ -313,16 +313,16 @@ const data = [
             "vrm": "MK89INV"
         }
       ]`,
-			},
-		],
-	},
-	{
-		heading: "Songs",
-		desc: "Returns song name, singer, genre, links, etc.",
-		routes: [{
-				route: "GET /songs/",
-				content: "Returns all the available songs",
-				output: `[
+        },
+        ],
+    },
+    {
+        heading: "Songs",
+        desc: "Returns song name, singer, genre, links, etc.",
+        routes: [{
+            route: "GET /songs/",
+            content: "Returns all the available songs",
+            output: `[
 
           {
               "name": "Chan Kitta",
@@ -360,11 +360,11 @@ const data = [
               "link": "https://www.youtube.com/watch?v=vTIIMJ9tUc8"
           },
         ]`,
-			},
-			{
-				route: "GET /songs/5",
-				content: "Returns song data from perticular index.",
-				output: `
+        },
+        {
+            route: "GET /songs/5",
+            content: "Returns song data from perticular index.",
+            output: `
       {
         "name": "Bohemian Rhapsody",
         "singer": "Queen",
@@ -372,11 +372,11 @@ const data = [
         "genre": "classic rock",
         "link": "https://www.youtube.com/watch?v=fJ9rUzIMcZQ"
       }`,
-			},
-			{
-				route: "GET /songs?artist=Ayushmann Khurrana",
-				content: "Returns song data from perticular artist.",
-				output: `[
+        },
+        {
+            route: "GET /songs?artist=Ayushmann Khurrana",
+            content: "Returns song data from perticular artist.",
+            output: `[
                 {
                     "name": "Chan Kitta",
                     "singer": "Ayushmann Khurrana",
@@ -386,11 +386,11 @@ const data = [
                 }
             
             ]`,
-			},
-			{
-				route: "GET /songs?genre=pop",
-				content: "Returns song data from perticular genre.",
-				output: `[
+        },
+        {
+            route: "GET /songs?genre=pop",
+            content: "Returns song data from perticular genre.",
+            output: `[
 
               {
                   "name": "Dope Shope",
@@ -415,11 +415,11 @@ const data = [
               }
           
           ]`,
-			},
-			{
-				route: "GET /songs?language=punjabi",
-				content: "Returns song data from perticular language.",
-				output: `[
+        },
+        {
+            route: "GET /songs?language=punjabi",
+            content: "Returns song data from perticular language.",
+            output: `[
                   {
                       "name": "Chan Kitta",
                       "singer": "Ayushmann Khurrana",
@@ -450,11 +450,11 @@ const data = [
                   }
               
               ]`,
-			},
-			{
-				route: "GET /songs?genre=pop&language=punjabi",
-				content: "Return dummy songs data after chaining genre and language query parameter.",
-				output: `[
+        },
+        {
+            route: "GET /songs?genre=pop&language=punjabi",
+            content: "Return dummy songs data after chaining genre and language query parameter.",
+            output: `[
 
                 {
                     "name": "Dope Shope",
@@ -472,11 +472,11 @@ const data = [
                 }
             
             ]`,
-			},
-			{
-				route: "GET /songs?artist=A.R. Rahman&genre=sufi&language=urdu",
-				content: "Return dummy songs data after chaining multiple song query parameter.",
-				output: `[
+        },
+        {
+            route: "GET /songs?artist=A.R. Rahman&genre=sufi&language=urdu",
+            content: "Return dummy songs data after chaining multiple song query parameter.",
+            output: `[
             {
                 "name": "Kun Faya Kun",
                 "singer": "A.R. Rahman",
@@ -486,16 +486,16 @@ const data = [
             }
         
         ]`,
-			},
-		],
-	},
-	{
-		heading: "Shows",
-		desc: "Returns TV show name, rating, description, etc.",
-		routes: [{
-				route: "GET /shows/",
-				content: "Return all the available shows with title,genre,season,episodes,rating,description.",
-				output: `
+        },
+        ],
+    },
+    {
+        heading: "Shows",
+        desc: "Returns TV show name, rating, description, etc.",
+        routes: [{
+            route: "GET /shows/",
+            content: "Return all the available shows with title,genre,season,episodes,rating,description.",
+            output: `
     [
       {
         "title": "Friends",
@@ -538,11 +538,11 @@ const data = [
         "description": "A cohabiting couple in their 20s navigate the ups and downs of work, modern-day relationships and finding themselves in contemporary Bengaluru."
       },
     ]`,
-			},
-			{
-				route: "GET /shows/2",
-				content: "Return show data at index 2 from showsdata.json.",
-				output: `
+        },
+        {
+            route: "GET /shows/2",
+            content: "Return show data at index 2 from showsdata.json.",
+            output: `
       {
         "title": "Little Things",
         "genre": ["comedy", "drama"],
@@ -552,11 +552,11 @@ const data = [
         "description": "A cohabiting couple in their 20s navigate the ups and downs of work, modern-day relationships and finding themselves in contemporary Bengaluru."
       },
     }`,
-			},
-			{
-				route: "GET /shows?genre=drama",
-				content: "Return show data specific to a perticular genre from showsdata.json.",
-				output: `
+        },
+        {
+            route: "GET /shows?genre=drama",
+            content: "Return show data specific to a perticular genre from showsdata.json.",
+            output: `
               [
                 {
                     "title": "Money Heist",
@@ -592,11 +592,11 @@ const data = [
                     "description": "A cohabiting couple in their 20s navigate the ups and downs of work, modern-day relationships and finding themselves in contemporary Bengaluru."
                 },
               ]`,
-			},
-			{
-				route: "GET /shows?rating=8.9",
-				content: "Return show data with specific rating from showsdata.json.",
-				output: `
+        },
+        {
+            route: "GET /shows?rating=8.9",
+            content: "Return show data with specific rating from showsdata.json.",
+            output: `
               [
                 {
                     "title": "Friends",
@@ -623,11 +623,11 @@ const data = [
                 }
             
             ]`,
-			},
-			{
-				route: "GET /shows?season=10",
-				content: "Return show data based on season count from showsdata.json.",
-				output: `
+        },
+        {
+            route: "GET /shows?season=10",
+            content: "Return show data based on season count from showsdata.json.",
+            output: `
             [
               {
                   "title": "Friends",
@@ -641,11 +641,11 @@ const data = [
                   "description": "Ross Geller, Rachel Green, Monica Geller, Joey Tribbiani, Chandler Bing, and Phoebe Buffay are six 20 something year olds living in New York City. Over the course of 10 years and seasons, these friends go through family,love,drama,friendship and comedy."
               }
             ]`,
-			},
-			{
-				route: "GET /shows?rating=9.8&genre=comedy",
-				content: "Return show data based on rating and season count from showsdata.json.",
-				output: `
+        },
+        {
+            route: "GET /shows?rating=9.8&genre=comedy",
+            content: "Return show data based on rating and season count from showsdata.json.",
+            output: `
             [
               {
                   "title": "Friends",
@@ -659,11 +659,11 @@ const data = [
                   "description": "Ross Geller, Rachel Green, Monica Geller, Joey Tribbiani, Chandler Bing, and Phoebe Buffay are six 20 something year olds living in New York City. Over the course of 10 years and seasons, these friends go through family,love,drama,friendship and comedy."
               },
             ]`,
-			},
-			{
-				route: "GET /shows?genre=comedy&season=10&rating=8.9",
-				content: "Return show data after chaining multiple show query parameter.",
-				output: `
+        },
+        {
+            route: "GET /shows?genre=comedy&season=10&rating=8.9",
+            content: "Return show data after chaining multiple show query parameter.",
+            output: `
             [
               {
                   "title": "Friends",
@@ -677,16 +677,16 @@ const data = [
                   "description": "Ross Geller, Rachel Green, Monica Geller, Joey Tribbiani, Chandler Bing, and Phoebe Buffay are six 20 something year olds living in New York City. Over the course of 10 years and seasons, these friends go through family,love,drama,friendship and comedy."
               }
             ]`,
-			},
-		],
-	},
-	{
-		heading: "Books",
-		desc: "Returns book title, author, price, rating, etc.",
-		routes: [{
-				route: "GET /books/",
-				content: "Return all the available book data.",
-				output: `
+        },
+        ],
+    },
+    {
+        heading: "Books",
+        desc: "Returns book title, author, price, rating, etc.",
+        routes: [{
+            route: "GET /books/",
+            content: "Return all the available book data.",
+            output: `
                 [
                 {
                   "title": "The Story Of My Experiments With The Truth",
@@ -717,11 +717,11 @@ const data = [
                   "price": "₹300"
                 }
               ]`,
-			},
-			{
-				route: "GET /books/2",
-				content: "Return book data at index 2 from booksdata.json.",
-				output: `
+        },
+        {
+            route: "GET /books/2",
+            content: "Return book data at index 2 from booksdata.json.",
+            output: `
                 {
                   "title": "Midnight’s Children",
                   "author": "Salman Rushdie",
@@ -729,11 +729,11 @@ const data = [
                   "descritpion": "Midnight’s Children portrays the journey of India from British rule to independence and then partition. The book received a great response, winning the Booker Prize in 1981 and the “Booker of Bookers” Prize (commemorating the best among all the Booker winners) twice – in 1993 and 2008! The book travels to various parts of the country including Kashmir, Agra and Mumbai and incorporates many actual historic events.",
                   "price": "₹300"
                 }`,
-			},
-			{
-				route: "GET /books?author=Vikram Seth",
-				content: "Return book data with specific author name from booksdata.json.",
-				output: `
+        },
+        {
+            route: "GET /books?author=Vikram Seth",
+            content: "Return book data with specific author name from booksdata.json.",
+            output: `
               [
                 {
                     "title": "A Suitable Boy",
@@ -743,11 +743,11 @@ const data = [
                     "price": "₹947"
                 }
               ]`,
-			},
-			{
-				route: "GET /books?price=₹268",
-				content: "Return book data with specific author name from booksdata.json.",
-				output: `
+        },
+        {
+            route: "GET /books?price=₹268",
+            content: "Return book data with specific author name from booksdata.json.",
+            output: `
               [
                 {
                     "title": "The Interpreter Of Maladies",
@@ -757,11 +757,11 @@ const data = [
                     "price": "₹268"
                 }
               ]`,
-			},
-			{
-				route: "GET /books?title=The Glass Palace",
-				content: "Return book data with specific title from booksdata.json.",
-				output: `
+        },
+        {
+            route: "GET /books?title=The Glass Palace",
+            content: "Return book data with specific title from booksdata.json.",
+            output: `
               [
                 {
                     "title": "The Glass Palace",
@@ -771,11 +771,11 @@ const data = [
                     "price": "₹248"
                 }
               ]`,
-			},
-			{
-				route: "GET /books?author=Vikram Seth&price=₹947",
-				content: "Return book data with specific title from booksdata.json.",
-				output: `
+        },
+        {
+            route: "GET /books?author=Vikram Seth&price=₹947",
+            content: "Return book data with specific title from booksdata.json.",
+            output: `
               [
                 {
                     "title": "A Suitable Boy",
@@ -785,11 +785,11 @@ const data = [
                     "price": "₹947"
                 }
               ]`,
-			},
-			{
-				route: "GET /books?title=God of Small Things&author=Arundhati Roy&price=₹275",
-				content: "Return book data after chaining multiple book query parameter.",
-				output: `
+        },
+        {
+            route: "GET /books?title=God of Small Things&author=Arundhati Roy&price=₹275",
+            content: "Return book data after chaining multiple book query parameter.",
+            output: `
               [
                 {
                     "title": "God of Small Things",
@@ -799,8 +799,8 @@ const data = [
                     "price": "₹275"
                 }
               ]`,
-			},
-		],
-	},
+        },
+        ],
+    },
 ];
 export default data;
