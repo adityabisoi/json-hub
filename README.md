@@ -19,7 +19,6 @@ A community-owned REST API service for testers and developers. JSON Hub provides
 
 - [Technology Stack](#technology-stack)
 - [Installation](#installation)
-  - [Before you setup project, make sure you have pre-commit installed on your machine](#before-you-setup-project-make-sure-you-have-pre-commit-installed-on-your-machine-skip-the-following-if-you-have-already-installed)
   - [Maintaining Consistency](#maintaining-consistency)
   - [Project Installation](#project-installation)
      - [Using Docker](#using-docker)
@@ -51,26 +50,6 @@ Try it out <a target="_blank" href="https://json-hub.herokuapp.com/"> <img src="
 
 ## Installation
 
-### Before you setup project, make sure you have pre-commit installed on your machine. Skip the following if you have already installed.
-
-There are 3 ways to install pre-commit package manager
-
--   Using pip:
-
-`$ pip install pre-commit`
-
--   Using homebrew:
-
-`$ brew install pre-commit`
-
--   Using conda (via conda-forge):
-
-`$ conda install -c conda-forge pre-commit`
-
-After completing the above steps, verify your installation by running
-
-`$ pre-commit --version`
-
 ### Maintaining Consistency
 
 It is absolutely necessary for us to maintain consistent coding styles for multiple developers working on this same project across various editors and IDEs. We have created a editorconfig file and urge you to download editorconfig plugin before further installation.
@@ -95,8 +74,6 @@ There are two ways of installing the project on your local Machine 🚀
   -   Fork and clone the project
   -   Install and configure your [Docker](https://www.docker.com/), following [this](https://docs.docker.com/engine/install/).
   -   Rename `.env.example` to `.env`.
-  -   Install the git hook scripts
-      -  `pre-commit install` on terminal
   -   Once docker is installed run the followig commands.
       -   `docker-compose build`
       -   Once the build is complete, run `docker-compose up`
@@ -107,8 +84,6 @@ There are two ways of installing the project on your local Machine 🚀
   -   Setup [mongodb atlas](https://www.mongodb.com/cloud/atlas) following [this tutorial](https://dev.to/dalalrohit/how-to-connect-to-mongodb-atlas-using-node-js-k9i)
   -   Enter the credentials in `.env.example` and rename it to `.env`.
   -   Make sure to set `USE_DOCKER= false` in `.env` file.
-  -   Install the git hook scripts
-      -   `pre-commit install` on terminal
   -   Run `npm run dev` to run the project in development
 
 ## Documentation on setting up ESLint in VSCode
@@ -118,9 +93,10 @@ There are two ways of installing the project on your local Machine 🚀
   - Search for ESLint 
   - Install the extension
   - Enable it across the JavaScript project
+
+**Note :** The project uses **Husky**, a pre-commit GIT hook which checks if the code follows linting guidelines before commiting. This helps prevent unwanted linting errors in the pipelines.
   
 ## Testing 
-
 
 -   The endpoint `usertest` which follows the same schema as the `users/` endpoint, must be used for testing
 -   All other endpoints except `usertest` should involve methods which **must not** change the data on the server (read-only)
