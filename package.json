@@ -6,7 +6,7 @@
     "scripts": {
         "start": "node dist/server.js",
         "dev": "nodemon src/server.ts",
-        "lint": "eslint -c .eslintrc --fix ./src/**/*.ts",
+        "lint": "eslint .",
         "build": "tsc",
         "postinstall": "npm run build",
         "test": "jest"

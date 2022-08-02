@@ -1,101 +1,98 @@
-import express, { Application, NextFunction, Request, Response, RequestHandler } from "express";
-import mongoose from "mongoose";
-import morgan from "morgan";
-import path from "path";
+import express, { Application, NextFunction, Request, RequestHandler, Response } from 'express'
+import mongoose from 'mongoose'
+import morgan from 'morgan'
+import path from 'path'
 
-require("dotenv").config();
+require('dotenv').config()
 
-const app: Application = express();
-app.use(express.static(__dirname + "/public"));
-app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "ejs");
+const app: Application = express()
+app.use(express.static(__dirname + '/public'))
+app.set('views', path.join(__dirname, 'views'))
+app.set('view engine', 'ejs')
 
-const homeRoute = require("./api/routes/home");
-const usersRoute = require("./api/routes/users");
-const testRoute = require("./api/routes/usertest");
-const taskRoute = require("./api/routes/tasks"); //include tasks route
-const commentRoute = require("./api/routes/comments");//importing the comments endpoint file
-const photoRoute = require("./api/routes/photos");
-const foodPhotoRoute = require("./api/routes/foodphotos"); //include foodphotos route
-const vehicleRoute = require("./api/routes/vehicles"); //include vehicles route
-const songRoute = require("./api/routes/songs"); //include songs route
-const bookRoute = require("./api/routes/books"); //include books route
-const showsRoute = require("./api/routes/shows"); //include shows route
-const movieRoute = require("./api/routes/movies");
-const productRoute = require("./api/routes/products"); //include products route
-const sportRoute = require("./api/routes/sports");
+const homeRoute = require('./api/routes/home')
+const usersRoute = require('./api/routes/users')
+const testRoute = require('./api/routes/usertest')
+const taskRoute = require('./api/routes/tasks') //include tasks route
+const commentRoute = require('./api/routes/comments') //importing the comments endpoint file
+const photoRoute = require('./api/routes/photos')
+const foodPhotoRoute = require('./api/routes/foodphotos') //include foodphotos route
+const vehicleRoute = require('./api/routes/vehicles') //include vehicles route
+const songRoute = require('./api/routes/songs') //include songs route
+const bookRoute = require('./api/routes/books') //include books route
+const showsRoute = require('./api/routes/shows') //include shows route
+const movieRoute = require('./api/routes/movies')
+const productRoute = require('./api/routes/products') //include products route
+const sportRoute = require('./api/routes/sports')
 
 const options = {
-    useNewUrlParser: true
-};
+    useNewUrlParser: true,
+}
 // Connect to database
-let url;
+let url
 if (process.env.USE_DOCKER == `true`) {
-    url = `mongodb://${process.env.MONGO_NON_ROOT_USERNAME}:${process.env.MONGO_NON_ROOT_PASSWORD}@mongodb:27017/${process.env.MONGO_INITDB_DATABASE}`;
+    url = `mongodb://${process.env.MONGO_NON_ROOT_USERNAME}:${process.env.MONGO_NON_ROOT_PASSWORD}@mongodb:27017/${process.env.MONGO_INITDB_DATABASE}`
 } else {
-    url = `${process.env.DB_CONNECTION_URL}`;
+    url = `${process.env.DB_CONNECTION_URL}`
 }
 
 mongoose.connect(url, options).then(() => {
-    console.log("Connected to database");
-});
+    console.log('Connected to database')
+})
 
-app.use(morgan("dev") as RequestHandler);
-app.use(express.json() as RequestHandler);
+app.use(morgan('dev') as RequestHandler)
+app.use(express.json() as RequestHandler)
 app.use(
     express.urlencoded({
         extended: false,
     }) as RequestHandler
-);
+)
 
 // Add CORS
 app.use((req: Request, res: Response, next: NextFunction) => {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header(
-        "Access-Control-Allow-Headers",
-        "Origin, X-Requested-With, Content-Type, Accept, Authorization",
-    );
-    if (req.method === "OPTIONS") {
-        res.header("Access-Control-Allow-Methods", "GET, POST, PUT, PATCH, DELETE");
-        return res.status(200).json({});
+    res.header('Access-Control-Allow-Origin', '*')
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization')
+    if (req.method === 'OPTIONS') {
+        res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE')
+        return res.status(200).json({})
     }
-    next();
-});
+    next()
+})
 
 // Routes to handle requests
-app.use("/", homeRoute);
-app.use("/users", usersRoute);
-app.use("/usertest", testRoute);
-app.use("/tasks", taskRoute); // Added task route
-app.use("/comments", commentRoute);//Routing the app to use the comments endpoint
-app.use("/photos/food", foodPhotoRoute); //Added foodphoto route
-app.use("/photos", photoRoute);
-app.use("/vehicles", vehicleRoute); //Added vehicles route
-app.use("/songs", songRoute);
-app.use("/songs", songRoute);
-app.use("/shows", showsRoute);
-app.use("/books", bookRoute);   //Added books route
-app.use("/movies", movieRoute);
-app.use("/products", productRoute);   //Added products route
-app.use("/sports", sportRoute);
+app.use('/', homeRoute)
+app.use('/users', usersRoute)
+app.use('/usertest', testRoute)
+app.use('/tasks', taskRoute) // Added task route
+app.use('/comments', commentRoute) //Routing the app to use the comments endpoint
+app.use('/photos/food', foodPhotoRoute) //Added foodphoto route
+app.use('/photos', photoRoute)
+app.use('/vehicles', vehicleRoute) //Added vehicles route
+app.use('/songs', songRoute)
+app.use('/songs', songRoute)
+app.use('/shows', showsRoute)
+app.use('/books', bookRoute) //Added books route
+app.use('/movies', movieRoute)
+app.use('/products', productRoute) //Added products route
+app.use('/sports', sportRoute)
 
 // Handle error
 interface ErrorWithStatus extends Error {
-    status: number;
+    status: number
 }
 
 app.use((req: Request, res: Response, next: NextFunction) => {
-    const error = new Error("Not found") as ErrorWithStatus;
-    error.status = 404;
-    next(error);
-});
+    const error = new Error('Not found') as ErrorWithStatus
+    error.status = 404
+    next(error)
+})
 
 app.use((error: ErrorWithStatus, req: Request, res: Response, next: NextFunction) => {
     res.status(error.status || 500).json({
         error: {
             message: error.message,
         },
-    });
-});
+    })
+})
 
-module.exports = app;
+module.exports = app
