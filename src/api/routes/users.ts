@@ -1,23 +1,23 @@
-import express, { NextFunction, Request, Response } from "express";
-const router = express.Router();
+import express, { NextFunction, Request, Response } from 'express'
+const router = express.Router()
 
-const User = require("../models/user");
+const User = require('../models/user')
 
-router.get("/", (req: Request, res: Response, next: NextFunction) => {
+router.get('/', (req: Request, res: Response, next: NextFunction) => {
     User.find()
         .exec()
         .then((data: string) => {
-            console.log(data);
-            res.status(200).json(data);
+            console.log(data)
+            res.status(200).json(data)
         })
         .catch((err: string) => {
-            console.log(err);
+            console.log(err)
             res.status(500).json({
                 error: err,
-            });
-        });
-});
-router.post("/", (req: Request, res: Response, next: NextFunction) => {
+            })
+        })
+})
+router.post('/', (req: Request, res: Response, next: NextFunction) => {
     const result = {
         first_name: req.body.first_name,
         last_name: req.body.last_name,
@@ -28,38 +28,38 @@ router.post("/", (req: Request, res: Response, next: NextFunction) => {
         gender: req.body.gender,
         dob: req.body.dob,
         timestamp: new Date(),
-    };
-    res.status(200).json({ data: result });
-});
-router.get("/:userId", (req: Request, res: Response, next: NextFunction) => {
-    const id: string = req.params.userId;
+    }
+    res.status(200).json({ data: result })
+})
+router.get('/:userId', (req: Request, res: Response, next: NextFunction) => {
+    const id: string = req.params.userId
 
     User.findById(id)
         .exec()
         // Single user valid
         .then((data: string) => {
-            console.log(data);
+            console.log(data)
             if (data) {
                 res.status(200).json({
                     data: data,
-                });
+                })
             } else {
                 res.status(404).json({
-                    message: "Id does not exist",
-                });
+                    message: 'Id does not exist',
+                })
             }
         })
         // Single user invalid
         .catch((err: string) => {
-            console.log(err);
+            console.log(err)
             res.status(500).json({
                 error: err,
-            });
-        });
-});
+            })
+        })
+})
 
-router.patch("/:userId", (req: Request, res: Response, next: NextFunction) => {
-    const jsonData = req.body;
+router.patch('/:userId', (req: Request, res: Response, next: NextFunction) => {
+    const jsonData = req.body
     User.findById(req.params.userId)
         .exec()
         .then((user: any) => {
@@ -72,7 +72,7 @@ router.patch("/:userId", (req: Request, res: Response, next: NextFunction) => {
                 phoneno = user.phoneno,
                 gender = user.gender,
                 dob = user.dob,
-            } = jsonData;
+            } = jsonData
 
             res.status(200).json({
                 first_name: first_name,
@@ -83,32 +83,32 @@ router.patch("/:userId", (req: Request, res: Response, next: NextFunction) => {
                 phoneno: phoneno,
                 gender: gender,
                 dob: dob,
-            });
+            })
         })
         .catch((err: string) => {
-            res.status(404).json({ message: "user not found" });
-        });
-});
+            res.status(404).json({ message: 'user not found' })
+        })
+})
 
-router.delete("/:userId", (req: Request, res: Response, next: NextFunction) => {
-    const id: any = req.params.userId;
+router.delete('/:userId', (req: Request, res: Response, next: NextFunction) => {
+    const id: any = req.params.userId
     User.findById(id)
         .exec()
         .then((data: string) => {
             if (data) {
-                res.status(204).json();
+                res.status(204).json()
             } else {
                 res.status(404).json({
-                    message: "User ID does not exist",
-                });
+                    message: 'User ID does not exist',
+                })
             }
         })
         .catch((err: string) => {
-            console.log(err);
+            console.log(err)
             res.status(500).json({
                 error: err,
-            });
-        });
-});
+            })
+        })
+})
 
-module.exports = router;
+module.exports = router

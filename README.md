@@ -19,11 +19,10 @@ A community-owned REST API service for testers and developers. JSON Hub provides
 
 - [Technology Stack](#technology-stack)
 - [Installation](#installation)
-  - [Maintaining Consistency](#maintaining-consistency)
   - [Project Installation](#project-installation)
      - [Using Docker](#using-docker)
      - [Conventional setup](#conventional-setup)
-- [Documentation on setting up ESLint in VSCode](#documentation-on-setting-up-eslint-in-vscode)
+- [Code linting and formatting](#code-linting-and-formatting)
 - [Testing](#testing)
 - [Documentation](#documentation)
 - [Help & support](#help--support)
@@ -31,9 +30,8 @@ A community-owned REST API service for testers and developers. JSON Hub provides
 - [Contributors](#contributors)
 - [License](#license)
 - [Open Source Events](#open-source-events)
+
 ## Technology Stack
-
-
 <ul>
 <li>MongoDB</li>
 <li>Express</li>
@@ -49,28 +47,11 @@ Try it out <a target="_blank" href="https://json-hub.herokuapp.com/"> <img src="
 </h3> -->
 
 ## Installation
-
-### Maintaining Consistency
-
-It is absolutely necessary for us to maintain consistent coding styles for multiple developers working on this same project across various editors and IDEs. We have created a editorconfig file and urge you to download editorconfig plugin before further installation.
-
-Setup for 3 major editors
-
--   For vscode
-    -   Download the following [plugin](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig) on your editor
-
--   For atom
-    -   Download the following [plugin](https://atom.io/packages/editorconfig) on your editor
-
--   For Sublime text
-    -   Download the following [plugin](https://github.com/sindresorhus/editorconfig-sublime) on your editor
-
 ### Project Installation
 
 There are two ways of installing the project on your local Machine 🚀
 
 ####  Using Docker
-
   -   Fork and clone the project
   -   Install and configure your [Docker](https://www.docker.com/), following [this](https://docs.docker.com/engine/install/).
   -   Rename `.env.example` to `.env`.
@@ -86,42 +67,28 @@ There are two ways of installing the project on your local Machine 🚀
   -   Make sure to set `USE_DOCKER= false` in `.env` file.
   -   Run `npm run dev` to run the project in development
 
-## Documentation on setting up ESLint in VSCode
-
-  - Go to VSCode 
-  - Extensions (on left sidebar) 
-  - Search for ESLint 
-  - Install the extension
-  - Enable it across the JavaScript project
+## Code linting and formatting
+Json-hub uses Prettier + Eslint for code listing and formatting. To check if your code follows the guidelines, run `npm run lint`
 
 **Note :** The project uses **Husky**, a pre-commit GIT hook which checks if the code follows linting guidelines before commiting. This helps prevent unwanted linting errors in the pipelines.
   
 ## Testing 
-
 -   The endpoint `usertest` which follows the same schema as the `users/` endpoint, must be used for testing
 -   All other endpoints except `usertest` should involve methods which **must not** change the data on the server (read-only)
 -   To test the endpoints provided by the application, tools such as [postman](https://www.postman.com/) can be used
 
 ## Documentation
-
-
 To understand the aim, scope and technologies used in the project, please see the [documentation](https://bit.ly/36PmwEc)
 
 ## Help & support 
-
-
 If you are stuck somewhere or do not understand what to do, feel free to reach out to mentors/ admin in the [Gitter community channel](https://gitter.im/fetch-lobby/community).
 
 ## Contribution
- 
-
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 <br/>
 <strong> Please refer the <a href="https://github.com/adityabisoi/json-hub/blob/main/CONTRIBUTING.md">contribution guideline</a> before making any contribution. </strong>
 
 ## Contributors 
-
-
 <table>
 	<tr>
 		<td>
@@ -133,10 +100,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 </table>
 
 ## License 
-
-
 This project is licensed under the GPL V3 License - see the [LICENSE.md](LICENSE.md) file for details
 	
 ##  Open Source Events 
-
  <img  src="https://raw.githubusercontent.com/GirlScriptSummerOfCode/MentorshipProgram/master/GSsoc%20Type%20Logo%20Black.png" href="https://gssoc.girlscript.tech/" alt="DS-ALGO-SOLUTIONS">
