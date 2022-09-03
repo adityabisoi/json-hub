@@ -15,13 +15,12 @@
 A community-owned REST API service for testers and developers. JSON Hub provides REST API endpoints for different types of placeholders, which can be easily used during testing and development without the need for creating sample data manually.
 </p>
 
+### Click [here](https://json-hub.up.railway.app/) to use json-hub!
+
 ## Table of Contents
 
 - [Technology Stack](#technology-stack)
 - [Installation](#installation)
-  - [Project Installation](#project-installation)
-     - [Using Docker](#using-docker)
-     - [Conventional setup](#conventional-setup)
 - [Code linting and formatting](#code-linting-and-formatting)
 - [Testing](#testing)
 - [Documentation](#documentation)
@@ -39,14 +38,7 @@ A community-owned REST API service for testers and developers. JSON Hub provides
 <li>CI/CD</li>
 </ul>
 
-<!-- <h3>
-<em>
-Try it out <a target="_blank" href="https://json-hub.herokuapp.com/"> <img src="https://github.com/Samridhi-98/Images/blob/master/Images/play.svg" width="2%"></a>
-</em>
-</h3> -->
-
 ## Installation
-### Project Installation
   -   Fork and clone the project
   -   `cd json-hub/` and run `npm install` to install dependencies
   -   Run `npm run dev` to run the project in development
