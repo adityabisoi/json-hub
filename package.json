@@ -4,8 +4,9 @@
     "description": "A NodeJS based REST API service for development and testing",
     "main": "server.js",
     "scripts": {
-        "start": "node dist/server.js",
+        "start": "nodemon src/server.ts",
         "dev": "nodemon src/server.ts",
+        "prod": "node dict/server.ts",
         "lint": "eslint .",
         "build": "tsc",
         "postinstall": "npm run build",
