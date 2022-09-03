@@ -33,9 +33,8 @@ A community-owned REST API service for testers and developers. JSON Hub provides
 
 ## Technology Stack
 <ul>
-<li>MongoDB</li>
-<li>Express</li>
 <li>NodeJS</li>
+<li>Express</li>
 <li>Typescript</li>
 <li>CI/CD</li>
 </ul>
@@ -48,23 +47,8 @@ Try it out <a target="_blank" href="https://json-hub.herokuapp.com/"> <img src="
 
 ## Installation
 ### Project Installation
-
-There are two ways of installing the project on your local Machine 🚀
-
-####  Using Docker
-  -   Fork and clone the project
-  -   Install and configure your [Docker](https://www.docker.com/), following [this](https://docs.docker.com/engine/install/).
-  -   Rename `.env.example` to `.env`.
-  -   Once docker is installed run the followig commands.
-      -   `docker-compose build`
-      -   Once the build is complete, run `docker-compose up`
-
-####  Conventional Setup
   -   Fork and clone the project
   -   `cd json-hub/` and run `npm install` to install dependencies
-  -   Setup [mongodb atlas](https://www.mongodb.com/cloud/atlas) following [this tutorial](https://dev.to/dalalrohit/how-to-connect-to-mongodb-atlas-using-node-js-k9i)
-  -   Enter the credentials in `.env.example` and rename it to `.env`.
-  -   Make sure to set `USE_DOCKER= false` in `.env` file.
   -   Run `npm run dev` to run the project in development
 
 ## Code linting and formatting
@@ -73,8 +57,6 @@ Json-hub uses Prettier + Eslint for code listing and formatting. To check if you
 **Note :** The project uses **Husky**, a pre-commit GIT hook which checks if the code follows linting guidelines before commiting. This helps prevent unwanted linting errors in the pipelines.
   
 ## Testing 
--   The endpoint `usertest` which follows the same schema as the `users/` endpoint, must be used for testing
--   All other endpoints except `usertest` should involve methods which **must not** change the data on the server (read-only)
 -   To test the endpoints provided by the application, tools such as [postman](https://www.postman.com/) can be used
 
 ## Documentation

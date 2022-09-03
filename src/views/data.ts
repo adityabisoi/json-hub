@@ -194,7 +194,7 @@ const data = [
       ]`,
             },
             {
-                route: 'GET /users/:userId',
+                route: 'GET /users/1',
                 content: 'Return dummy user data with the matching Id.',
                 output: `
       {
@@ -202,18 +202,6 @@ const data = [
         "first_name": "Becky",
         "last_name": "Blasbad",
         "email": "beck1blas4@gmail.com"
-      }`,
-            },
-            {
-                route: 'PATCH /users/',
-                content: 'Returns dummy user data with the current timestamp.',
-                output: `
-      {
-        "id": "1",
-        "first_name": "Becky",
-        "last_name": "Blasbad",
-        "email": "beck1blas4@gmail.com",
-        "timestamp": "2021-03-31 18-00"
       }`,
             },
         ],
@@ -319,7 +307,7 @@ const data = [
       }`,
             },
             {
-                route: 'GET /songs?artist=Ayushmann Khurrana',
+                route: 'GET /songs?artist=Ayushmann+Khurrana',
                 content: 'Returns song data from perticular artist.',
                 output: `[
                 {
@@ -419,7 +407,7 @@ const data = [
             ]`,
             },
             {
-                route: 'GET /songs?artist=A.R. Rahman&genre=sufi&language=urdu',
+                route: 'GET /songs?artist=A.R.+Rahman&genre=sufi&language=urdu',
                 content: 'Return dummy songs data after chaining multiple song query parameter.',
                 output: `[
             {
@@ -678,7 +666,7 @@ const data = [
                 }`,
             },
             {
-                route: 'GET /books?author=Vikram Seth',
+                route: 'GET /books?author=Vikram+Seth',
                 content: 'Return book data with specific author name from booksdata.json.',
                 output: `
               [
@@ -706,7 +694,7 @@ const data = [
               ]`,
             },
             {
-                route: 'GET /books?title=The Glass Palace',
+                route: 'GET /books?title=The+Glass+Palace',
                 content: 'Return book data with specific title from booksdata.json.',
                 output: `
               [
@@ -720,7 +708,7 @@ const data = [
               ]`,
             },
             {
-                route: 'GET /books?author=Vikram Seth&price=₹947',
+                route: 'GET /books?author=Vikram+Seth&price=₹947',
                 content: 'Return book data with specific title from booksdata.json.',
                 output: `
               [
@@ -734,7 +722,7 @@ const data = [
               ]`,
             },
             {
-                route: 'GET /books?title=God of Small Things&author=Arundhati Roy&price=₹275',
+                route: 'GET /books?title=God+of+Small+Things&author=Arundhati+Roy&price=₹275',
                 content: 'Return book data after chaining multiple book query parameter.',
                 output: `
               [

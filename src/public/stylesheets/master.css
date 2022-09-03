@@ -108,6 +108,11 @@ body {
     color: white;
 }
 
+.btn:hover {
+    background-color: white;
+    color: black;
+}
+
 .row {
     display: flex;
 }
@@ -175,8 +180,8 @@ body {
 footer {
     background-color: white;
     color: black;
-    padding: 2vh;
-    font-size: 1.5em;
+    padding: 0.7vh;
+    font-size: 1.3em;
     text-align: center;
 }
 

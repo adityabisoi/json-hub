@@ -1,114 +1,41 @@
 import express, { NextFunction, Request, Response } from 'express'
+const data = require('../../../data/userdata.json')
+
 const router = express.Router()
 
-const User = require('../models/user')
-
+// GET request /photos route
 router.get('/', (req: Request, res: Response, next: NextFunction) => {
-    User.find()
-        .exec()
-        .then((data: string) => {
-            console.log(data)
-            res.status(200).json(data)
+    try {
+        res.status(200).json(data)
+    } catch (err) {
+        //error handling
+        console.log(err)
+        res.status(500).json({
+            error: err,
         })
-        .catch((err: string) => {
-            console.log(err)
-            res.status(500).json({
-                error: err,
-            })
-        })
-})
-router.post('/', (req: Request, res: Response, next: NextFunction) => {
-    const result = {
-        first_name: req.body.first_name,
-        last_name: req.body.last_name,
-        email: req.body.email,
-        country: req.body.country,
-        occupation: req.body.occupation,
-        phoneno: req.body.phoneno,
-        gender: req.body.gender,
-        dob: req.body.dob,
-        timestamp: new Date(),
     }
-    res.status(200).json({ data: result })
 })
-router.get('/:userId', (req: Request, res: Response, next: NextFunction) => {
-    const id: string = req.params.userId
-
-    User.findById(id)
-        .exec()
-        // Single user valid
-        .then((data: string) => {
-            console.log(data)
-            if (data) {
-                res.status(200).json({
-                    data: data,
-                })
+router.get('/:id', (req: Request, res: Response, next: NextFunction) => {
+    const idx: number = parseInt(req.params.id)
+    const size = data.data.length
+    try {
+        if (idx >= size) {
+            res.status(404).json({ message: 'No data found at the given index' })
+        } else {
+            let count: any = req.query.count
+            if (count) {
+                count = parseInt(count)
+                const result = []
+                for (let i: number = idx; i < size && i <= idx + count; i++) {
+                    result.push(data.data[i])
+                }
+                res.status(200).json({ data: result })
             } else {
-                res.status(404).json({
-                    message: 'Id does not exist',
-                })
+                res.status(200).json({ data: data.data[idx] })
             }
-        })
-        // Single user invalid
-        .catch((err: string) => {
-            console.log(err)
-            res.status(500).json({
-                error: err,
-            })
-        })
+        }
+    } catch (err) {
+        res.status(500).json({ error: err })
+    }
 })
-
-router.patch('/:userId', (req: Request, res: Response, next: NextFunction) => {
-    const jsonData = req.body
-    User.findById(req.params.userId)
-        .exec()
-        .then((user: any) => {
-            const {
-                first_name = user.first_name,
-                last_name = user.last_name,
-                email = user.email,
-                country = user.country,
-                occupation = user.occupation,
-                phoneno = user.phoneno,
-                gender = user.gender,
-                dob = user.dob,
-            } = jsonData
-
-            res.status(200).json({
-                first_name: first_name,
-                last_name: last_name,
-                email: email,
-                country: country,
-                occupation: occupation,
-                phoneno: phoneno,
-                gender: gender,
-                dob: dob,
-            })
-        })
-        .catch((err: string) => {
-            res.status(404).json({ message: 'user not found' })
-        })
-})
-
-router.delete('/:userId', (req: Request, res: Response, next: NextFunction) => {
-    const id: any = req.params.userId
-    User.findById(id)
-        .exec()
-        .then((data: string) => {
-            if (data) {
-                res.status(204).json()
-            } else {
-                res.status(404).json({
-                    message: 'User ID does not exist',
-                })
-            }
-        })
-        .catch((err: string) => {
-            console.log(err)
-            res.status(500).json({
-                error: err,
-            })
-        })
-})
-
 module.exports = router

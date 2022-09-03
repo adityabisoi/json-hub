@@ -1,9 +1,6 @@
 import express, { Application, NextFunction, Request, RequestHandler, Response } from 'express'
-import mongoose from 'mongoose'
 import morgan from 'morgan'
 import path from 'path'
-
-require('dotenv').config()
 
 const app: Application = express()
 app.use(express.static(__dirname + '/public'))
@@ -12,33 +9,13 @@ app.set('view engine', 'ejs')
 
 const homeRoute = require('./api/routes/home')
 const usersRoute = require('./api/routes/users')
-const testRoute = require('./api/routes/usertest')
 const taskRoute = require('./api/routes/tasks') //include tasks route
 const commentRoute = require('./api/routes/comments') //importing the comments endpoint file
 const photoRoute = require('./api/routes/photos')
 const foodPhotoRoute = require('./api/routes/foodphotos') //include foodphotos route
-const vehicleRoute = require('./api/routes/vehicles') //include vehicles route
 const songRoute = require('./api/routes/songs') //include songs route
 const bookRoute = require('./api/routes/books') //include books route
 const showsRoute = require('./api/routes/shows') //include shows route
-const movieRoute = require('./api/routes/movies')
-const productRoute = require('./api/routes/products') //include products route
-const sportRoute = require('./api/routes/sports')
-
-const options = {
-    useNewUrlParser: true,
-}
-// Connect to database
-let url
-if (process.env.USE_DOCKER == `true`) {
-    url = `mongodb://${process.env.MONGO_NON_ROOT_USERNAME}:${process.env.MONGO_NON_ROOT_PASSWORD}@mongodb:27017/${process.env.MONGO_INITDB_DATABASE}`
-} else {
-    url = `${process.env.DB_CONNECTION_URL}`
-}
-
-mongoose.connect(url, options).then(() => {
-    console.log('Connected to database')
-})
 
 app.use(morgan('dev') as RequestHandler)
 app.use(express.json() as RequestHandler)
@@ -62,19 +39,14 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 // Routes to handle requests
 app.use('/', homeRoute)
 app.use('/users', usersRoute)
-app.use('/usertest', testRoute)
 app.use('/tasks', taskRoute) // Added task route
 app.use('/comments', commentRoute) //Routing the app to use the comments endpoint
 app.use('/photos/food', foodPhotoRoute) //Added foodphoto route
 app.use('/photos', photoRoute)
-app.use('/vehicles', vehicleRoute) //Added vehicles route
 app.use('/songs', songRoute)
 app.use('/songs', songRoute)
 app.use('/shows', showsRoute)
 app.use('/books', bookRoute) //Added books route
-app.use('/movies', movieRoute)
-app.use('/products', productRoute) //Added products route
-app.use('/sports', sportRoute)
 
 // Handle error
 interface ErrorWithStatus extends Error {

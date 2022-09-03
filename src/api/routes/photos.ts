@@ -6,7 +6,6 @@ const router = express.Router()
 // GET request /photos route
 router.get('/', (req: Request, res: Response, next: NextFunction) => {
     try {
-        console.log(data)
         res.status(200).json(data)
     } catch (err) {
         //error handling
