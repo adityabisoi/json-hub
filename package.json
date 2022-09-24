@@ -6,9 +6,9 @@
     "scripts": {
         "start": "node src/server.ts",
         "dev": "nodemon src/server.ts",
-        "prod": "node dict/server.ts",
+        "prod": "node dist/server.js",
         "lint": "eslint .",
-        "build": "tsc",
+        "build": "tsc && cp ./src/views/index.ejs ./dist/views && cp -r ./src/public ./dist",
         "postinstall": "npm run build",
         "test": "jest"
     },
