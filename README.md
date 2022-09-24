@@ -60,7 +60,7 @@ If you are stuck somewhere or do not understand what to do, feel free to reach o
 ## Contribution
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 <br/>
-<strong> Please refer the <a href="https://github.com/adityabisoi/json-hub/blob/main/CONTRIBUTING.md">contribution guideline</a> before making any contribution. </strong>
+Please refer the <a href="https://github.com/adityabisoi/json-hub/blob/main/CONTRIBUTING.md">contribution guideline</a> before making any contribution.
 
 ## Contributors 
 <table>
