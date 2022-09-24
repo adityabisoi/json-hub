@@ -15,7 +15,7 @@
 A community-owned REST API service for testers and developers. JSON Hub provides REST API endpoints for different types of placeholders, which can be easily used during testing and development without the need for creating sample data manually.
 </p>
 
-### Click [here](https://json-hub.up.railway.app/) to use json-hub!
+### Click [here](https://json-hub.herokuapp.com/) to use json-hub!
 
 ## Table of Contents
 
